@@ -187,6 +187,19 @@ We thank the [SGLang](https://github.com/sgl-project/sglang) project. Part of th
 
 We also thank [Enderfga](https://github.com/Enderfga) for [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator), which powers our goal-mode session orchestration.
 
+## Citation
+
+If you use ResearchBoost-Agent in your research or project, please cite:
+
+```bibtex
+@misc{researchboost2026infra,
+  author = {{ResearchBoost Team}},
+  title = {{ResearchBoost}: {RSI} starts with Infra},
+  year = {2026},
+  url = {https://ydove0324.github.io/hx_resume/blog/researchboost/}
+}
+```
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AI4AI-for-Anything/ResearchBoost-Agent&type=Date)](https://star-history.com/#AI4AI-for-Anything/ResearchBoost-Agent&Date)

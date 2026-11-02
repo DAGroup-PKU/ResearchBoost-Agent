@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use ResearchBoost-Agent in your research or project, please cite this work."
+title: "ResearchBoost-Agent"
+abstract: >-
+  An autonomous agent that profiles, optimizes, and validates AI training code,
+  turning the same compute budget into more room to explore.
+type: software
+authors:
+  - name: "ResearchBoost Team"
+repository-code: "https://github.com/DAGroup-PKU/ResearchBoost-Agent"
+url: "https://ai4ai-for-anything.github.io/"
+preferred-citation:
+  type: generic
+  title: "ResearchBoost: RSI starts with Infra"
+  authors:
+    - name: "ResearchBoost Team"
+  year: 2026
+  url: "https://ydove0324.github.io/hx_resume/blog/researchboost/"

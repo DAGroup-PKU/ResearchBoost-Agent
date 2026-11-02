@@ -187,6 +187,19 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 同时感谢 [Enderfga](https://github.com/Enderfga) 开发的 [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator)，为我们的 goal 模式提供会话编排支持。
 
+## 引用
+
+如果你在研究中使用了 ResearchBoost-Agent，请引用：
+
+```bibtex
+@misc{researchboost2026infra,
+  author = {{ResearchBoost Team}},
+  title = {{ResearchBoost}: {RSI} starts with Infra},
+  year = {2026},
+  url = {https://ydove0324.github.io/hx_resume/blog/researchboost/}
+}
+```
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AI4AI-for-Anything/ResearchBoost-Agent&type=Date)](https://star-history.com/#AI4AI-for-Anything/ResearchBoost-Agent&Date)
