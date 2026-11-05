@@ -27,6 +27,7 @@ Change only the docs; your code stays in your repository.
 
 - `docs/results/<domain>.md`: a section in the same layout as the others (speedup, hardware, measurement scope, validation, links).
 - `docs/results/README.md`: the project in its domain row, and the counts.
+- `docs/figures/make_results_overview.py`: a row in `PROJECTS`, kept sorted by speedup; run `python3 docs/figures/make_results_overview.py` to redraw the result figures in both READMEs. If the top speedup changes, update the results card text in `docs/assets/readme/render.py` and rerun it too.
 
 For a domain not listed yet, add a new block in the same form. Commit with an email linked to your GitHub account; otherwise GitHub cannot credit you as a contributor.
 

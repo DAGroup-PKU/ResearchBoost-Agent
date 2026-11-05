@@ -1,39 +1,65 @@
-<p align="center">
-  <img src="docs/assets/researchboost-agent-logo.png" alt="ResearchBoost-Agent logo" width="480">
-</p>
-
-<p align="center">
-  <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a>
-</p>
-
-<p align="center"><strong>AI that accelerates the research that advances AI.</strong></p>
-
-<p align="center">
-  <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="https://img.shields.io/static/v1?label=Blog&amp;message=Read&amp;color=7C3AED" alt="Blog"></a> &ensp;
-  <a href="https://ai4ai-for-anything.github.io/"><img src="https://img.shields.io/static/v1?label=Project&amp;message=Page&amp;color=blue&amp;logo=github-pages" alt="Project Page"></a> &ensp;
-  <a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img src="https://img.shields.io/static/v1?label=GitHub&amp;message=Code&amp;color=181717&amp;logo=github" alt="GitHub"></a> &ensp;
-  <a href="docs/assets/wechat-group.png"><img src="https://img.shields.io/static/v1?label=WeChat&amp;message=Group&amp;color=07C160&amp;logo=wechat&amp;logoColor=white" alt="WeChat Group"></a> &ensp;
-  <a href="https://discord.gg/5k7Rr9hut"><img src="https://img.shields.io/static/v1?label=Discord&amp;message=Join&amp;color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord"></a>
-</p>
-
-ResearchBoost-Agent turns AI capabilities into faster AI experimentation, starting with the training code researchers run every day. It autonomously profiles bottlenecks, implements optimizations, and validates speedups against a frozen evaluation protocol, turning the same compute budget into more room to explore.
-
 <div align="center">
-<table>
-<tr><td align="center">
-<p><strong>🚀 Project Blog & Wishlist</strong></p>
-<p>Read the story behind ResearchBoost and our training speedups.<br>
-Have a project you want accelerated? Submit it to our Wishlist.</p>
-<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="https://img.shields.io/badge/Read_the_Blog-7C3AED?style=for-the-badge" height="24" alt="Read the project blog"></a>
-&nbsp;
-<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img src="https://img.shields.io/badge/Submit_to_Wishlist-0891B2?style=for-the-badge" height="24" alt="Submit a project"></a>
-</td></tr>
-</table>
+
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="docs/assets/readme/banner-en.jpg" alt="ResearchBoost-Agent: AI that accelerates the research that advances AI" width="100%"></a>
+
+<h3>The open-source agent that makes AI training code faster,<br>and keeps only the speedups a frozen judge verifies</h3>
+
+<p>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="docs/assets/readme/button-blog-en.png" alt="Read the blog" height="56"></a>
+<a href="#results"><img src="docs/assets/readme/button-results-en.png" alt="Explore results" height="56"></a>
+<a href="#quick-start"><img src="docs/assets/readme/button-quickstart-en.png" alt="Quick start" height="56"></a>
+</p>
+
+<p>
+<a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
+<a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/AI4AI-for-Anything/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
+<a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
+<a href="#community"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
+</p>
+
+<b>English</b> · <a href="README.zh-CN.md">简体中文</a>
+
 </div>
+
+<br>
+
+**Same GPUs, same training semantics: how much faster can the research loop run?** ResearchBoost-Agent turns AI capabilities into faster AI experimentation, starting with the training code researchers run every day. It autonomously profiles bottlenecks, implements optimizations, and validates speedups against a frozen evaluation protocol, turning the same compute budget into more room to explore. Have a project you want accelerated? [Submit it to the Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist).
+
+## News
+
+- <img src="https://img.shields.io/badge/SKILL-8C0000?style=flat-square" alt="SKILL" height="18"> **2026-11-01** · New skill card [`kernel-utilization-analysis`](skills/kernel-utilization-analysis): SM coverage, launch-bound kernels and bandwidth against peak become a standard profiling step ([#8](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/8)).
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)** by [@micky-li-hd](https://github.com/micky-li-hd): **2.25×** on ProteinMPNN training, our first AI for Science case.
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)** by [@2018cx](https://github.com/2018cx): **1.86×** on MiniMax-H3 LoRA fine-tuning.
+- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-30** · Large-model support: the numerics recorder frees each step's tensors, the sandbox binds shared paths read-only, and runs can be detached ([#6](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/6)).
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-10-29** · **[Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)** and **[Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec)** by [@Bool1020](https://github.com/Bool1020). Case submissions are open to everyone: see [Contribute a case](#contribute-a-case).
+
+<details>
+<summary>Earlier</summary>
+
+- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-28** · The quick start hands the whole job to a coding agent: paste one prompt, nothing to fill in ([#4](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/4)).
+- <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-10-19** · ResearchBoost-Agent is open source.
+
+</details>
+
+## Highlights
+
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across six research domains: 15 projects, each measured against its own baseline." width="100%"></a>
+
+<a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
+
+<a href="#the-judge"><img src="docs/assets/readme/card-judge-en.png" alt="A frozen, hashed judge keeps a change only if it is bitwise identical or within the baseline's own seed noise." width="100%"></a>
+
+<a href="docs/goal-mode.md"><img src="docs/assets/readme/card-loop-en.png" alt="One /goal session in a sandbox attacks one hotspot per round, guided by nine skill cards and supervised from outside." width="100%"></a>
 
 ## Results
 
-**15 projects across 6 research domains.** Explore the reports for experiment settings and validation results.
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 15 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.07× (NanoChat), with how each was validated" width="100%"></a>
+
+<img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
+
+Open a domain for the workloads, or the reports for experiment settings and validation results.
 
 <details>
 <summary><strong>LLM</strong> · 3 projects — NanoChat, YOCO, LLM2Vec</summary>
@@ -136,26 +162,17 @@ Clone it and follow docs/run-a-task.md; ask me which GPUs and work directory to 
 
 </details>
 
-## Contribute a case
+## How it works
 
-Got a result with ResearchBoost-Agent? Add it to [Results](#results).
+### A run
 
-1. Run the [Quick start](#quick-start) on your own training code.
-2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml).
-3. We review it. Once it is accepted, open a pull request that adds your result to Results, linking to your repository.
-4. When the pull request is merged, you appear among this repository's contributors.
+<img src="docs/assets/readme/run-en.png" alt="A run in three stages: frame and freeze the judge before round one; goal mode, where one /goal session in a bubblewrap sandbox loops profile, edit, time, check and log, run by claw-orchestrator and watched by a supervisor; accept, where the final check requires PASS, the target speedup and unchanged judge files, then an end-to-end run confirms" width="100%">
 
-Review criteria and the pull request format: [CONTRIBUTING.md](CONTRIBUTING.md). To have us accelerate a project instead, use the [Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist).
+1. **Frame and freeze.** The owner fixes what may not change: the upstream workload and per-GPU load, the baseline precision, the training semantics. A formulating agent builds the judge for this task (`bench/` plus a frozen copy of [`numerics/`](numerics)), records the baseline twice and confirms the records are bitwise identical, freezes δ, proves with known-bad candidates that every gate fires, hashes the judge and writes `GOAL.md`. The formulation material stays out of the optimizing agent's sight; the judge itself is read-only to it.
+2. **Goal mode.** One Codex or Claude Code `/goal` session gets the workspace, the assigned GPUs and the skill cards inside a bubblewrap sandbox, with the judge read-only. Every round it profiles the current best version, changes one hotspot behind a switch, measures with `bench.py time`, runs `bench.py check` once timing reaches the target, and logs the round in `WORK_LOG.md`, failed rounds included. [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator) runs the session: it keeps the thread across restarts and usage limits, and when the agent stops it runs the final check itself. A supervisor watches from outside and intervenes only on rules and facts, never on optimization direction. See [docs/goal-mode.md](docs/goal-mode.md).
+3. **Accept.** The final check is the only verdict: `bench.py check` must PASS, the speedup must reach the target in `GOAL.md`, and every judge file must be byte for byte as it was at launch. A failed final check goes back to the same thread once. A PASS is then confirmed with a real end-to-end training or evaluation run.
 
-## How a run works
-
-![Goal mode: formulate and freeze the judge, then one agent iterates in a sandbox: profile, edit, time, full check, log](docs/figures/goal-mode-loop.svg)
-
-1. **Frame the task.** The owner fixes what may not change: the upstream workload and per-GPU load, the baseline precision, the training semantics. A formulating agent builds the judge for this task (`bench/` plus a frozen copy of [`numerics/`](numerics)), records the baseline, freezes δ, proves with known-bad candidates that every gate fires, and writes `GOAL.md`.
-2. **Run goal mode.** One Codex or Claude Code `/goal` session gets the workspace, the GPUs and the skill cards inside a bubblewrap sandbox. Every round it profiles the current best version, changes one hotspot behind a switch, measures with `bench.py time`, and logs the round in `WORK_LOG.md`. [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator) runs the session: it keeps the thread across restarts and usage limits, and when the agent stops it runs the full check itself. A supervisor watches from outside and intervenes only on rules and facts, never on optimization direction. See [docs/goal-mode.md](docs/goal-mode.md).
-3. **Accept only what the judge accepts.** `bench.py check` is the only verdict. A full-check PASS is then confirmed with a real end-to-end training or evaluation run.
-
-## The judge
+### The judge
 
 A candidate counts only if the task's frozen judge accepts it. The judge runs these gates in order and stops at the first one that fails:
 
@@ -165,6 +182,19 @@ A candidate counts only if the task's frozen judge accepts it. The judge runs th
 3. **Statistical**: otherwise, paired-seed training trajectories; every endpoint must stay within δ, twice the baseline's own seed-to-seed standard deviation, frozen before any candidate is seen.
 
 The judge is frozen and hashed before optimization starts and is never relaxed to let a candidate through. Details: [docs/judge.md](docs/judge.md).
+
+## Contribute a case
+
+Got a result with ResearchBoost-Agent? Add it to [Results](#results).
+
+<img src="docs/assets/readme/contribute-en.png" alt="Contributing a case in four steps: run the quick start on your code, open a case submission, we review it against the judge, then a merged pull request adds your row to Results and you join the contributors" width="100%">
+
+1. Run the [Quick start](#quick-start) on your own training code.
+2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml).
+3. We review it. Once it is accepted, open a pull request that adds your result to Results, linking to your repository.
+4. When the pull request is merged, you appear among this repository's contributors.
+
+Review criteria and the pull request format: [CONTRIBUTING.md](CONTRIBUTING.md). To have us accelerate a project instead, use the [Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist).
 
 ## Starting a new task
 
@@ -180,6 +210,15 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |
 | [`skills/`](skills) | Nine skill cards read before choosing what to try: `train-opt-*` (profiling, measurement, action ladder, numerics validation, fusion patterns, FSDP multi-forward), `kernel-utilization-analysis` (SM coverage, launch-bound kernels, bandwidth against peak, repeated kernel chains, with a trace-analysis script) and `sglang-diffusion-*` (diffusion benchmarking and performance) |
 | [`tasks/`](tasks) | Per task: the `GOAL.md` the agent saw, the frozen judge code, archived judge records, supervision notes and the prep scripts |
+
+## Community
+
+<table>
+<tr>
+<td align="center" width="270"><img src="docs/assets/wechat-group.png" alt="WeChat group QR code" width="240"><br><sub>WeChat group · the QR code is refreshed weekly</sub></td>
+<td valign="middle">Questions, ideas, or a run that went sideways? Join us on <a href="https://discord.gg/5k7Rr9hut">Discord</a> or scan the QR code to join the WeChat group.<br><br>Bug reports, fixes and new cases are welcome as issues or pull requests: see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</td>
+</tr>
+</table>
 
 ## Acknowledgements
 

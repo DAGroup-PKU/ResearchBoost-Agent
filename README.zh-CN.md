@@ -1,39 +1,65 @@
-<p align="center">
-  <img src="docs/assets/researchboost-agent-logo.png" alt="ResearchBoost-Agent logo" width="480">
-</p>
-
-<p align="center">
-  <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a>
-</p>
-
-<p align="center"><strong>用 AI 加速 AI 研究。</strong></p>
-
-<p align="center">
-  <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="https://img.shields.io/static/v1?label=Blog&amp;message=Read&amp;color=7C3AED" alt="项目 Blog"></a> &ensp;
-  <a href="https://ai4ai-for-anything.github.io/"><img src="https://img.shields.io/static/v1?label=Project&amp;message=Page&amp;color=blue&amp;logo=github-pages" alt="项目主页"></a> &ensp;
-  <a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img src="https://img.shields.io/static/v1?label=GitHub&amp;message=Code&amp;color=181717&amp;logo=github" alt="GitHub"></a> &ensp;
-  <a href="docs/assets/wechat-group.png"><img src="https://img.shields.io/static/v1?label=WeChat&amp;message=Group&amp;color=07C160&amp;logo=wechat&amp;logoColor=white" alt="WeChat Group"></a> &ensp;
-  <a href="https://discord.gg/5k7Rr9hut"><img src="https://img.shields.io/static/v1?label=Discord&amp;message=Join&amp;color=5865F2&amp;logo=discord&amp;logoColor=white" alt="Discord"></a>
-</p>
-
-ResearchBoost-Agent 从研究者日常使用的训练代码入手，用 AI 加快实验迭代。它自主分析性能瓶颈、实现优化，并按照预先固定的评测规则验证加速效果，让研究者在相同算力预算下开展更多实验。
-
 <div align="center">
-<table>
-<tr><td align="center">
-<p><strong>🚀 项目 Blog 与 Wishlist</strong></p>
-<p>我们的项目 Blog 已上线，了解 ResearchBoost 的方法与训练加速成果。<br>
-欢迎通过 Wishlist 提交你希望优化的项目！</p>
-<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="https://img.shields.io/badge/Read_the_Blog-7C3AED?style=for-the-badge" height="24" alt="阅读项目 Blog"></a>
-&nbsp;
-<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img src="https://img.shields.io/badge/Submit_to_Wishlist-0891B2?style=for-the-badge" height="24" alt="提交项目"></a>
-</td></tr>
-</table>
+
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="docs/assets/readme/banner-zh.jpg" alt="ResearchBoost-Agent: 用 AI 加速 AI 研究" width="100%"></a>
+
+<h3>开源的 AI 训练加速 agent：自主分析、优化，<br>只保留通过固定评测验证的加速</h3>
+
+<p>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img src="docs/assets/readme/button-blog-zh.png" alt="阅读项目 Blog" height="56"></a>
+<a href="#已有结果"><img src="docs/assets/readme/button-results-zh.png" alt="查看全部结果" height="56"></a>
+<a href="#快速开始"><img src="docs/assets/readme/button-quickstart-zh.png" alt="快速开始" height="56"></a>
+</p>
+
+<p>
+<a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
+<a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
+<a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/AI4AI-for-Anything/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
+<a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
+<a href="#交流社区"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
+</p>
+
+<a href="README.md">English</a> · <b>简体中文</b>
+
 </div>
+
+<br>
+
+**同样的 GPU、同样的训练语义，研究迭代还能快多少？** ResearchBoost-Agent 从研究者日常使用的训练代码入手，用 AI 加快实验迭代。它自主分析性能瓶颈、实现优化，并按照预先固定的评测规则验证加速效果，让研究者在相同算力预算下开展更多实验。有希望加速的项目？[提交到 Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist)。
+
+## 动态
+
+- <img src="https://img.shields.io/badge/技能-8C0000?style=flat-square" alt="技能" height="18"> **2026-11-01** · 新增技能文档 [`kernel-utilization-analysis`](skills/kernel-utilization-analysis)：SM 占用、受启动开销限制的内核、实际带宽与峰值之比成为标准的性能分析步骤（[#8](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/8)）。
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：ProteinMPNN 训练加速 **2.25×**，第一个 AI for Science 案例。
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)**，来自 [@2018cx](https://github.com/2018cx)：MiniMax-H3 LoRA 微调加速 **1.86×**。
+- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-30** · 大模型支持：数值记录器逐步释放张量，沙箱可把共享路径设为只读，并支持后台运行（[#6](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/6)）。
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-29** · **[Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)** 和 **[Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec)**，来自 [@Bool1020](https://github.com/Bool1020)。案例提交向所有人开放，见[贡献案例](#贡献案例)。
+
+<details>
+<summary>更早</summary>
+
+- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-28** · 快速开始把整个流程交给编程 agent：粘贴一段话即可，无需填写任何内容（[#4](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/4)）。
+- <img src="https://img.shields.io/badge/发布-6250D6?style=flat-square" alt="发布" height="18"> **2026-10-19** · ResearchBoost-Agent 开源。
+
+</details>
+
+## 亮点
+
+<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖六个研究领域：15 个项目，每个都与自身的基线对比。" width="100%"></a>
+
+<a href="#快速开始"><img src="docs/assets/readme/card-prompt-zh.png" alt="在 Codex 或 Claude Code 里粘贴一段话；agent 自己找到代码，只问需要你决定的事，其余全部自己完成。" width="100%"></a>
+
+<a href="#评测"><img src="docs/assets/readme/card-judge-zh.png" alt="评测固定并记录哈希，只保留与基线逐位一致、或差异不超过基线自身随机种子波动的改动。" width="100%"></a>
+
+<a href="docs/goal-mode.md"><img src="docs/assets/readme/card-loop-zh.png" alt="一个 /goal 会话在沙箱里每轮攻克一个瓶颈，参考 9 份技能文档，由外部监督。" width="100%"></a>
 
 ## 已有结果
 
-**15 个项目 · 6 个领域。** 实验设置与验证结果见分类报告。
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="15 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
+
+<img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
+
+展开各领域可查看任务负载，实验设置与验证结果见分类报告。
 
 <details>
 <summary><strong>语言模型</strong> · 3 个项目 — NanoChat, YOCO, LLM2Vec</summary>
@@ -136,26 +162,17 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 </details>
 
-## 贡献案例
+## 工作原理
 
-用 ResearchBoost-Agent 跑出了结果？欢迎加入[已有结果](#已有结果)。
+### 运行流程
 
-1. 在你自己的训练代码上跑一遍[快速开始](#快速开始)。
-2. 如果加速比不错，或者优化过程有值得分享的轨迹，按 [case 提交模板](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml)开一个 issue（表单为英文）。
-3. 审核通过后，提一个 pull request，把结果加进已有结果，链接到你自己的仓库。
-4. PR 合并后，你会出现在本仓库的 contributors 中。
+<img src="docs/assets/readme/run-zh.png" alt="一次运行分三个阶段：第一轮之前定义任务并固定评测；goal 模式下，一个 /goal 会话在 bubblewrap 沙箱中循环分析、修改、计时、评测和记录，由 claw-orchestrator 运行、监督者在外部观察；验收时，最终评测要求通过、达到目标加速比且评测文件未改动，再用端到端运行确认" width="100%">
 
-审核标准和 PR 格式见 [CONTRIBUTING.md](CONTRIBUTING.md)（英文）。如果是希望我们帮你加速某个项目，请提交到 [Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist)。
+1. **定义并固定。** 任务负责人先明确必须保持不变的设置：上游训练工作负载、每张 GPU 的负载、基线数值精度和训练计算逻辑。负责准备任务的 agent 搭建评测程序（`bench/` 和一份固定版本的 [`numerics/`](numerics)），记录两次基线并确认逐位一致，固定容差 δ，用已知有问题的候选版本验证各项检查都能拒绝错误，然后记录评测哈希、编写 `GOAL.md`。准备过程的材料对负责优化的 agent 不可见，评测本身对它只读。
+2. **goal 模式。** 在 bubblewrap 沙箱内，为一个 Codex 或 Claude Code 的 `/goal` 会话提供工作区、分配的 GPU 和技能文档，评测目录只读。每轮先分析当前最佳版本的性能，再优化一个瓶颈，并用配置开关控制是否启用；用 `bench.py time` 计时，达到目标后运行 `bench.py check`，最后把本轮结果（包括失败的轮次）写入 `WORK_LOG.md`。会话由 [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator) 运行：主机重启或模型接口达到用量上限后，它会接回同一个会话继续；agent 停下后，由它亲自运行最终评测。监督者在沙箱外观察，只针对规则执行和事实核对进行干预，不指导优化方向。详见 [docs/goal-mode.md](docs/goal-mode.md)。
+3. **验收。** 最终评测是唯一的结论：`bench.py check` 必须通过，加速比必须达到 `GOAL.md` 中的目标，所有评测文件必须与启动时逐字节一致。最终评测失败时，结果会退回同一会话，再给一次修复机会。通过后，再用实际的端到端训练或评测确认结果。
 
-## 运行流程
-
-![运行流程：定义任务并固定评测规则，随后由 agent 在沙箱内反复分析性能、修改代码、计时、完整评测并记录结果](docs/figures/goal-mode-loop.svg)
-
-1. **定义任务。** 任务负责人先明确必须保持不变的设置：上游训练工作负载、每张 GPU 的负载、基线数值精度和训练计算逻辑。负责准备任务的 agent 搭建评测程序（`bench/` 和一份固定版本的 [`numerics/`](numerics)），记录基线结果，并固定容差 δ。随后用已知有问题的候选版本验证各项检查能否正确拒绝错误，最后编写 `GOAL.md`。
-2. **运行优化。** 在 bubblewrap 沙箱内，为一个 Codex 或 Claude Code 的 `/goal` 会话提供工作区、GPU 和技能文档。每轮先分析当前最佳版本的性能，再优化一个瓶颈，并通过配置开关控制是否启用。用 `bench.py time` 计时后，将本轮结果写入 `WORK_LOG.md`。会话由 [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator) 运行：主机重启或模型接口达到用量上限后，它会接回同一个会话继续；agent 停下后，由它亲自运行完整评测。监督 agent 在沙箱外监控运行，仅针对规则执行和事实核对进行干预，不指导优化方向。详见 [docs/goal-mode.md](docs/goal-mode.md)。
-3. **验证结果。** 以 `bench.py check` 的结果作为唯一通过标准。完整评测通过后，再通过实际的端到端训练或评测验证结果。
-
-## 评测
+### 评测
 
 候选版本必须通过预先固定的评测。评测依次执行以下检查；某项检查失败后，不再继续：
 
@@ -165,6 +182,19 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 3. **统计检查**：如果未达到逐位一致，则使用配对的随机种子分别运行基线和候选版本，比较训练轨迹。各项终点指标与基线的差异必须在容差 δ 内。δ 取基线在不同随机种子下对应指标标准差的两倍，在评测任何候选版本之前固定。
 
 评测程序在优化开始前固定，并记录哈希用于校验，后续不因候选结果而放宽评测规则。详见 [docs/judge.md](docs/judge.md)。
+
+## 贡献案例
+
+用 ResearchBoost-Agent 跑出了结果？欢迎加入[已有结果](#已有结果)。
+
+<img src="docs/assets/readme/contribute-zh.png" alt="贡献案例四步：在自己的代码上运行快速开始，按模板提交 case，我们对照评测审核，PR 合并后结果加入已有结果，你成为 contributor" width="100%">
+
+1. 在你自己的训练代码上跑一遍[快速开始](#快速开始)。
+2. 如果加速比不错，或者优化过程有值得分享的轨迹，按 [case 提交模板](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml)开一个 issue（表单为英文）。
+3. 审核通过后，提一个 pull request，把结果加进已有结果，链接到你自己的仓库。
+4. PR 合并后，你会出现在本仓库的 contributors 中。
+
+审核标准和 PR 格式见 [CONTRIBUTING.md](CONTRIBUTING.md)（英文）。如果是希望我们帮你加速某个项目，请提交到 [Wishlist](https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist)。
 
 ## 创建新任务
 
@@ -180,6 +210,15 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |
 | [`skills/`](skills) | 选择优化方向前阅读的 9 份技能文档：`train-opt-*`（性能分析、计时、分阶段优化步骤、数值验证、算子融合方法、FSDP 多次前向计算）、`kernel-utilization-analysis`（SM 占用、受启动开销限制的内核、实际带宽与峰值之比、重复出现的小内核链，附 trace 分析脚本）和 `sglang-diffusion-*`（扩散模型的性能测试与优化方法） |
 | [`tasks/`](tasks) | 各任务的材料：agent 使用的 `GOAL.md`、固定版本的评测代码、评测结果存档、监督记录和准备脚本 |
+
+## 交流社区
+
+<table>
+<tr>
+<td align="center" width="270"><img src="docs/assets/wechat-group.png" alt="微信群二维码" width="240"><br><sub>微信群 · 二维码每周更新</sub></td>
+<td valign="middle">有问题、想法，或者运行遇到了意外？欢迎加入 <a href="https://discord.gg/5k7Rr9hut">Discord</a>，或扫码加入微信群。<br><br>也欢迎通过 issue 或 pull request 报告问题、提交修复和新案例，见 <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>（英文）。</td>
+</tr>
+</table>
 
 ## 致谢
 

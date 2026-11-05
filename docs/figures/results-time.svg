@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="684" viewBox="0 0 1000 684" role="img" aria-labelledby="t d">
+<title id="t">Same work, a fraction of the time</title>
+<desc id="d">Motus: 7.47 s → 0.78 s (9.59×); RoboTwin: 73.5 h → 16.8 h (4.38×); FastWAM: 1,541 ms → 446 ms (3.46×); R3: 24.7 s → 11.9 s (2.08×); YOCO: 89 min → 47 min (1.91×); DMD2: 16.4 h → 9.8 h (1.67×)</desc>
+<defs><pattern id="h-est" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#8C0000" fill-opacity=".28"/><rect width="2.6" height="6" fill="#8C0000"/></pattern><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.title{font-size:26px;font-weight:700;fill:#241B1C}.sub{font-size:15px;fill:#867678}.col{font-size:12.5px;font-weight:600;fill:#867678;letter-spacing:.04em}.rank{font-size:13px;fill:#867678;font-variant-numeric:tabular-nums}.name{font-size:15.5px;font-weight:600;fill:#241B1C}.dom{font-size:13px;fill:#867678}.val{font-size:15.5px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.chip{font-size:12.5px;font-weight:600}.leg{font-size:13px;fill:#4E4244}.tick{font-size:12px;fill:#867678;font-variant-numeric:tabular-nums}.foot{font-size:12.5px;fill:#867678}.big{font-size:26px;font-weight:800;fill:#241B1C;font-variant-numeric:tabular-nums}.tl{font-size:13px;fill:#4E4244;font-variant-numeric:tabular-nums}.tlb{font-size:13px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.q{font-size:13px;fill:#4E4244}</style></defs>
+<rect x="0.5" y="0.5" width="999" height="683" rx="16" fill="#FFFFFF" stroke="#EEE4E4"/>
+<text x="36" y="56" class="title">Same work, a fraction of the time</text>
+<text x="36" y="84" class="sub">Baseline vs optimized, from the project reports</text>
+<rect x="734" y="72" width="22" height="10" rx="3" fill="#D9CFCF"/><text x="764" y="81" class="leg">baseline</text>
+<rect x="844" y="72" width="22" height="10" rx="3" fill="#8C0000"/><text x="874" y="81" class="leg">optimized</text>
+<circle cx="41" cy="142" r="5" fill="#6250d6"/>
+<text x="54" y="147" class="name">Motus</text>
+<text x="36" y="170" class="dom">Fine-tuning · per iteration</text>
+<path d="M300.0 132.0H696.0Q700.0 132.0 700.0 136.0V144.0Q700.0 148.0 696.0 148.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="145" class="tl">7.47 s</text>
+<path d="M300.0 154.0H337.7Q341.7 154.0 341.7 158.0V166.0Q341.7 170.0 337.7 170.0H300.0Z" fill="#8C0000"/>
+<text x="349.7" y="167" class="tlb">0.78 s</text>
+<text x="300" y="192" class="q">✓ Bitwise identical over 1,100 iterations</text>
+<text x="964" y="160" class="big" text-anchor="end">9.59×</text>
+<line x1="36" y1="202" x2="964" y2="202" stroke="#F1EAEA" stroke-width="1"/>
+<circle cx="41" cy="226" r="5" fill="#6250d6"/>
+<text x="54" y="231" class="name">RoboTwin</text>
+<text x="36" y="254" class="dom">π0.5 policy evaluation · full benchmark</text>
+<path d="M300.0 216.0H696.0Q700.0 216.0 700.0 220.0V228.0Q700.0 232.0 696.0 232.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="229" class="tl">73.5 h</text>
+<path d="M300.0 238.0H387.4Q391.4 238.0 391.4 242.0V250.0Q391.4 254.0 387.4 254.0H300.0Z" fill="url(#h-est)"/>
+<text x="399.4" y="251" class="tlb">16.8 h</text>
+<text x="300" y="276" class="q">✓ Compared episodes bitwise identical</text>
+<text x="964" y="244" class="big" text-anchor="end">4.38×</text>
+<text x="964" y="262" class="dom" text-anchor="end">est.</text>
+<line x1="36" y1="286" x2="964" y2="286" stroke="#F1EAEA" stroke-width="1"/>
+<circle cx="41" cy="310" r="5" fill="#6250d6"/>
+<text x="54" y="315" class="name">FastWAM</text>
+<text x="36" y="338" class="dom">LIBERO training recipe · per iteration</text>
+<path d="M300.0 300.0H696.0Q700.0 300.0 700.0 304.0V312.0Q700.0 316.0 696.0 316.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="313" class="tl">1,541 ms</text>
+<path d="M300.0 322.0H411.7Q415.7 322.0 415.7 326.0V334.0Q415.7 338.0 411.7 338.0H300.0Z" fill="#8C0000"/>
+<text x="423.7" y="335" class="tlb">446 ms</text>
+<text x="300" y="360" class="q">✓ LIBERO success 96.90% vs 97.15% released</text>
+<text x="964" y="328" class="big" text-anchor="end">3.46×</text>
+<line x1="36" y1="370" x2="964" y2="370" stroke="#F1EAEA" stroke-width="1"/>
+<circle cx="41" cy="394" r="5" fill="#1baf7a"/>
+<text x="54" y="399" class="name">R3</text>
+<text x="36" y="422" class="dom">BAGEL Tree-RL · per RL step</text>
+<path d="M300.0 384.0H696.0Q700.0 384.0 700.0 388.0V396.0Q700.0 400.0 696.0 400.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="397" class="tl">24.7 s</text>
+<path d="M300.0 406.0H488.1Q492.1 406.0 492.1 410.0V418.0Q492.1 422.0 488.1 422.0H300.0Z" fill="#8C0000"/>
+<text x="500.1" y="419" class="tlb">11.9 s</text>
+<text x="300" y="444" class="q">✓ Bitwise identical, 14 steps on 8 ranks</text>
+<text x="964" y="412" class="big" text-anchor="end">2.08×</text>
+<line x1="36" y1="454" x2="964" y2="454" stroke="#F1EAEA" stroke-width="1"/>
+<circle cx="41" cy="478" r="5" fill="#2a78d6"/>
+<text x="54" y="483" class="name">YOCO</text>
+<text x="36" y="506" class="dom">3B pretraining · 20k-update run</text>
+<path d="M300.0 468.0H696.0Q700.0 468.0 700.0 472.0V480.0Q700.0 484.0 696.0 484.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="481" class="tl">89 min</text>
+<path d="M300.0 490.0H505.5Q509.5 490.0 509.5 494.0V502.0Q509.5 506.0 505.5 506.0H300.0Z" fill="#8C0000"/>
+<text x="517.5" y="503" class="tlb">47 min</text>
+<text x="300" y="528" class="q">✓ Statistical equivalence</text>
+<text x="964" y="496" class="big" text-anchor="end">1.91×</text>
+<line x1="36" y1="538" x2="964" y2="538" stroke="#F1EAEA" stroke-width="1"/>
+<circle cx="41" cy="562" r="5" fill="#eb6834"/>
+<text x="54" y="567" class="name">DMD2</text>
+<text x="36" y="590" class="dom">One-step distillation · 2,000 iterations</text>
+<path d="M300.0 552.0H696.0Q700.0 552.0 700.0 556.0V564.0Q700.0 568.0 696.0 568.0H300.0Z" fill="#D9CFCF"/>
+<text x="708" y="565" class="tl">16.4 h</text>
+<path d="M300.0 574.0H534.9Q538.9 574.0 538.9 578.0V586.0Q538.9 590.0 534.9 590.0H300.0Z" fill="#8C0000"/>
+<text x="546.9" y="587" class="tlb">9.8 h</text>
+<text x="300" y="612" class="q">✓ FID-30k 8.70 vs 8.65 baseline</text>
+<text x="964" y="580" class="big" text-anchor="end">1.67×</text>
+<text x="36" y="662" class="foot">YOCO and DMD2 rows are longer end-to-end runs, so their speedup differs from the headline number.</text>
+</svg>
