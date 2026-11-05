@@ -226,6 +226,8 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 同时感谢 [Enderfga](https://github.com/Enderfga) 开发的 [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator)，为我们的 goal 模式提供会话编排支持。
 
+感谢 [NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer)，本 README 的版式和风格参考了它的主页设计。
+
 ## 引用
 
 如果你在研究中使用了 ResearchBoost-Agent，请引用：

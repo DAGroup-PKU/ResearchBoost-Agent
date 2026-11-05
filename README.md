@@ -226,6 +226,8 @@ We thank the [SGLang](https://github.com/sgl-project/sglang) project. Part of th
 
 We also thank [Enderfga](https://github.com/Enderfga) for [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator), which powers our goal-mode session orchestration.
 
+We thank [NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer) as well, whose README inspired the layout and style of our README.
+
 ## Citation
 
 If you use ResearchBoost-Agent in your research or project, please cite:
