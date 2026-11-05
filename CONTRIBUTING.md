@@ -3,7 +3,7 @@
 ## Contribute a case
 
 1. Run the [Quick start](README.md#quick-start) on your own training code.
-2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml).
+2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/DAGroup-PKU/ResearchBoost-Agent/issues/new?template=case-submission.yml).
 3. We review it. Once it is labelled `accepted`, open a pull request that adds it to [Results](README.md#results).
 4. When the pull request is merged, you appear among this repository's contributors.
 

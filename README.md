@@ -14,7 +14,7 @@
 <a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
-<a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/AI4AI-for-Anything/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DAGroup-PKU/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
 <a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
 <a href="#community"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
 </p>
@@ -29,16 +29,16 @@
 
 ## News
 
-- <img src="https://img.shields.io/badge/SKILL-8C0000?style=flat-square" alt="SKILL" height="18"> **2026-11-01** · New skill card [`kernel-utilization-analysis`](skills/kernel-utilization-analysis): SM coverage, launch-bound kernels and bandwidth against peak become a standard profiling step ([#8](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/8)).
+- <img src="https://img.shields.io/badge/SKILL-8C0000?style=flat-square" alt="SKILL" height="18"> **2026-11-01** · New skill card [`kernel-utilization-analysis`](skills/kernel-utilization-analysis): SM coverage, launch-bound kernels and bandwidth against peak become a standard profiling step ([#8](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/8)).
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)** by [@micky-li-hd](https://github.com/micky-li-hd): **2.25×** on ProteinMPNN training, our first AI for Science case.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)** by [@2018cx](https://github.com/2018cx): **1.86×** on MiniMax-H3 LoRA fine-tuning.
-- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-30** · Large-model support: the numerics recorder frees each step's tensors, the sandbox binds shared paths read-only, and runs can be detached ([#6](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/6)).
+- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-30** · Large-model support: the numerics recorder frees each step's tensors, the sandbox binds shared paths read-only, and runs can be detached ([#6](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/6)).
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-10-29** · **[Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)** and **[Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec)** by [@Bool1020](https://github.com/Bool1020). Case submissions are open to everyone: see [Contribute a case](#contribute-a-case).
 
 <details>
 <summary>Earlier</summary>
 
-- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-28** · The quick start hands the whole job to a coding agent: paste one prompt, nothing to fill in ([#4](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/4)).
+- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-10-28** · The quick start hands the whole job to a coding agent: paste one prompt, nothing to fill in ([#4](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/4)).
 - <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-10-19** · ResearchBoost-Agent is open source.
 
 </details>
@@ -144,7 +144,7 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 Open Codex or Claude Code on a Linux GPU host, in your training repository or in an empty folder, and paste:
 
 ```text
-Use ResearchBoost-Agent (https://github.com/AI4AI-for-Anything/ResearchBoost-Agent) to speed up my training.
+Use ResearchBoost-Agent (https://github.com/DAGroup-PKU/ResearchBoost-Agent) to speed up my training.
 Clone it outside my repository and follow goal/templates/FORMULATOR_BRIEF.md from section 0.5.
 ```
 
@@ -156,7 +156,7 @@ Codex shows its question form when started as `codex --enable default_mode_reque
 <summary>Reproduce one of the tasks in this repository</summary>
 
 ```text
-Use ResearchBoost-Agent (https://github.com/AI4AI-for-Anything/ResearchBoost-Agent) to reproduce its task tasks/dmd2.
+Use ResearchBoost-Agent (https://github.com/DAGroup-PKU/ResearchBoost-Agent) to reproduce its task tasks/dmd2.
 Clone it and follow docs/run-a-task.md; ask me which GPUs and work directory to use, offering what you find.
 ```
 
@@ -190,7 +190,7 @@ Got a result with ResearchBoost-Agent? Add it to [Results](#results).
 <img src="docs/assets/readme/contribute-en.png" alt="Contributing a case in four steps: run the quick start on your code, open a case submission, we review it against the judge, then a merged pull request adds your row to Results and you join the contributors" width="100%">
 
 1. Run the [Quick start](#quick-start) on your own training code.
-2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml).
+2. If you get a solid speedup or a non-trivial optimization trajectory, open a [case submission](https://github.com/DAGroup-PKU/ResearchBoost-Agent/issues/new?template=case-submission.yml).
 3. We review it. Once it is accepted, open a pull request that adds your result to Results, linking to your repository.
 4. When the pull request is merged, you appear among this repository's contributors.
 

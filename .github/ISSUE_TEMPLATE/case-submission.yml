@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for sharing your result. Run the [Quick start](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent#quick-start) on your own training code first; a solid speedup or a non-trivial optimization trajectory both qualify.
-        We review every submission. Once it is labelled `accepted`, open a pull request that adds it to [Results](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent#results). See [CONTRIBUTING.md](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/CONTRIBUTING.md).
+        Thanks for sharing your result. Run the [Quick start](https://github.com/DAGroup-PKU/ResearchBoost-Agent#quick-start) on your own training code first; a solid speedup or a non-trivial optimization trajectory both qualify.
+        We review every submission. Once it is labelled `accepted`, open a pull request that adds it to [Results](https://github.com/DAGroup-PKU/ResearchBoost-Agent#results). See [CONTRIBUTING.md](https://github.com/DAGroup-PKU/ResearchBoost-Agent/blob/main/CONTRIBUTING.md).
 
   - type: input
     id: upstream

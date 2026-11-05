@@ -14,7 +14,7 @@
 <a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
-<a href="https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/AI4AI-for-Anything/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DAGroup-PKU/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
 <a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
 <a href="#交流社区"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
 </p>
@@ -29,16 +29,16 @@
 
 ## 动态
 
-- <img src="https://img.shields.io/badge/技能-8C0000?style=flat-square" alt="技能" height="18"> **2026-11-01** · 新增技能文档 [`kernel-utilization-analysis`](skills/kernel-utilization-analysis)：SM 占用、受启动开销限制的内核、实际带宽与峰值之比成为标准的性能分析步骤（[#8](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/8)）。
+- <img src="https://img.shields.io/badge/技能-8C0000?style=flat-square" alt="技能" height="18"> **2026-11-01** · 新增技能文档 [`kernel-utilization-analysis`](skills/kernel-utilization-analysis)：SM 占用、受启动开销限制的内核、实际带宽与峰值之比成为标准的性能分析步骤（[#8](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/8)）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：ProteinMPNN 训练加速 **2.25×**，第一个 AI for Science 案例。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)**，来自 [@2018cx](https://github.com/2018cx)：MiniMax-H3 LoRA 微调加速 **1.86×**。
-- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-30** · 大模型支持：数值记录器逐步释放张量，沙箱可把共享路径设为只读，并支持后台运行（[#6](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/6)）。
+- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-30** · 大模型支持：数值记录器逐步释放张量，沙箱可把共享路径设为只读，并支持后台运行（[#6](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/6)）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-29** · **[Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)** 和 **[Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec)**，来自 [@Bool1020](https://github.com/Bool1020)。案例提交向所有人开放，见[贡献案例](#贡献案例)。
 
 <details>
 <summary>更早</summary>
 
-- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-28** · 快速开始把整个流程交给编程 agent：粘贴一段话即可，无需填写任何内容（[#4](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/pull/4)）。
+- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-10-28** · 快速开始把整个流程交给编程 agent：粘贴一段话即可，无需填写任何内容（[#4](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/4)）。
 - <img src="https://img.shields.io/badge/发布-6250D6?style=flat-square" alt="发布" height="18"> **2026-10-19** · ResearchBoost-Agent 开源。
 
 </details>
@@ -144,7 +144,7 @@
 在 Linux GPU 主机上打开 Codex 或 Claude Code（在你的训练仓库里，或者一个空文件夹里都行），粘贴：
 
 ```text
-用 ResearchBoost-Agent（https://github.com/AI4AI-for-Anything/ResearchBoost-Agent）加速我的训练。
+用 ResearchBoost-Agent（https://github.com/DAGroup-PKU/ResearchBoost-Agent）加速我的训练。
 把它克隆到我的仓库之外，从 goal/templates/FORMULATOR_BRIEF.md 第 0.5 节开始执行。
 ```
 
@@ -156,7 +156,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 <summary>复现本仓库中的任务</summary>
 
 ```text
-用 ResearchBoost-Agent（https://github.com/AI4AI-for-Anything/ResearchBoost-Agent）复现它的任务 tasks/dmd2。
+用 ResearchBoost-Agent（https://github.com/DAGroup-PKU/ResearchBoost-Agent）复现它的任务 tasks/dmd2。
 克隆它，按 docs/run-a-task.md 执行；用哪些 GPU、在哪个工作目录，先查看主机情况再列出选项问我。
 ```
 
@@ -190,7 +190,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 <img src="docs/assets/readme/contribute-zh.png" alt="贡献案例四步：在自己的代码上运行快速开始，按模板提交 case，我们对照评测审核，PR 合并后结果加入已有结果，你成为 contributor" width="100%">
 
 1. 在你自己的训练代码上跑一遍[快速开始](#快速开始)。
-2. 如果加速比不错，或者优化过程有值得分享的轨迹，按 [case 提交模板](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/issues/new?template=case-submission.yml)开一个 issue（表单为英文）。
+2. 如果加速比不错，或者优化过程有值得分享的轨迹，按 [case 提交模板](https://github.com/DAGroup-PKU/ResearchBoost-Agent/issues/new?template=case-submission.yml)开一个 issue（表单为英文）。
 3. 审核通过后，提一个 pull request，把结果加进已有结果，链接到你自己的仓库。
 4. PR 合并后，你会出现在本仓库的 contributors 中。
 
