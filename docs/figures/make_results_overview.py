@@ -38,6 +38,7 @@ PROJECTS = [
     ("DMD2", "img", 1.72, "1.72×", False, "stat"),
     ("LLM2Vec", "llm", 1.6009, "1.60×", False, "stat"),
     ("JiT", "img", 1.56, "1.56×", False, "stat"),
+    ("Protenix", "sci", 1.5524, "1.55×", False, "manual"),
     ("FermiNet", "sci", 1.252, "1.25×", False, "bitwise"),
     ("NanoChat", "llm", 1.0744, "1.07×", False, "stat"),
 ]
@@ -69,7 +70,7 @@ TEXT = {
         "title": "Speedup over each project's own baseline",
         "sub": "{n} projects · {d} research domains · higher is faster",
         "cols": ("#", "Project", "Speedup", "Validation"),
-        "valid": {"bitwise": "Bitwise", "stat": "Statistical", "task": "Task metric", "explore": "Exploratory"},
+        "valid": {"bitwise": "Bitwise", "stat": "Statistical", "task": "Task metric", "explore": "Exploratory", "manual": "Manual review"},
         "est": "est.",
         "baseline": "1× baseline",
         "foot": "Hatched: extrapolated estimate · LLM2Vec: SimCSE stage (MNTP 1.29×) · details in docs/results",
@@ -83,7 +84,7 @@ TEXT = {
         "title": "加速比（均相对各项目自身的基线）",
         "sub": "{n} 个项目 · {d} 个研究领域 · 越长越快",
         "cols": ("#", "项目", "加速比", "验证方式"),
-        "valid": {"bitwise": "逐位一致", "stat": "统计等价", "task": "任务指标", "explore": "探索性"},
+        "valid": {"bitwise": "逐位一致", "stat": "统计等价", "task": "任务指标", "explore": "探索性", "manual": "人工复核"},
         "est": "估计",
         "baseline": "1× 基线",
         "foot": "斜纹：外推估计值 · LLM2Vec：SimCSE 阶段（MNTP 为 1.29×） · 详见 docs/results",
@@ -174,7 +175,8 @@ def leaderboard(lang):
     a(f'<line x1="{sx(1):.1f}" y1="{TOP - 6}" x2="{sx(1):.1f}" y2="{bottom}" stroke="{ACCENT}" stroke-width="1" stroke-dasharray="3 3"/>')
     a(f'<text x="{sx(1) + 5:.1f}" y="{TOP - 14}" class="tick" fill="{ACCENT}" style="fill:{ACCENT}">{t["baseline"]}</text>')
     chip_style = {"bitwise": ("#FBEAEA", "#E7C2C2", ACCENT), "stat": ("#F3F0F0", "#E4DCDC", INK2),
-                  "task": ("#EEF4FA", "#D3E2F0", "#2F5F8A"), "explore": ("#FFFFFF", "#D9CFCF", MUTED)}
+                  "task": ("#EEF4FA", "#D3E2F0", "#2F5F8A"), "explore": ("#FFFFFF", "#D9CFCF", MUTED),
+                  "manual": ("#F7F0FA", "#E2D2EA", "#6250D6")}
     for i, (name, d, v, label, est, val) in enumerate(PROJECTS):
         cy = TOP + i * ROW_H + ROW_H / 2
         color = DOMAINS[d][0]
