@@ -21,12 +21,13 @@ DOMAINS = {
     "sci": ("#e87ba4", "AI for Science", "AI for Science"),
 }
 
-# (name, domain, speedup that sets the bar length, label, extrapolated estimate?, validation)
+# (name, domain, speedup that sets the bar length (a (low, high) pair for a range), label, extrapolated estimate?, validation)
 PROJECTS = [
     ("Motus", "emb", 9.59, "9.59×", False, "bitwise"),
     ("RAE", "img", 5.32, "5.32×", False, "stat"),
     ("RoboTwin", "emb", 4.38, "4.38×", True, "bitwise"),
     ("FastWAM", "emb", 3.46, "3.46×", False, "task"),
+    ("OpenWAM", "emb", (2.54, 2.77), "2.54–2.77×", False, "task"),
     ("LLaVA", "mllm", 2.39, "2.39×", False, "stat"),
     ("ProteinMPNN", "sci", 2.25, "2.25×", False, "explore"),
     ("YOCO", "llm", 2.12, "2.12×", False, "stat"),
@@ -180,7 +181,11 @@ def leaderboard(lang):
         a(f'<text x="{X_RANK}" y="{cy + 4.5:.1f}" class="rank" text-anchor="middle">{i + 1}</text>')
         a(f'<circle cx="{X_NAME + 5}" cy="{cy:.1f}" r="5" fill="{color}"/>')
         a(f'<text x="{X_NAME + 18}" y="{cy + 5:.1f}" class="name">{name}</text>')
-        a(f'<path d="{bar_path(X0, cy - BAR_H / 2, sx(v), BAR_H)}" fill="{"url(#h-" + d + ")" if est else color}"/>')
+        lo, hi = v if isinstance(v, tuple) else (v, v)
+        if hi > lo:
+            # a range: the solid bar ends at the low end, a lighter segment runs to the high end
+            a(f'<path d="{bar_path(X0, cy - BAR_H / 2, sx(hi), BAR_H)}" fill="{color}" fill-opacity=".35"/>')
+        a(f'<path d="{bar_path(X0, cy - BAR_H / 2, sx(lo), BAR_H, 0 if hi > lo else 4)}" fill="{"url(#h-" + d + ")" if est else color}"/>')
         a(f'<text x="{X_VAL}" y="{cy + 5:.1f}" class="val" text-anchor="end">{label}{"*" if est else ""}</text>')
         fill, stroke, ink = chip_style[val]
         chip = t["valid"][val]

@@ -51,6 +51,8 @@ def main(argv=None):
     tc.add_argument('--frozen', required=True)
     tc.add_argument('--cand', required=True)
     tc.add_argument('--final', action='store_true', help='last seed batch: an endpoint beyond delta counts as deviating')
+    tc.add_argument('--sigma-k', type=float,
+                    help='gate 3: per endpoint |paired difference| <= k x reference sigma (bound), no test')
     tc.add_argument('--out', required=True)
     o = sub.add_parser('loo', help='leave-one-out: each legitimate variant must PASS gates calibrated on the others')
     o.add_argument('--ref', required=True)
@@ -99,12 +101,13 @@ def main(argv=None):
         print(json.dumps({n: round(e['delta'], 6) for n, e in fr['endpoints'].items()}))
         return 0
     if a.cmd == 'traj-compare':
-        from .trajectory import compare as traj_compare
-        rep = traj_compare(json.loads(Path(a.frozen).read_text()), a.cand, final=a.final)
+        from .trajectory import bound as traj_bound, compare as traj_compare
+        frozen = json.loads(Path(a.frozen).read_text())
+        rep = traj_bound(frozen, a.cand, k=a.sigma_k) if a.sigma_k else traj_compare(frozen, a.cand, final=a.final)
         Path(a.out).write_text(json.dumps(rep, indent=1) + '\n')
         print(json.dumps({'verdict': rep['verdict'], 'seeds': rep['seeds'],
                           'endpoints': {n: e['state'] for n, e in rep['endpoints'].items()}}))
-        return {'equivalent': 0, 'different': 2, 'inconclusive': 4}.get(rep['verdict'], 3)
+        return {'equivalent': 0, 'within': 0, 'different': 2, 'beyond': 2, 'inconclusive': 4}.get(rep['verdict'], 3)
     if a.cmd == 'loo':
         from .judge import leave_one_out
         res = leave_one_out(a.ref, a.variants, golden=a.golden)
