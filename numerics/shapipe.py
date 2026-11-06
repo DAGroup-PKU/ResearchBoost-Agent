@@ -74,7 +74,7 @@ class ShaPipeline:
         nbytes = flat.numel() * flat.element_size()
         self._drain(nbytes)
         if flat.is_cuda:
-            host = torch.empty(flat.shape, dtype=flat.dtype, pin_memory=True)
+            host = torch.empty(flat.shape, dtype=flat.dtype, device="cpu", pin_memory=True)  # explicit: the training code may set_default_device("cuda") (R3 does)
             host.copy_(flat, non_blocking=True)
             event = torch.cuda.Event()
             event.record()

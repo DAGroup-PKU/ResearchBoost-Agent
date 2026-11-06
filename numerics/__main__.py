@@ -107,7 +107,7 @@ def main(argv=None):
         Path(a.out).write_text(json.dumps(rep, indent=1) + '\n')
         print(json.dumps({'verdict': rep['verdict'], 'seeds': rep['seeds'],
                           'endpoints': {n: e['state'] for n, e in rep['endpoints'].items()}}))
-        return {'equivalent': 0, 'different': 2, 'inconclusive': 4}.get(rep['verdict'], 3)
+        return {'equivalent': 0, 'within': 0, 'different': 2, 'beyond': 2, 'inconclusive': 4}.get(rep['verdict'], 3)
     if a.cmd == 'loo':
         from .judge import leave_one_out
         res = leave_one_out(a.ref, a.variants, golden=a.golden)

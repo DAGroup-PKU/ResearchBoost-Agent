@@ -12,18 +12,33 @@ Exact per step: phase, RNG fingerprints before/after, call counters, adapter inv
 and (multi-rank) which tensors are identical across ranks.
 """
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from contextlib import nullcontext
 import fnmatch
 import hashlib
 import json
+import os
 from pathlib import Path
 import random
+import sys
+import time
 
 import torch
 from torch.utils._python_dispatch import TorchDispatchMode
 
 FWD_KINDS = ('loss', 'out')
 PARAM_KINDS = ('grad', 'delta', 'optim', 'ema', 'buffer')
+
+
+_T0 = time.perf_counter()
+
+
+def phase_mark(what, case_name):
+    """One log line per phase of a record run (process start -> setup -> step -> fingerprint -> written), read by the
+    bench to break a record's cost down; nothing else depends on it."""
+    rank = os.environ.get('RANK', '0')
+    print(f'[numerics-phase] rank={rank} case={case_name} phase={what} t={time.perf_counter() - _T0:.2f}',
+          file=sys.stderr, flush=True)
 
 
 try:                                       # tensor_sha: the synchronous reference formulation
@@ -34,14 +49,6 @@ except ImportError:                        # record.py loaded on its own (tests)
     _shapipe = _importlib_util.module_from_spec(_spec)
     _spec.loader.exec_module(_shapipe)
     ShaPipeline, tensor_sha = _shapipe.ShaPipeline, _shapipe.tensor_sha
-
-
-def resolve_shas(described):
-    """Replace the ShaPipeline futures in describe() results by their digests (in place); returns described."""
-    for d in described.values():
-        if hasattr(d.get('sha256'), 'result'):
-            d['sha256'] = d['sha256'].result()
-    return described
 
 
 def rng_fingerprint():
@@ -74,19 +81,78 @@ def _mix(x):
 def countsketch(t, k, name):
     """Linear k-dim CountSketch of t. Bucket and sign of element i come from an integer hash of
     (name, numel, i), so reference, candidate and fp64 runs share the sketch on any device.
-    ||S(a) - S(b)|| estimates ||a - b|| with relative std ~ sqrt(2/k)."""
+    ||S(a) - S(b)|| estimates ||a - b|| with relative std ~ sqrt(2/k).
+    The arithmetic is _mix's, element by element, on cache-sized chunks with preallocated buffers and in-place
+    integer ops (fresh full-size temporaries per op made this pass memory bound); index_add_ accumulates in index
+    order on the CPU at any chunk size, so the sketch is bitwise the one of the plain formulation."""
     flat = t.detach().reshape(-1)
     n = flat.numel()
     salt = int(hashlib.sha256(f'{name}|{n}'.encode()).hexdigest()[:15], 16) & _MASK63
-    out = torch.zeros(k, dtype=torch.float64, device=flat.device)
-    chunk = 1 << 24
-    for start in range(0, n, chunk):
-        m = min(chunk, n - start)
-        h = _mix(torch.arange(start, start + m, dtype=torch.int64, device=flat.device) ^ salt)
-        idx = (h & _MASK63) % k
-        sign = ((h >> 7) & 1).to(torch.float64) * 2 - 1
-        out.index_add_(0, idx, flat[start:start + m].double() * sign)
+    dev = flat.device
+    out = torch.zeros(k, dtype=torch.float64, device=dev)
+    c = max(1, min(_SKETCH_CHUNK, n))
+    base = torch.arange(c, dtype=torch.int64, device=dev)
+    h, tmp = torch.empty(c, dtype=torch.int64, device=dev), torch.empty(c, dtype=torch.int64, device=dev)
+    vals, sign = torch.empty(c, dtype=torch.float64, device=dev), torch.empty(c, dtype=torch.float64, device=dev)
+    for start in range(0, n, c):
+        m = min(c, n - start)
+        hv, tv, vv, sv = h[:m], tmp[:m], vals[:m], sign[:m]
+        torch.add(base[:m], start, out=hv)                      # arange(start, start + m)
+        hv.bitwise_xor_(salt)
+        for shift, mult in _MIX_STEPS:                          # _mix, in place
+            torch.bitwise_right_shift(hv, shift, out=tv)
+            hv.bitwise_xor_(tv)
+            if mult is not None:
+                hv.mul_(mult)
+        torch.bitwise_right_shift(hv, 7, out=tv)                # sign = ((h >> 7) & 1) * 2 - 1
+        tv.bitwise_and_(1)
+        sv.copy_(tv).mul_(2).sub_(1)
+        hv.bitwise_and_(_MASK63).remainder_(k)                  # idx = (h & _MASK63) % k
+        vv.copy_(flat[start:start + m]).mul_(sv)
+        out.index_add_(0, hv, vv)
     return out.cpu()
+
+
+_SKETCH_CHUNK = 1 << 18
+_MIX_STEPS = ((31, 0x7FB5D329728EA185), (27, 0x01C3F7A2F84F3A35), (33, None))
+
+
+def thread_budget():
+    """CPU threads this process may use: PyTorch's intra-op thread count, which a task bench's CPU binding
+    (if it has one, before the training code starts) sets to this rank's physical cores. Dividing the
+    affinity by the local ranks again would count the share twice: the affinity already is this rank's share."""
+    return max(1, torch.get_num_threads())
+
+
+def fingerprint(mapped, sketch_dim, pool=4):
+    """(described, stored) of the recorded tensors: describe() of each, sorted by name, with 'stored'; what is kept of
+    each, in mapped's order: its CountSketch above sketch_dim elements, else the tensor. The same values as one
+    tensor after the other; the tensors go through a thread pool, and torch's intra-op threads are set so that
+    the pool stays within this process's CPU share while it runs (oversubscribed threads make countsketch's
+    integer passes several times slower)."""
+    budget = thread_budget()
+    workers = max(1, min(pool, budget, len(mapped)))
+
+    def one(item):
+        n, t = item
+        d = describe(n.split('/', 1)[0], t, sha=shas[n])
+        sketch = bool(sketch_dim) and t.is_floating_point() and t.numel() > sketch_dim
+        d['stored'] = 'sketch' if sketch else 'full'
+        return n, d, countsketch(t, sketch_dim, n) if sketch else t.cpu()
+
+    previous = torch.get_num_threads()
+    torch.set_num_threads(max(1, budget // workers))
+    try:
+        # The digests first, through the pipeline (asynchronous pinned copies, hashed in its own threads), so they
+        # overlap describe's norms and the sketches below.
+        with ShaPipeline() as pipe:
+            shas = {n: pipe.submit(t) for n, t in mapped.items()}
+            with ThreadPoolExecutor(workers) as ex:
+                done = {n: (d, s) for n, d, s in ex.map(one, list(mapped.items()))}
+            described = resolve_shas({n: done[n][0] for n in sorted(mapped)})
+    finally:
+        torch.set_num_threads(previous)
+    return described, {n: done[n][1] for n in mapped}
 
 
 def math_mode():
@@ -148,6 +214,14 @@ def describe(kind, t, sha=None):
             'finite': bool(torch.isfinite(t).all()) if floating else True}
 
 
+def resolve_shas(described):
+    """Replace the ShaPipeline futures in describe() results by their digests (in place); returns described."""
+    for d in described.values():
+        if hasattr(d.get('sha256'), 'result'):
+            d['sha256'] = d['sha256'].result()
+    return described
+
+
 # A traced step runs under a TorchDispatchMode, and torch.compile'd regions fall back to eager inside it: the
 # traced step does not exercise compiled code, so it cannot support a bitwise (N0) claim (see judge.compare).
 class DtypeTrace(TorchDispatchMode):
@@ -205,11 +279,13 @@ class Recorder:
         if len(phases) != steps:
             raise ValueError(f'case {name}: {len(phases)} phases for {steps} steps')
         seed_everything(case.get('seed', 0))
+        phase_mark('start', name)
         a.configure(case)
         a.build(case.get('seed', 0), golden=self.golden)
         if case.get('state'):
             a.load_state(case['state'])
         rank, world = dist_info()
+        phase_mark('built', name)
         if self.losses_only:
             return self._trajectory(a, case, name, steps, phases, rank, world)
         objs = a.objects()
@@ -286,6 +362,7 @@ class Recorder:
                     losses = a.step(i, batch)
                 if torch.cuda.is_available() and torch.cuda.is_initialized():
                     torch.cuda.synchronize()
+                phase_mark(f'step{i}', name)
                 if trace is not None:
                     manifest['dtype_ops'] = dict(sorted(trace.counts.items()))
                 tensors = dict(pending)
@@ -307,15 +384,9 @@ class Recorder:
                 for tname, tv in tensors.items():
                     for cname, cv in a.canonical(tname.split('/', 1)[0], tname, tv).items():
                         mapped[cname] = cv.detach()
-                with ShaPipeline() as pipe:      # digests overlap the norms (asynchronous pinned copies, threads)
-                    shas = {n: pipe.submit(t) for n, t in mapped.items()}
-                    described = resolve_shas({n: describe(n.split('/', 1)[0], t, sha=shas[n])
-                                              for n, t in sorted(mapped.items())})
-                stored = {}
-                for n, t in mapped.items():
-                    sketch = self.sketch_dim and t.is_floating_point() and t.numel() > self.sketch_dim
-                    stored[n] = countsketch(t, self.sketch_dim, n) if sketch else t.cpu()
-                    described[n]['stored'] = 'sketch' if sketch else 'full'
+                phase_mark(f'collected{i}', name)
+                described, stored = fingerprint(mapped, self.sketch_dim)
+                phase_mark(f'fingerprinted{i}', name)
                 entry = {'step': i, 'phase': phases[i], 'rng_before': rng_before, 'rng_after': rng_fingerprint(),
                          'counters': {k: v - counted.get(k, 0) for k, v in sorted(counters.items())
                                       if v - counted.get(k, 0) and not k.startswith('out_calls/')},
@@ -328,6 +399,7 @@ class Recorder:
                     entry['xrank_equal'] = {n: len({g.get(n) for g in gathered}) == 1 for n in shas}
                 torch.save(stored, self.out / f'{name}.r{rank}.s{i}.pt')
                 manifest['steps'].append(entry)
+                phase_mark(f'written{i}', name)
                 # The step's clones (gradients, updates, optimizer state, EMA) live on the device; drop them before
                 # the next step runs, which may need that memory (a large model's optimizer state alone can be
                 # tens of GB per GPU).
