@@ -54,7 +54,7 @@ T = {
                     ("quickstart", "rocket", "Quick start", "light")],
         "cards": [
             ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across six domains",
-             "16 projects, from LLM pretraining to robot policies and protein design, each measured against its own baseline.",
+             "17 projects, from LLM pretraining to robot policies and protein design, each measured against its own baseline.",
              "See all results"),
             ("prompt", "terminal", "02 · ONE PROMPT", "Paste one prompt,<br>get a verified speedup",
              "Open Codex or Claude Code on a GPU host. The agent finds the code, asks only what is yours to decide, and does the rest.",
@@ -128,7 +128,7 @@ T = {
                     ("quickstart", "rocket", "快速开始", "light")],
         "cards": [
             ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖六个领域",
-             "16 个项目，从大模型预训练到机器人策略和蛋白质设计，每个都与自身的基线对比。",
+             "17 个项目，从大模型预训练到机器人策略和蛋白质设计，<br>每个都与自身的基线对比。",
              "查看全部结果"),
             ("prompt", "terminal", "02 · 一段提示词", "粘贴一段话，<br>拿到验证过的加速",
              "在 GPU 主机上打开 Codex 或 Claude Code。agent 自己找到代码，只问需要你决定的事，其余全部自己完成。",

@@ -38,6 +38,7 @@ PROJECTS = [
     ("DMD2", "img", 1.72, "1.72×", False, "stat"),
     ("LLM2Vec", "llm", 1.6009, "1.60×", False, "stat"),
     ("JiT", "img", 1.56, "1.56×", False, "stat"),
+    ("FermiNet", "sci", 1.252, "1.25×", False, "bitwise"),
     ("NanoChat", "llm", 1.0744, "1.07×", False, "stat"),
 ]
 
