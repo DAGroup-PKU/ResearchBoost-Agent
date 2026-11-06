@@ -2,7 +2,7 @@
 
 [← All results](README.md) · [ResearchBoost-Agent](../../README.md#results)
 
-3 projects · [RoboTwin](#faster-robotwin) · [Motus](#faster-motus) · [FastWAM](#faster-fastwam)
+4 projects · [RoboTwin](#faster-robotwin) · [Motus](#faster-motus) · [FastWAM](#faster-fastwam) · [OpenWAM](#openwam)
 
 ## Faster-RoboTwin
 
@@ -48,3 +48,18 @@ Validation covers all eight ranks across two epoch boundaries, including losses,
 LIBERO overall success: 96.90% for Faster-FastWAM and 97.15% for the released checkpoint.
 
 [Code & project README ↗](https://github.com/AI4AI-for-Anything/Faster-FastWAM) · [Detailed evidence ↗](https://github.com/AI4AI-for-Anything/Faster-FastWAM/blob/main/docs/training.md)
+
+## OpenWAM
+
+**OpenWAM-α fine-tuning · seven SFT benchmarks** · by [@GONGSHUKAI](https://github.com/GONGSHUKAI), merged upstream in [OpenWAM#58](https://github.com/OpenWAM-Official/OpenWAM/pull/58)
+
+| Item | Result |
+|---|---|
+| Speedup | **2.54–2.77×** |
+| Hardware | 4 × H200 |
+| Measurement scope | Warmed-up training throughput on seven SFT benchmarks, against the original `main` |
+| Validation | LIBERO evaluation reproduced |
+
+The original `main` recomputed every layer (all-layer gradient checkpointing); the measured configuration used no checkpointing and no 80 GiB memory cap, so the speedups include the recomputation it avoids. Each change was kept only if training stayed bitwise identical to `main` or within its seed-to-seed variation. LIBERO success after a full Sim-LIBERO fine-tuning run with the speed preset: 99.05%, against 99.2% for the released OpenWAM-Alpha-Sim-LIBERO checkpoint under the same evaluation. OpenWAM now loads the speed preset by default and keeps all-layer checkpointing on by default.
+
+[Code & project README ↗](https://github.com/OpenWAM-Official/OpenWAM#training-acceleration) · [Pull request & review ↗](https://github.com/OpenWAM-Official/OpenWAM/pull/58)

@@ -30,6 +30,7 @@
 ## 动态
 
 - <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-11-05** · 轻量化 check：统计检查改为单种子 3σ，agent 自己的 `check` 只计时一次候选版本、与固定的基线计时比较，“基线 → 候选版本 → 基线”计时留给最终评测。每次 check 更快，一次运行中更多时间用于优化（[check 模式](docs/judge.md#check-modes)）。
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-05** · **[OpenWAM](https://github.com/OpenWAM-Official/OpenWAM)** 已把 RBA 的训练加速合入上游（[OpenWAM#58](https://github.com/OpenWAM-Official/OpenWAM/pull/58)，来自 [@GONGSHUKAI](https://github.com/GONGSHUKAI)）：OpenWAM-α 微调在 7 个 SFT 基准上加速 **2.54–2.77×**。
 - <img src="https://img.shields.io/badge/技能-8C0000?style=flat-square" alt="技能" height="18"> **2026-11-01** · 新增技能文档 [`kernel-utilization-analysis`](skills/kernel-utilization-analysis)：SM 占用、受启动开销限制的内核、实际带宽与峰值之比成为标准的性能分析步骤（[#8](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/8)）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：ProteinMPNN 训练加速 **2.25×**，第一个 AI for Science 案例。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)**，来自 [@2018cx](https://github.com/2018cx)：MiniMax-H3 LoRA 微调加速 **1.86×**。
@@ -46,7 +47,7 @@
 
 ## 亮点
 
-<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖六个研究领域：15 个项目，每个都与自身的基线对比。" width="100%"></a>
+<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖六个研究领域：16 个项目，每个都与自身的基线对比。" width="100%"></a>
 
 <a href="#快速开始"><img src="docs/assets/readme/card-prompt-zh.png" alt="在 Codex 或 Claude Code 里粘贴一段话；agent 自己找到代码，只问需要你决定的事，其余全部自己完成。" width="100%"></a>
 
@@ -56,7 +57,7 @@
 
 ## 已有结果
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="15 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="16 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
 
 <img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
 
@@ -114,13 +115,14 @@
 </details>
 
 <details>
-<summary><strong>具身智能</strong> · 3 个项目 — RoboTwin, Motus, FastWAM</summary>
+<summary><strong>具身智能</strong> · 4 个项目 — RoboTwin, Motus, FastWAM, OpenWAM</summary>
 
 | 项目 | 工作负载 | 加速比 |
 |---|---|---:|
 | [Faster-RoboTwin](https://github.com/AI4AI-for-Anything/Faster-RoboTwin) | RoboTwin 2.0 π0.5 策略评测 | **4.38×**（估算） |
 | [Faster-Motus](https://github.com/AI4AI-for-Anything/Faster-Motus) | RoboTwin 2.0 微调 | **9.59×** |
 | [Faster-FastWAM](https://github.com/AI4AI-for-Anything/Faster-FastWAM) | FastWAM-LIBERO 训练 | **3.46×** |
+| [OpenWAM](https://github.com/OpenWAM-Official/OpenWAM#training-acceleration)（[@GONGSHUKAI](https://github.com/GONGSHUKAI) 贡献） | OpenWAM-α 微调 · 7 个 SFT 基准 · 已合入上游 | **2.54–2.77×** |
 
 [实验设置与验证记录（英文） →](docs/results/embodied-ai.md)
 
@@ -205,7 +207,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 | 路径 | 内容 |
 |---|---|
-| [`docs/results/`](docs/results) | 15 个项目的分类报告、测量范围与验证记录（英文） |
+| [`docs/results/`](docs/results) | 16 个项目的分类报告、测量范围与验证记录（英文） |
 | [`docs/`](docs) | 英文文档：[方法](docs/methodology.md)、[评测](docs/judge.md)、[goal 模式](docs/goal-mode.md)、[任务运行指南](docs/run-a-task.md)、[四个任务的经验](docs/lessons.md) |
 | [`goal/`](goal) | 在 claw-orchestrator 上运行 Codex 或 Claude Code `/goal` 会话的工具：建任务目录的脚本、沙箱、两种引擎的模型访问配置、启动 / 查看状态 / 发送提醒 / 恢复运行的脚本和最终评测、监控脚本，以及任务准备和监督 agent 的说明 |
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |
