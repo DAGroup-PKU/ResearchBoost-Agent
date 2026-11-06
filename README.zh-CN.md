@@ -29,6 +29,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-11-05** · 轻量化 check：统计检查改为单种子 3σ，agent 自己的 `check` 只计时一次候选版本、与固定的基线计时比较，“基线 → 候选版本 → 基线”计时留给最终评测。每次 check 更快，一次运行中更多时间用于优化（[check 模式](docs/judge.md#check-modes)）。
 - <img src="https://img.shields.io/badge/技能-8C0000?style=flat-square" alt="技能" height="18"> **2026-11-01** · 新增技能文档 [`kernel-utilization-analysis`](skills/kernel-utilization-analysis)：SM 占用、受启动开销限制的内核、实际带宽与峰值之比成为标准的性能分析步骤（[#8](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/8)）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：ProteinMPNN 训练加速 **2.25×**，第一个 AI for Science 案例。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)**，来自 [@2018cx](https://github.com/2018cx)：MiniMax-H3 LoRA 微调加速 **1.86×**。

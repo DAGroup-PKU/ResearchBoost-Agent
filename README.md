@@ -29,6 +29,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-11-05** · Lite check: the statistical gate now runs on one seed within 3σ, and the agent's `check` times the candidate once against the frozen baseline, leaving baseline → candidate → baseline timing to the final check. Each check takes less time, so more of a run goes to optimizing ([check modes](docs/judge.md#check-modes)).
 - <img src="https://img.shields.io/badge/SKILL-8C0000?style=flat-square" alt="SKILL" height="18"> **2026-11-01** · New skill card [`kernel-utilization-analysis`](skills/kernel-utilization-analysis): SM coverage, launch-bound kernels and bandwidth against peak become a standard profiling step ([#8](https://github.com/DAGroup-PKU/ResearchBoost-Agent/pull/8)).
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-01** · **[Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)** by [@micky-li-hd](https://github.com/micky-li-hd): **2.25×** on ProteinMPNN training, our first AI for Science case.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-10-30** · **[Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)** by [@2018cx](https://github.com/2018cx): **1.86×** on MiniMax-H3 LoRA fine-tuning.
