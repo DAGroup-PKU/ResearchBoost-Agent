@@ -29,6 +29,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Original 3DGS and PIDG](docs/results/3d-reconstruction.md)** by [@HaoqinHong](https://github.com/HaoqinHong): **1.13×** across three complete 3DGS pipelines and **4.17×** for the PIDG optical-flow module group on one A800.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)** by [@micky-li-hd](https://github.com/micky-li-hd): **1.55×** on Protenix 2.0.0 training over a fixed 128-update workload, validated by manual review.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)** by [@sen-ye](https://github.com/sen-ye): **1.25×** on FermiNet all-electron training for Fe, Kr, Cd and Xe.
 - <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-11-05** · Lite check: the statistical gate now runs on one seed within 3σ, and the agent's `check` times the candidate once against the frozen baseline, leaving baseline → candidate → baseline timing to the final check. Each check takes less time, so more of a run goes to optimizing ([check modes](docs/judge.md#check-modes)).
@@ -49,7 +50,7 @@
 
 ## Highlights
 
-<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across six research domains: 18 projects, each measured against its own baseline." width="100%"></a>
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 20 projects, each measured against its own baseline." width="100%"></a>
 
 <a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
 
@@ -59,7 +60,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 18 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.07× (NanoChat), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 20 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.07× (NanoChat), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -144,6 +145,18 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 
+<details>
+<summary><strong>3D Reconstruction</strong> · 2 projects — Original 3DGS, PIDG</summary>
+
+| Project | Workload | Speedup |
+|---|---|---:|
+| [Original 3DGS](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost) by [@HaoqinHong](https://github.com/HaoqinHong) | Mip-NeRF360 · bonsai / bicycle / garden · complete 30,000-step pipelines | **1.13×** total; **1.07–1.29×** per scene |
+| [PIDG](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost) by [@HaoqinHong](https://github.com/HaoqinHong) | dry_ice · optical-flow module group | **4.17×** |
+
+[Measurement setup, image quality & validation →](docs/results/3d-reconstruction.md)
+
+</details>
+
 [Full results index →](docs/results/README.md) · [Interactive results ↗](https://ai4ai-for-anything.github.io/#research) · [Add your case →](#contribute-a-case)
 
 ## Quick start
@@ -211,7 +224,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 
 | Path | Contents |
 |---|---|
-| [`docs/results/`](docs/results) | Results from 18 projects, grouped by domain, with measurement scope and validation records |
+| [`docs/results/`](docs/results) | Results from 20 projects, grouped by domain, with measurement scope and validation records |
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |

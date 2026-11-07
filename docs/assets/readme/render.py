@@ -42,6 +42,7 @@ DOMAINS = [
     ("sci", "#e87ba4", "AI for Science", "AI for Science", "ProteinMPNN", "2.25×"),
     ("llm", "#2a78d6", "LLM", "语言模型", "YOCO", "2.12×"),
     ("vid", "#eda100", "Video gen", "视频生成", "Self-Forcing", "2.08×"),
+    ("3d", "#333333", "3D recon", "三维重建", "3DGS · 30k", "1.13×"),
 ]
 
 T = {
@@ -53,8 +54,8 @@ T = {
         "buttons": [("blog", "book", "Read the blog", "crimson"), ("results", "chart", "Explore results", "ink"),
                     ("quickstart", "rocket", "Quick start", "light")],
         "cards": [
-            ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across six domains",
-             "18 projects, from LLM pretraining to robot policies and protein design, each measured against its own baseline.",
+            ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across seven domains",
+             "20 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
              "See all results"),
             ("prompt", "terminal", "02 · ONE PROMPT", "Paste one prompt,<br>get a verified speedup",
              "Open Codex or Claude Code on a GPU host. The agent finds the code, asks only what is yours to decide, and does the rest.",
@@ -66,7 +67,7 @@ T = {
              "One /goal session in a sandbox attacks one hotspot per round, guided by nine skill cards and supervised from outside.",
              "How a run works"),
         ],
-        "domain_top": "top speedup",
+        "domain_top": "featured speedup",
         "prompt_lines": ["Use ResearchBoost-Agent to speed up my training.",
                          "Clone it outside my repository and follow",
                          "goal/templates/FORMULATOR_BRIEF.md from section 0.5."],
@@ -127,8 +128,8 @@ T = {
         "buttons": [("blog", "book", "阅读项目 Blog", "crimson"), ("results", "chart", "查看全部结果", "ink"),
                     ("quickstart", "rocket", "快速开始", "light")],
         "cards": [
-            ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖六个领域",
-             "18 个项目，从大模型预训练到机器人策略和蛋白质设计，<br>每个都与自身的基线对比。",
+            ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖七个领域",
+             "20 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",
              "查看全部结果"),
             ("prompt", "terminal", "02 · 一段提示词", "粘贴一段话，<br>拿到验证过的加速",
              "在 GPU 主机上打开 Codex 或 Claude Code。agent 自己找到代码，只问需要你决定的事，其余全部自己完成。",
@@ -140,7 +141,7 @@ T = {
              "一个 /goal 会话在沙箱里每轮攻克一个瓶颈，参考 9 份技能文档，由外部监督。",
              "运行流程"),
         ],
-        "domain_top": "最高加速",
+        "domain_top": "代表性加速比",
         "prompt_lines": ["用 ResearchBoost-Agent 加速我的训练。",
                          "把它克隆到我的仓库之外，从",
                          "goal/templates/FORMULATOR_BRIEF.md 第 0.5 节开始执行。"],
@@ -281,13 +282,13 @@ h2 {{ font-size:39px; line-height:1.14; font-weight:800; letter-spacing:-.02em; 
 p {{ font-size:18px; line-height:1.55; color:var(--muted); }}
 .lk {{ margin-top:22px; font-size:17px; font-weight:700; color:var(--crimson); display:flex; align-items:center; gap:8px; }}
 .r {{ flex:1; height:318px; border-radius:20px; background:rgba(255,255,255,.75); border:1px solid var(--line);
-      box-shadow:0 6px 18px -12px rgba(90,30,30,.3); padding:22px 24px; position:relative; }}
+      box-shadow:0 6px 18px -12px rgba(90,30,30,.3); padding:22px 24px; position:relative; min-width:0; }}
 /* results */
-.grid {{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }}
-.tile {{ border-radius:14px; border:1px solid var(--line); background:#fff; padding:13px 14px 12px; }}
-.th {{ display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--muted); white-space:nowrap; }}
+.grid {{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }}
+.tile {{ border-radius:14px; border:1px solid var(--line); background:#fff; padding:13px 10px 12px; }}
+.th {{ display:flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:var(--muted); white-space:nowrap; }}
 .sw {{ width:12px; height:12px; border-radius:4px; flex:none; }}
-.big {{ font-size:34px; font-weight:800; letter-spacing:-.02em; margin-top:6px; }}
+.big {{ font-size:30px; font-weight:800; letter-spacing:-.02em; margin-top:6px; }}
 .pj {{ font-size:13.5px; color:var(--ink2); font-weight:600; }}
 .note {{ position:absolute; right:24px; bottom:12px; font-size:12px; color:var(--muted); letter-spacing:.06em; }}
 /* prompt */

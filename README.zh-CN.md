@@ -29,6 +29,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Original 3DGS 与 PIDG](docs/results/3d-reconstruction.md)**，来自 [@HaoqinHong](https://github.com/HaoqinHong)：单张 A800 上，三场景完整 3DGS 流程合计 **1.13×**，PIDG 光流模块组 **4.17×**。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：Protenix 2.0.0 训练在固定的 128 次更新上加速 **1.55×**，经人工复核验证。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)**，来自 [@sen-ye](https://github.com/sen-ye)：FermiNet 全电子训练（Fe / Kr / Cd / Xe）加速 **1.25×**。
 - <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-11-05** · 轻量化 check：统计检查改为单种子 3σ，agent 自己的 `check` 只计时一次候选版本、与固定的基线计时比较，“基线 → 候选版本 → 基线”计时留给最终评测。每次 check 更快，一次运行中更多时间用于优化（[check 模式](docs/judge.md#check-modes)）。
@@ -49,7 +50,7 @@
 
 ## 亮点
 
-<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖六个研究领域：18 个项目，每个都与自身的基线对比。" width="100%"></a>
+<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖七个研究领域：20 个项目，每个都与自身的基线对比。" width="100%"></a>
 
 <a href="#快速开始"><img src="docs/assets/readme/card-prompt-zh.png" alt="在 Codex 或 Claude Code 里粘贴一段话；agent 自己找到代码，只问需要你决定的事，其余全部自己完成。" width="100%"></a>
 
@@ -59,7 +60,7 @@
 
 ## 已有结果
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="18 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="20 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
 
 <img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
 
@@ -144,6 +145,18 @@
 </details>
 
 
+<details>
+<summary><strong>三维重建</strong> · 2 个项目 — Original 3DGS, PIDG</summary>
+
+| 项目 | 工作负载 | 加速比 |
+|---|---|---:|
+| [Original 3DGS](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost)（[@HaoqinHong](https://github.com/HaoqinHong) 贡献） | Mip-NeRF360 · bonsai / bicycle / garden · 完整 30000 步原生流程 | 合计 **1.13×**；分场景 **1.07–1.29×** |
+| [PIDG](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost)（[@HaoqinHong](https://github.com/HaoqinHong) 贡献） | dry_ice · 光流模块组 | **4.17×** |
+
+[实验设置、画质与验证记录（英文） →](docs/results/3d-reconstruction.md)
+
+</details>
+
 [完整结果索引（英文） →](docs/results/README.md) · [交互式官网 ↗](https://ai4ai-for-anything.github.io/#research) · [贡献你的结果 →](#贡献案例)
 
 ## 快速开始
@@ -211,7 +224,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 | 路径 | 内容 |
 |---|---|
-| [`docs/results/`](docs/results) | 18 个项目的分类报告、测量范围与验证记录（英文） |
+| [`docs/results/`](docs/results) | 20 个项目的分类报告、测量范围与验证记录（英文） |
 | [`docs/`](docs) | 英文文档：[方法](docs/methodology.md)、[评测](docs/judge.md)、[goal 模式](docs/goal-mode.md)、[任务运行指南](docs/run-a-task.md)、[四个任务的经验](docs/lessons.md) |
 | [`goal/`](goal) | 在 claw-orchestrator 上运行 Codex 或 Claude Code `/goal` 会话的工具：建任务目录的脚本、沙箱、两种引擎的模型访问配置、启动 / 查看状态 / 发送提醒 / 恢复运行的脚本和最终评测、监控脚本，以及任务准备和监督 agent 的说明 |
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |
