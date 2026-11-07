@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="818" viewBox="0 0 1000 818" role="img" aria-labelledby="t d">
 <title id="t">Speedup over each project's own baseline</title>
-<desc id="d">Motus (Embodied AI) 9.59×, Bitwise; RAE (Image generation) 5.32×, Statistical; RoboTwin (Embodied AI) 4.38× est., Bitwise; FastWAM (Embodied AI) 3.46×, Task metric; OpenWAM (Embodied AI) 2.54–2.77×, Task metric; LLaVA (MLLM) 2.39×, Statistical; ProteinMPNN (AI for Science) 2.25×, Exploratory; YOCO (LLM) 2.12×, Statistical; Self-Forcing (Video generation) 2.08×, Statistical; R3 (MLLM) 2.08×, Bitwise; MiniMax-H3 (Video generation) 1.86×, Statistical; BAGEL (MLLM) 1.82×, Statistical; DMD2 (Image generation) 1.72×, Statistical; LLM2Vec (LLM) 1.60×, Statistical; JiT (Image generation) 1.56×, Statistical; Protenix (AI for Science) 1.55×, Manual review; FermiNet (AI for Science) 1.25×, Bitwise; NanoChat (LLM) 1.07×, Statistical</desc>
+<desc id="d">Motus (Embodied AI) 9.59×, Bitwise; RAE (Image generation) 5.32×, Statistical; RoboTwin (Embodied AI) 4.38× est., Bitwise; FastWAM (Embodied AI) 3.46×, Task metric; OpenWAM (Embodied AI) 2.54–2.77×, Task metric, Community case; LLaVA (MLLM) 2.39×, Statistical; ProteinMPNN (AI for Science) 2.25×, Exploratory, Community case; YOCO (LLM) 2.12×, Statistical; Self-Forcing (Video generation) 2.08×, Statistical; R3 (MLLM) 2.08×, Bitwise; MiniMax-H3 (Video generation) 1.86×, Statistical, Community case; BAGEL (MLLM) 1.82×, Statistical; DMD2 (Image generation) 1.72×, Statistical; LLM2Vec (LLM) 1.60×, Statistical, Community case; JiT (Image generation) 1.56×, Statistical; Protenix (AI for Science) 1.55×, Manual review, Community case; FermiNet (AI for Science) 1.25×, Bitwise, Community case; NanoChat (LLM) 1.07×, Statistical, Community case</desc>
 <defs><pattern id="h-llm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2a78d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#2a78d6"/></pattern><pattern id="h-mllm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#1baf7a" fill-opacity=".28"/><rect width="2.6" height="6" fill="#1baf7a"/></pattern><pattern id="h-img" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eb6834" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eb6834"/></pattern><pattern id="h-vid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eda100" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eda100"/></pattern><pattern id="h-emb" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#6250d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#6250d6"/></pattern><pattern id="h-sci" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#e87ba4" fill-opacity=".28"/><rect width="2.6" height="6" fill="#e87ba4"/></pattern><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.title{font-size:26px;font-weight:700;fill:#241B1C}.sub{font-size:15px;fill:#867678}.col{font-size:12.5px;font-weight:600;fill:#867678;letter-spacing:.04em}.rank{font-size:13px;fill:#867678;font-variant-numeric:tabular-nums}.name{font-size:15.5px;font-weight:600;fill:#241B1C}.dom{font-size:13px;fill:#867678}.val{font-size:15.5px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.chip{font-size:12.5px;font-weight:600}.leg{font-size:13px;fill:#4E4244}.tick{font-size:12px;fill:#867678;font-variant-numeric:tabular-nums}.foot{font-size:12.5px;fill:#867678}.big{font-size:26px;font-weight:800;fill:#241B1C;font-variant-numeric:tabular-nums}.tl{font-size:13px;fill:#4E4244;font-variant-numeric:tabular-nums}.tlb{font-size:13px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.q{font-size:13px;fill:#4E4244}</style></defs>
 <rect x="0.5" y="0.5" width="999" height="817" rx="16" fill="#FFFFFF" stroke="#EEE4E4"/>
 <text x="36" y="56" class="title">Speedup over each project's own baseline</text>
@@ -18,6 +18,9 @@
 <text x="498.9" y="117" class="leg">Embodied AI</text>
 <rect x="601.0" y="106" width="12" height="12" rx="3" fill="#e87ba4"/>
 <text x="619.0" y="117" class="leg">AI for Science</text>
+<line x1="736.4" y1="104" x2="736.4" y2="120" stroke="#D9CFCF" stroke-width="1"/>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="762.0" cy="109.2" r="2.1"/><path d="M758.8 117.5Q759.2 112.6 762.0 112.6Q765.0 112.6 765.6 117.5Z"/></g><circle cx="757.4" cy="109.9" r="2.5"/><path d="M753.0 118.0Q753.4 113.4 757.4 113.4Q761.4 113.4 761.8 118.0Z"/></g>
+<text x="772.4" y="117" class="leg">Community case</text>
 <text x="50" y="158" class="col" text-anchor="middle">#</text>
 <text x="82" y="158" class="col">Project</text>
 <text x="776" y="158" class="col" text-anchor="end">Speedup</text>
@@ -76,6 +79,7 @@
 <text x="50" y="320.5" class="rank" text-anchor="middle">5</text>
 <circle cx="87" cy="316.0" r="5" fill="#6250d6"/>
 <text x="100" y="321.0" class="name">OpenWAM</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="313.2" r="2.1"/><path d="M230.4 321.5Q230.8 316.6 233.6 316.6Q236.6 316.6 237.2 321.5Z"/></g><circle cx="229.0" cy="313.9" r="2.5"/><path d="M224.6 322.0Q225.0 317.4 229.0 317.4Q233.0 317.4 233.4 322.0Z"/></g>
 <path d="M250.0 309.0H365.1Q369.1 309.0 369.1 313.0V319.0Q369.1 323.0 365.1 323.0H250.0Z" fill="#6250d6" fill-opacity=".35"/>
 <path d="M250.0 309.0H359.2Q359.2 309.0 359.2 309.0V323.0Q359.2 323.0 359.2 323.0H250.0Z" fill="#6250d6"/>
 <text x="776" y="321.0" class="val" text-anchor="end">2.54–2.77×</text>
@@ -91,6 +95,7 @@
 <text x="50" y="384.5" class="rank" text-anchor="middle">7</text>
 <circle cx="87" cy="380.0" r="5" fill="#e87ba4"/>
 <text x="100" y="385.0" class="name">ProteinMPNN</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="377.2" r="2.1"/><path d="M230.4 385.5Q230.8 380.6 233.6 380.6Q236.6 380.6 237.2 385.5Z"/></g><circle cx="229.0" cy="377.9" r="2.5"/><path d="M224.6 386.0Q225.0 381.4 229.0 381.4Q233.0 381.4 233.4 386.0Z"/></g>
 <path d="M250.0 373.0H342.8Q346.8 373.0 346.8 377.0V383.0Q346.8 387.0 342.8 387.0H250.0Z" fill="#e87ba4"/>
 <text x="776" y="385.0" class="val" text-anchor="end">2.25×</text>
 <rect x="808" y="369.0" width="101" height="22" rx="11" fill="#FFFFFF" stroke="#D9CFCF" stroke-dasharray="3 2"/>
@@ -119,6 +124,7 @@
 <text x="50" y="512.5" class="rank" text-anchor="middle">11</text>
 <circle cx="87" cy="508.0" r="5" fill="#eda100"/>
 <text x="100" y="513.0" class="name">MiniMax-H3</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="505.2" r="2.1"/><path d="M230.4 513.5Q230.8 508.6 233.6 508.6Q236.6 508.6 237.2 513.5Z"/></g><circle cx="229.0" cy="505.9" r="2.5"/><path d="M224.6 514.0Q225.0 509.4 229.0 509.4Q233.0 509.4 233.4 514.0Z"/></g>
 <path d="M250.0 501.0H325.9Q329.9 501.0 329.9 505.0V511.0Q329.9 515.0 325.9 515.0H250.0Z" fill="#eda100"/>
 <text x="776" y="513.0" class="val" text-anchor="end">1.86×</text>
 <rect x="808" y="497.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
@@ -140,6 +146,7 @@
 <text x="50" y="608.5" class="rank" text-anchor="middle">14</text>
 <circle cx="87" cy="604.0" r="5" fill="#2a78d6"/>
 <text x="100" y="609.0" class="name">LLM2Vec</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="601.2" r="2.1"/><path d="M230.4 609.5Q230.8 604.6 233.6 604.6Q236.6 604.6 237.2 609.5Z"/></g><circle cx="229.0" cy="601.9" r="2.5"/><path d="M224.6 610.0Q225.0 605.4 229.0 605.4Q233.0 605.4 233.4 610.0Z"/></g>
 <path d="M250.0 597.0H314.8Q318.8 597.0 318.8 601.0V607.0Q318.8 611.0 314.8 611.0H250.0Z" fill="#2a78d6"/>
 <text x="776" y="609.0" class="val" text-anchor="end">1.60×</text>
 <rect x="808" y="593.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
@@ -154,6 +161,7 @@
 <text x="50" y="672.5" class="rank" text-anchor="middle">16</text>
 <circle cx="87" cy="668.0" r="5" fill="#e87ba4"/>
 <text x="100" y="673.0" class="name">Protenix</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="665.2" r="2.1"/><path d="M230.4 673.5Q230.8 668.6 233.6 668.6Q236.6 668.6 237.2 673.5Z"/></g><circle cx="229.0" cy="665.9" r="2.5"/><path d="M224.6 674.0Q225.0 669.4 229.0 669.4Q233.0 669.4 233.4 674.0Z"/></g>
 <path d="M250.0 661.0H312.8Q316.8 661.0 316.8 665.0V671.0Q316.8 675.0 312.8 675.0H250.0Z" fill="#e87ba4"/>
 <text x="776" y="673.0" class="val" text-anchor="end">1.55×</text>
 <rect x="808" y="657.0" width="116" height="22" rx="11" fill="#F8F1EA" stroke="#E6D5C3"/>
@@ -161,6 +169,7 @@
 <text x="50" y="704.5" class="rank" text-anchor="middle">17</text>
 <circle cx="87" cy="700.0" r="5" fill="#e87ba4"/>
 <text x="100" y="705.0" class="name">FermiNet</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="697.2" r="2.1"/><path d="M230.4 705.5Q230.8 700.6 233.6 700.6Q236.6 700.6 237.2 705.5Z"/></g><circle cx="229.0" cy="697.9" r="2.5"/><path d="M224.6 706.0Q225.0 701.4 229.0 701.4Q233.0 701.4 233.4 706.0Z"/></g>
 <path d="M250.0 693.0H299.8Q303.8 693.0 303.8 697.0V703.0Q303.8 707.0 299.8 707.0H250.0Z" fill="#e87ba4"/>
 <text x="776" y="705.0" class="val" text-anchor="end">1.25×</text>
 <rect x="808" y="689.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
@@ -168,6 +177,7 @@
 <text x="50" y="736.5" class="rank" text-anchor="middle">18</text>
 <circle cx="87" cy="732.0" r="5" fill="#2a78d6"/>
 <text x="100" y="737.0" class="name">NanoChat</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="729.2" r="2.1"/><path d="M230.4 737.5Q230.8 732.6 233.6 732.6Q236.6 732.6 237.2 737.5Z"/></g><circle cx="229.0" cy="729.9" r="2.5"/><path d="M224.6 738.0Q225.0 733.4 229.0 733.4Q233.0 733.4 233.4 738.0Z"/></g>
 <path d="M250.0 725.0H292.2Q296.2 725.0 296.2 729.0V735.0Q296.2 739.0 292.2 739.0H250.0Z" fill="#2a78d6"/>
 <text x="776" y="737.0" class="val" text-anchor="end">1.07×</text>
 <rect x="808" y="721.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>

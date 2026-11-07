@@ -43,6 +43,9 @@ PROJECTS = [
     ("NanoChat", "llm", 1.0744, "1.07×", False, "stat"),
 ]
 
+# Projects contributed by the community; the leaderboard marks them with a people icon.
+COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "ProteinMPNN", "Protenix", "FermiNet"}
+
 # (name, domain, baseline, optimized, unit-formatted labels, speedup label, estimate?, en/zh scope, en/zh quality)
 SHOWCASE = [
     ("Motus", "emb", 7.468, 0.779, ("7.47 s", "0.78 s"), "9.59×", False,
@@ -73,6 +76,7 @@ TEXT = {
         "valid": {"bitwise": "Bitwise", "stat": "Statistical", "task": "Task metric", "explore": "Exploratory", "manual": "Manual review"},
         "est": "est.",
         "baseline": "1× baseline",
+        "community": "Community case",
         "foot": "Hatched: extrapolated estimate · LLM2Vec: SimCSE stage (MNTP 1.29×) · details in docs/results",
         "t_title": "Same work, a fraction of the time",
         "t_sub": "Baseline vs optimized, from the project reports",
@@ -87,6 +91,7 @@ TEXT = {
         "valid": {"bitwise": "逐位一致", "stat": "统计等价", "task": "任务指标", "explore": "探索性", "manual": "人工复核"},
         "est": "估计",
         "baseline": "1× 基线",
+        "community": "社区案例",
         "foot": "斜纹：外推估计值 · LLM2Vec：SimCSE 阶段（MNTP 为 1.29×） · 详见 docs/results",
         "t_title": "同样的工作，只用几分之一的时间",
         "t_sub": "基线与优化后的耗时，数据来自各项目报告",
@@ -138,6 +143,16 @@ def hatch(pid, color):
             f'<rect width="6" height="6" fill="{color}" fill-opacity=".28"/><rect width="2.6" height="6" fill="{color}"/></pattern>')
 
 
+def people(x, cy, color):
+    # two people, 14 × 12, left edge at x, centered on cy
+    return (f'<g fill="{color}"><g fill-opacity=".5"><circle cx="{x + 9.6:.1f}" cy="{cy - 2.8:.1f}" r="2.1"/>'
+            f'<path d="M{x + 6.4:.1f} {cy + 5.5:.1f}Q{x + 6.8:.1f} {cy + 0.6:.1f} {x + 9.6:.1f} {cy + 0.6:.1f}'
+            f'Q{x + 12.6:.1f} {cy + 0.6:.1f} {x + 13.2:.1f} {cy + 5.5:.1f}Z"/></g>'
+            f'<circle cx="{x + 5:.1f}" cy="{cy - 2.1:.1f}" r="2.5"/>'
+            f'<path d="M{x + 0.6:.1f} {cy + 6:.1f}Q{x + 1:.1f} {cy + 1.4:.1f} {x + 5:.1f} {cy + 1.4:.1f}'
+            f'Q{x + 9:.1f} {cy + 1.4:.1f} {x + 9.4:.1f} {cy + 6:.1f}Z"/></g>')
+
+
 def leaderboard(lang):
     t = TEXT[lang]
     li = 1 if lang == "en" else 2
@@ -148,7 +163,8 @@ def leaderboard(lang):
     bottom = TOP + n * ROW_H
     H = bottom + 70
     defs = "".join(hatch(f"h-{k}", c) for k, (c, *_rest) in DOMAINS.items())
-    desc = "; ".join(f"{p[0]} ({DOMAINS[p[1]][li]}) {p[3]}{' ' + t['est'] if p[4] else ''}, {t['valid'][p[5]]}" for p in PROJECTS)
+    desc = "; ".join(f"{p[0]} ({DOMAINS[p[1]][li]}) {p[3]}{' ' + t['est'] if p[4] else ''}, {t['valid'][p[5]]}"
+                     f"{', ' + t['community'] if p[0] in COMMUNITY else ''}" for p in PROJECTS)
     o = head(H, t["title"], desc, defs)
     a = o.append
     a(f'<text x="{PAD}" y="56" class="title">{t["title"]}</text>')
@@ -159,7 +175,10 @@ def leaderboard(lang):
         label = en if lang == "en" else zh
         a(f'<rect x="{x}" y="106" width="12" height="12" rx="3" fill="{c}"/>')
         a(f'<text x="{x + 18}" y="117" class="leg">{label}</text>')
-        x += 18 + len(label) * (7.1 if lang == "en" else 13.5) + 24
+        x += 18 + sum(13.5 if ord(ch) > 0x2E80 else 7.1 for ch in label) + 24
+    a(f'<line x1="{x - 6:.1f}" y1="104" x2="{x - 6:.1f}" y2="120" stroke="{GRAY_BAR}" stroke-width="1"/>')
+    a(people(x + 10, 112, MUTED))
+    a(f'<text x="{x + 30:.1f}" y="117" class="leg">{t["community"]}</text>')
     # header
     cols = t["cols"]
     a(f'<text x="{X_RANK}" y="{TOP - 14}" class="col" text-anchor="middle">{cols[0]}</text>')
@@ -183,6 +202,8 @@ def leaderboard(lang):
         a(f'<text x="{X_RANK}" y="{cy + 4.5:.1f}" class="rank" text-anchor="middle">{i + 1}</text>')
         a(f'<circle cx="{X_NAME + 5}" cy="{cy:.1f}" r="5" fill="{color}"/>')
         a(f'<text x="{X_NAME + 18}" y="{cy + 5:.1f}" class="name">{name}</text>')
+        if name in COMMUNITY:
+            a(people(X0 - 26, cy, MUTED))
         lo, hi = v if isinstance(v, tuple) else (v, v)
         if hi > lo:
             # a range: the solid bar ends at the low end, a lighter segment runs to the high end
