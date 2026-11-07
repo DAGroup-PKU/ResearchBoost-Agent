@@ -29,6 +29,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)** by [@micky-li-hd](https://github.com/micky-li-hd): **1.55×** on Protenix 2.0.0 training over a fixed 128-update workload, validated by manual review.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)** by [@sen-ye](https://github.com/sen-ye): **1.25×** on FermiNet all-electron training for Fe, Kr, Cd and Xe.
 - <img src="https://img.shields.io/badge/FEATURE-2A78D6?style=flat-square" alt="FEATURE" height="18"> **2026-11-05** · Lite check: the statistical gate now runs on one seed within 3σ, and the agent's `check` times the candidate once against the frozen baseline, leaving baseline → candidate → baseline timing to the final check. Each check takes less time, so more of a run goes to optimizing ([check modes](docs/judge.md#check-modes)).
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-05** · **[OpenWAM](https://github.com/OpenWAM-Official/OpenWAM)** merged RBA's training speedups upstream ([OpenWAM#58](https://github.com/OpenWAM-Official/OpenWAM/pull/58), by [@GONGSHUKAI](https://github.com/GONGSHUKAI)): **2.54–2.77×** on OpenWAM-α fine-tuning across seven SFT benchmarks.
@@ -135,7 +136,7 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 | Project | Workload | Speedup |
 |---|---|---:|
 | [Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN) by [@micky-li-hd](https://github.com/micky-li-hd) | ProteinMPNN v_48_020 training · full public dataset | **2.25×** |
-| [Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix) by [@micky-li-hd](https://github.com/micky-li-hd) | Protenix 2.0.0 training · 128 updates · 8 × H20 | **1.55×** |
+| [Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix) by [@micky-li-hd](https://github.com/micky-li-hd) | Protenix 2.0.0 training · 128 updates · crop 384 | **1.55×** |
 | [Faster-FermiNet](https://github.com/sen-ye/faster-ferminet) by [@sen-ye](https://github.com/sen-ye) | Fe / Kr / Cd / Xe all-electron training · KFAC, 1024 walkers per GPU | **1.25×** |
 
 [Measurement setup & validation →](docs/results/ai4s.md)

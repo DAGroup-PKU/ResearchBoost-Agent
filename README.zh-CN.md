@@ -29,6 +29,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：Protenix 2.0.0 训练在固定的 128 次更新上加速 **1.55×**，经人工复核验证。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)**，来自 [@sen-ye](https://github.com/sen-ye)：FermiNet 全电子训练（Fe / Kr / Cd / Xe）加速 **1.25×**。
 - <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-11-05** · 轻量化 check：统计检查改为单种子 3σ，agent 自己的 `check` 只计时一次候选版本、与固定的基线计时比较，“基线 → 候选版本 → 基线”计时留给最终评测。每次 check 更快，一次运行中更多时间用于优化（[check 模式](docs/judge.md#check-modes)）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-05** · **[OpenWAM](https://github.com/OpenWAM-Official/OpenWAM)** 已把 RBA 的训练加速合入上游（[OpenWAM#58](https://github.com/OpenWAM-Official/OpenWAM/pull/58)，来自 [@GONGSHUKAI](https://github.com/GONGSHUKAI)）：OpenWAM-α 微调在 7 个 SFT 基准上加速 **2.54–2.77×**。
@@ -135,7 +136,7 @@
 | 项目 | 工作负载 | 加速比 |
 |---|---|---:|
 | [Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN)（[@micky-li-hd](https://github.com/micky-li-hd) 贡献） | ProteinMPNN v_48_020 训练（完整公开数据集） | **2.25×** |
-| [Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)（[@micky-li-hd](https://github.com/micky-li-hd) 贡献） | Protenix 2.0.0 训练 · 128 次更新 · 8 × H20 | **1.55×** |
+| [Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)（[@micky-li-hd](https://github.com/micky-li-hd) 贡献） | Protenix 2.0.0 训练 · 128 次更新 · crop 384 | **1.55×** |
 | [Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)（[@sen-ye](https://github.com/sen-ye) 贡献） | Fe / Kr / Cd / Xe 全电子训练 · KFAC，每卡 1024 walkers | **1.25×** |
 
 [实验设置与验证记录（英文） →](docs/results/ai4s.md)

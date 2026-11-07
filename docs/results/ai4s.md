@@ -38,7 +38,9 @@ Contributed by [@micky-li-hd](https://github.com/micky-li-hd).
 
 The fixed workload ran reference → candidate → reference with the same inputs, random-state fingerprints, precision, Adam configuration, effective batch, learning-rate schedule, checkpointing and evaluation. Whole-process timing includes startup, cold native compilation, 128 updates, checkpoint writing and evaluation. Mean max-rank step time over updates 16–127 improved from 10.24 to 6.07 s (**1.69×**).
 
-Manual review accepted the three deviations in `ema0.999_lddt/complex/plddt.rank1.avg` as run-to-run variance: the reference-repeat delta was 0.003168, larger than the 0.001859 and 0.001309 candidate deltas. All six final normal/EMA checkpoints were finite. The public repository includes the implementation snapshot, source and publication manifests, reviewed findings, fixed-scope record and clean-run closure record.
+The candidate keeps selected Pairformer, MSA and diffusion activations instead of recomputing them, caches repeated conditioning and sampling projections, fuses attention softmax and the head-gate backward, uses native CUDA kernels for selected layer-norm and affine work, and parallelizes cold builds and model initialization. Keeping activations costs memory: the candidate peaked at 81.9 GiB allocated and 93.4 GiB reserved per rank.
+
+Comparisons used the frozen tolerance max(1e-4, 5% of the reference value). Manual review accepted the three deviations in `ema0.999_lddt/complex/plddt.rank1.avg` as run-to-run variance: the reference-repeat delta was 0.003168, larger than the 0.001859 and 0.001309 candidate deltas. All six final normal/EMA checkpoints were finite. The public repository includes the implementation snapshot, source and publication manifests, reviewed findings, fixed-scope record and clean-run closure record.
 
 The validation covers this fixed 128-update engineering workload; full-corpus convergence is outside its scope. The exact training fixture and generated checkpoints are not redistributed, and the source snapshot is hash-manifested because the upstream Git commit was not recorded.
 

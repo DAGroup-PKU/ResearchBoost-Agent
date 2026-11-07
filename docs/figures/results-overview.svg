@@ -156,8 +156,8 @@
 <text x="100" y="673.0" class="name">Protenix</text>
 <path d="M250.0 661.0H312.8Q316.8 661.0 316.8 665.0V671.0Q316.8 675.0 312.8 675.0H250.0Z" fill="#e87ba4"/>
 <text x="776" y="673.0" class="val" text-anchor="end">1.55×</text>
-<rect x="808" y="657.0" width="116" height="22" rx="11" fill="#F7F0FA" stroke="#E2D2EA"/>
-<text x="866.1" y="672.5" class="chip" text-anchor="middle" style="fill:#6250D6">Manual review</text>
+<rect x="808" y="657.0" width="116" height="22" rx="11" fill="#F8F1EA" stroke="#E6D5C3"/>
+<text x="866.1" y="672.5" class="chip" text-anchor="middle" style="fill:#7A5634">Manual review</text>
 <text x="50" y="704.5" class="rank" text-anchor="middle">17</text>
 <circle cx="87" cy="700.0" r="5" fill="#e87ba4"/>
 <text x="100" y="705.0" class="name">FermiNet</text>

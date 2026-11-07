@@ -176,7 +176,7 @@ def leaderboard(lang):
     a(f'<text x="{sx(1) + 5:.1f}" y="{TOP - 14}" class="tick" fill="{ACCENT}" style="fill:{ACCENT}">{t["baseline"]}</text>')
     chip_style = {"bitwise": ("#FBEAEA", "#E7C2C2", ACCENT), "stat": ("#F3F0F0", "#E4DCDC", INK2),
                   "task": ("#EEF4FA", "#D3E2F0", "#2F5F8A"), "explore": ("#FFFFFF", "#D9CFCF", MUTED),
-                  "manual": ("#F7F0FA", "#E2D2EA", "#6250D6")}
+                  "manual": ("#F8F1EA", "#E6D5C3", "#7A5634")}
     for i, (name, d, v, label, est, val) in enumerate(PROJECTS):
         cy = TOP + i * ROW_H + ROW_H / 2
         color = DOMAINS[d][0]
