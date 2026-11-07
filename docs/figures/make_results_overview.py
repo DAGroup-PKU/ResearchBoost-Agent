@@ -19,6 +19,7 @@ DOMAINS = {
     "vid": ("#eda100", "Video generation", "视频生成"),
     "emb": ("#6250d6", "Embodied AI", "具身智能"),
     "sci": ("#e87ba4", "AI for Science", "AI for Science"),
+    "3d": ("#333333", "3D reconstruction", "三维重建"),
 }
 
 # (name, domain, speedup that sets the bar length (a (low, high) pair for a range), label, extrapolated estimate?, validation)
@@ -26,6 +27,7 @@ PROJECTS = [
     ("Motus", "emb", 9.59, "9.59×", False, "bitwise"),
     ("RAE", "img", 5.32, "5.32×", False, "stat"),
     ("RoboTwin", "emb", 4.38, "4.38×", True, "bitwise"),
+    ("PIDG (module)", "3d", 4.1749, "4.17×", False, "explore"),
     ("FastWAM", "emb", 3.46, "3.46×", False, "task"),
     ("OpenWAM", "emb", (2.54, 2.77), "2.54–2.77×", False, "task"),
     ("LLaVA", "mllm", 2.39, "2.39×", False, "stat"),
@@ -40,11 +42,12 @@ PROJECTS = [
     ("JiT", "img", 1.56, "1.56×", False, "stat"),
     ("Protenix", "sci", 1.5524, "1.55×", False, "manual"),
     ("FermiNet", "sci", 1.252, "1.25×", False, "bitwise"),
+    ("3DGS", "3d", 1.1314, "1.13×", False, "explore"),
     ("NanoChat", "llm", 1.0744, "1.07×", False, "stat"),
 ]
 
 # Projects contributed by the community; the leaderboard marks them with a people icon.
-COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "ProteinMPNN", "Protenix", "FermiNet"}
+COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS"}
 
 # (name, domain, baseline, optimized, unit-formatted labels, speedup label, estimate?, en/zh scope, en/zh quality)
 SHOWCASE = [
@@ -78,6 +81,7 @@ TEXT = {
         "baseline": "1× baseline",
         "community": "Community case",
         "foot": "Hatched: extrapolated estimate · LLM2Vec: SimCSE stage (MNTP 1.29×) · details in docs/results",
+        "scope_foot": "PIDG: module group including PNG output; not complete-training time.",
         "t_title": "Same work, a fraction of the time",
         "t_sub": "Baseline vs optimized, from the project reports",
         "t_base": "baseline",
@@ -93,6 +97,7 @@ TEXT = {
         "baseline": "1× 基线",
         "community": "社区案例",
         "foot": "斜纹：外推估计值 · LLM2Vec：SimCSE 阶段（MNTP 为 1.29×） · 详见 docs/results",
+        "scope_foot": "PIDG：包含 PNG 写出的模块组耗时，不是完整训练耗时。",
         "t_title": "同样的工作，只用几分之一的时间",
         "t_sub": "基线与优化后的耗时，数据来自各项目报告",
         "t_base": "基线",
@@ -160,8 +165,22 @@ def leaderboard(lang):
     PAD, TOP, ROW_H, BAR_H = 36, 172, 32, 14
     X_RANK, X_NAME, X0, PLOT_W, X_VAL, X_CHIP = PAD + 14, PAD + 46, 250, 430, 776, 808
     sx = lambda v: X0 + v / 10.0 * PLOT_W
+    # Include community provenance in the same wrapping legend as the domains.
+    text_width = lambda label: sum(13.5 if ord(ch) > 0x2E80 else 7.1 for ch in label)
+    legend, x, legend_y = [], PAD, 106
+    for color, en, zh in DOMAINS.values():
+        label = en if lang == "en" else zh
+        width = 18 + text_width(label) + 24
+        if x > PAD and x + width > W - PAD:
+            x, legend_y = PAD, legend_y + 24
+        legend.append((x, legend_y, color, label))
+        x += width
+    if x + 30 + text_width(t["community"]) > W - PAD:
+        x, legend_y = PAD, legend_y + 24
+    community_x, community_y = x, legend_y
+    TOP += legend_y - 106
     bottom = TOP + n * ROW_H
-    H = bottom + 70
+    H = bottom + 90
     defs = "".join(hatch(f"h-{k}", c) for k, (c, *_rest) in DOMAINS.items())
     desc = "; ".join(f"{p[0]} ({DOMAINS[p[1]][li]}) {p[3]}{' ' + t['est'] if p[4] else ''}, {t['valid'][p[5]]}"
                      f"{', ' + t['community'] if p[0] in COMMUNITY else ''}" for p in PROJECTS)
@@ -170,15 +189,13 @@ def leaderboard(lang):
     a(f'<text x="{PAD}" y="56" class="title">{t["title"]}</text>')
     a(f'<text x="{PAD}" y="84" class="sub">{t["sub"].format(n=n, d=len({p[1] for p in PROJECTS}))}</text>')
     # legend
-    x = PAD
-    for k, (c, en, zh) in DOMAINS.items():
-        label = en if lang == "en" else zh
-        a(f'<rect x="{x}" y="106" width="12" height="12" rx="3" fill="{c}"/>')
-        a(f'<text x="{x + 18}" y="117" class="leg">{label}</text>')
-        x += 18 + sum(13.5 if ord(ch) > 0x2E80 else 7.1 for ch in label) + 24
-    a(f'<line x1="{x - 6:.1f}" y1="104" x2="{x - 6:.1f}" y2="120" stroke="{GRAY_BAR}" stroke-width="1"/>')
-    a(people(x + 10, 112, MUTED))
-    a(f'<text x="{x + 30:.1f}" y="117" class="leg">{t["community"]}</text>')
+    for x, y, color, label in legend:
+        a(f'<rect x="{x}" y="{y}" width="12" height="12" rx="3" fill="{color}"/>')
+        a(f'<text x="{x + 18}" y="{y + 11}" class="leg">{label}</text>')
+    if community_x > PAD:
+        a(f'<line x1="{community_x - 6:.1f}" y1="{community_y - 2}" x2="{community_x - 6:.1f}" y2="{community_y + 14}" stroke="{GRAY_BAR}" stroke-width="1"/>')
+    a(people(community_x + 10, community_y + 6, MUTED))
+    a(f'<text x="{community_x + 30:.1f}" y="{community_y + 11}" class="leg">{t["community"]}</text>')
     # header
     cols = t["cols"]
     a(f'<text x="{X_RANK}" y="{TOP - 14}" class="col" text-anchor="middle">{cols[0]}</text>')
@@ -216,7 +233,8 @@ def leaderboard(lang):
         dash = ' stroke-dasharray="3 2"' if val == "explore" else ""
         a(f'<rect x="{X_CHIP}" y="{cy - 11:.1f}" width="{cw:.0f}" height="22" rx="11" fill="{fill}" stroke="{stroke}"{dash}/>')
         a(f'<text x="{X_CHIP + cw / 2:.1f}" y="{cy + 4.5:.1f}" class="chip" text-anchor="middle" style="fill:{ink}">{chip}</text>')
-    a(f'<text x="{PAD}" y="{H - 22}" class="foot">* {t["foot"]}</text>')
+    a(f'<text x="{PAD}" y="{H - 42}" class="foot">* {t["foot"]}</text>')
+    a(f'<text x="{PAD}" y="{H - 22}" class="foot">{t["scope_foot"]}</text>')
     a('</svg>')
     return "\n".join(o) + "\n"
 

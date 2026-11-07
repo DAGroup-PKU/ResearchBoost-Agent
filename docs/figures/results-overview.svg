@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="818" viewBox="0 0 1000 818" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="926" viewBox="0 0 1000 926" role="img" aria-labelledby="t d">
 <title id="t">Speedup over each project's own baseline</title>
-<desc id="d">Motus (Embodied AI) 9.59×, Bitwise; RAE (Image generation) 5.32×, Statistical; RoboTwin (Embodied AI) 4.38× est., Bitwise; FastWAM (Embodied AI) 3.46×, Task metric; OpenWAM (Embodied AI) 2.54–2.77×, Task metric, Community case; LLaVA (MLLM) 2.39×, Statistical; ProteinMPNN (AI for Science) 2.25×, Exploratory, Community case; YOCO (LLM) 2.12×, Statistical; Self-Forcing (Video generation) 2.08×, Statistical; R3 (MLLM) 2.08×, Bitwise; MiniMax-H3 (Video generation) 1.86×, Statistical, Community case; BAGEL (MLLM) 1.82×, Statistical; DMD2 (Image generation) 1.72×, Statistical; LLM2Vec (LLM) 1.60×, Statistical, Community case; JiT (Image generation) 1.56×, Statistical; Protenix (AI for Science) 1.55×, Manual review, Community case; FermiNet (AI for Science) 1.25×, Bitwise, Community case; NanoChat (LLM) 1.07×, Statistical, Community case</desc>
-<defs><pattern id="h-llm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2a78d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#2a78d6"/></pattern><pattern id="h-mllm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#1baf7a" fill-opacity=".28"/><rect width="2.6" height="6" fill="#1baf7a"/></pattern><pattern id="h-img" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eb6834" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eb6834"/></pattern><pattern id="h-vid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eda100" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eda100"/></pattern><pattern id="h-emb" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#6250d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#6250d6"/></pattern><pattern id="h-sci" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#e87ba4" fill-opacity=".28"/><rect width="2.6" height="6" fill="#e87ba4"/></pattern><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.title{font-size:26px;font-weight:700;fill:#241B1C}.sub{font-size:15px;fill:#867678}.col{font-size:12.5px;font-weight:600;fill:#867678;letter-spacing:.04em}.rank{font-size:13px;fill:#867678;font-variant-numeric:tabular-nums}.name{font-size:15.5px;font-weight:600;fill:#241B1C}.dom{font-size:13px;fill:#867678}.val{font-size:15.5px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.chip{font-size:12.5px;font-weight:600}.leg{font-size:13px;fill:#4E4244}.tick{font-size:12px;fill:#867678;font-variant-numeric:tabular-nums}.foot{font-size:12.5px;fill:#867678}.big{font-size:26px;font-weight:800;fill:#241B1C;font-variant-numeric:tabular-nums}.tl{font-size:13px;fill:#4E4244;font-variant-numeric:tabular-nums}.tlb{font-size:13px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.q{font-size:13px;fill:#4E4244}</style></defs>
-<rect x="0.5" y="0.5" width="999" height="817" rx="16" fill="#FFFFFF" stroke="#EEE4E4"/>
+<desc id="d">Motus (Embodied AI) 9.59×, Bitwise; RAE (Image generation) 5.32×, Statistical; RoboTwin (Embodied AI) 4.38× est., Bitwise; PIDG (module) (3D reconstruction) 4.17×, Exploratory, Community case; FastWAM (Embodied AI) 3.46×, Task metric; OpenWAM (Embodied AI) 2.54–2.77×, Task metric, Community case; LLaVA (MLLM) 2.39×, Statistical; ProteinMPNN (AI for Science) 2.25×, Exploratory, Community case; YOCO (LLM) 2.12×, Statistical; Self-Forcing (Video generation) 2.08×, Statistical; R3 (MLLM) 2.08×, Bitwise; MiniMax-H3 (Video generation) 1.86×, Statistical, Community case; BAGEL (MLLM) 1.82×, Statistical; DMD2 (Image generation) 1.72×, Statistical; LLM2Vec (LLM) 1.60×, Statistical, Community case; JiT (Image generation) 1.56×, Statistical; Protenix (AI for Science) 1.55×, Manual review, Community case; FermiNet (AI for Science) 1.25×, Bitwise, Community case; 3DGS (3D reconstruction) 1.13×, Exploratory, Community case; NanoChat (LLM) 1.07×, Statistical, Community case</desc>
+<defs><pattern id="h-llm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2a78d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#2a78d6"/></pattern><pattern id="h-mllm" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#1baf7a" fill-opacity=".28"/><rect width="2.6" height="6" fill="#1baf7a"/></pattern><pattern id="h-img" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eb6834" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eb6834"/></pattern><pattern id="h-vid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#eda100" fill-opacity=".28"/><rect width="2.6" height="6" fill="#eda100"/></pattern><pattern id="h-emb" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#6250d6" fill-opacity=".28"/><rect width="2.6" height="6" fill="#6250d6"/></pattern><pattern id="h-sci" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#e87ba4" fill-opacity=".28"/><rect width="2.6" height="6" fill="#e87ba4"/></pattern><pattern id="h-3d" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#333333" fill-opacity=".28"/><rect width="2.6" height="6" fill="#333333"/></pattern><style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}.title{font-size:26px;font-weight:700;fill:#241B1C}.sub{font-size:15px;fill:#867678}.col{font-size:12.5px;font-weight:600;fill:#867678;letter-spacing:.04em}.rank{font-size:13px;fill:#867678;font-variant-numeric:tabular-nums}.name{font-size:15.5px;font-weight:600;fill:#241B1C}.dom{font-size:13px;fill:#867678}.val{font-size:15.5px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.chip{font-size:12.5px;font-weight:600}.leg{font-size:13px;fill:#4E4244}.tick{font-size:12px;fill:#867678;font-variant-numeric:tabular-nums}.foot{font-size:12.5px;fill:#867678}.big{font-size:26px;font-weight:800;fill:#241B1C;font-variant-numeric:tabular-nums}.tl{font-size:13px;fill:#4E4244;font-variant-numeric:tabular-nums}.tlb{font-size:13px;font-weight:700;fill:#241B1C;font-variant-numeric:tabular-nums}.q{font-size:13px;fill:#4E4244}</style></defs>
+<rect x="0.5" y="0.5" width="999" height="925" rx="16" fill="#FFFFFF" stroke="#EEE4E4"/>
 <text x="36" y="56" class="title">Speedup over each project's own baseline</text>
-<text x="36" y="84" class="sub">18 projects · 6 research domains · higher is faster</text>
+<text x="36" y="84" class="sub">20 projects · 7 research domains · higher is faster</text>
 <rect x="36" y="106" width="12" height="12" rx="3" fill="#2a78d6"/>
 <text x="54" y="117" class="leg">LLM</text>
 <rect x="99.3" y="106" width="12" height="12" rx="3" fill="#1baf7a"/>
@@ -14,173 +14,192 @@
 <text x="187.7" y="117" class="leg">Image generation</text>
 <rect x="325.29999999999995" y="106" width="12" height="12" rx="3" fill="#eda100"/>
 <text x="343.29999999999995" y="117" class="leg">Video generation</text>
-<rect x="480.9" y="106" width="12" height="12" rx="3" fill="#6250d6"/>
-<text x="498.9" y="117" class="leg">Embodied AI</text>
-<rect x="601.0" y="106" width="12" height="12" rx="3" fill="#e87ba4"/>
-<text x="619.0" y="117" class="leg">AI for Science</text>
-<line x1="736.4" y1="104" x2="736.4" y2="120" stroke="#D9CFCF" stroke-width="1"/>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="762.0" cy="109.2" r="2.1"/><path d="M758.8 117.5Q759.2 112.6 762.0 112.6Q765.0 112.6 765.6 117.5Z"/></g><circle cx="757.4" cy="109.9" r="2.5"/><path d="M753.0 118.0Q753.4 113.4 757.4 113.4Q761.4 113.4 761.8 118.0Z"/></g>
-<text x="772.4" y="117" class="leg">Community case</text>
-<text x="50" y="158" class="col" text-anchor="middle">#</text>
-<text x="82" y="158" class="col">Project</text>
-<text x="776" y="158" class="col" text-anchor="end">Speedup</text>
-<text x="808" y="158" class="col">Validation</text>
-<rect x="28" y="172" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="236" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="300" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="364" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="428" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="492" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="556" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="620" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<rect x="28" y="684" width="944" height="32" rx="6" fill="#FAF6F6"/>
-<line x1="250.0" y1="172" x2="250.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="250.0" y="766" class="tick" text-anchor="middle">0×</text>
-<line x1="336.0" y1="172" x2="336.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="336.0" y="766" class="tick" text-anchor="middle">2×</text>
-<line x1="422.0" y1="172" x2="422.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="422.0" y="766" class="tick" text-anchor="middle">4×</text>
-<line x1="508.0" y1="172" x2="508.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="508.0" y="766" class="tick" text-anchor="middle">6×</text>
-<line x1="594.0" y1="172" x2="594.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="594.0" y="766" class="tick" text-anchor="middle">8×</text>
-<line x1="680.0" y1="172" x2="680.0" y2="748" stroke="#F1EAEA" stroke-width="1"/>
-<text x="680.0" y="766" class="tick" text-anchor="middle">10×</text>
-<line x1="293.0" y1="166" x2="293.0" y2="748" stroke="#8C0000" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="298.0" y="158" class="tick" fill="#8C0000" style="fill:#8C0000">1× baseline</text>
-<text x="50" y="192.5" class="rank" text-anchor="middle">1</text>
-<circle cx="87" cy="188.0" r="5" fill="#6250d6"/>
-<text x="100" y="193.0" class="name">Motus</text>
-<path d="M250.0 181.0H658.4Q662.4 181.0 662.4 185.0V191.0Q662.4 195.0 658.4 195.0H250.0Z" fill="#6250d6"/>
-<text x="776" y="193.0" class="val" text-anchor="end">9.59×</text>
-<rect x="808" y="177.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
-<text x="843.9" y="192.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
-<text x="50" y="224.5" class="rank" text-anchor="middle">2</text>
-<circle cx="87" cy="220.0" r="5" fill="#eb6834"/>
-<text x="100" y="225.0" class="name">RAE</text>
-<path d="M250.0 213.0H474.8Q478.8 213.0 478.8 217.0V223.0Q478.8 227.0 474.8 227.0H250.0Z" fill="#eb6834"/>
-<text x="776" y="225.0" class="val" text-anchor="end">5.32×</text>
-<rect x="808" y="209.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="224.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="256.5" class="rank" text-anchor="middle">3</text>
-<circle cx="87" cy="252.0" r="5" fill="#6250d6"/>
-<text x="100" y="257.0" class="name">RoboTwin</text>
-<path d="M250.0 245.0H434.3Q438.3 245.0 438.3 249.0V255.0Q438.3 259.0 434.3 259.0H250.0Z" fill="url(#h-emb)"/>
-<text x="776" y="257.0" class="val" text-anchor="end">4.38×*</text>
-<rect x="808" y="241.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
-<text x="843.9" y="256.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
-<text x="50" y="288.5" class="rank" text-anchor="middle">4</text>
-<circle cx="87" cy="284.0" r="5" fill="#6250d6"/>
-<text x="100" y="289.0" class="name">FastWAM</text>
-<path d="M250.0 277.0H394.8Q398.8 277.0 398.8 281.0V287.0Q398.8 291.0 394.8 291.0H250.0Z" fill="#6250d6"/>
-<text x="776" y="289.0" class="val" text-anchor="end">3.46×</text>
-<rect x="808" y="273.0" width="101" height="22" rx="11" fill="#EEF4FA" stroke="#D3E2F0"/>
-<text x="858.7" y="288.5" class="chip" text-anchor="middle" style="fill:#2F5F8A">Task metric</text>
-<text x="50" y="320.5" class="rank" text-anchor="middle">5</text>
-<circle cx="87" cy="316.0" r="5" fill="#6250d6"/>
-<text x="100" y="321.0" class="name">OpenWAM</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="313.2" r="2.1"/><path d="M230.4 321.5Q230.8 316.6 233.6 316.6Q236.6 316.6 237.2 321.5Z"/></g><circle cx="229.0" cy="313.9" r="2.5"/><path d="M224.6 322.0Q225.0 317.4 229.0 317.4Q233.0 317.4 233.4 322.0Z"/></g>
-<path d="M250.0 309.0H365.1Q369.1 309.0 369.1 313.0V319.0Q369.1 323.0 365.1 323.0H250.0Z" fill="#6250d6" fill-opacity=".35"/>
-<path d="M250.0 309.0H359.2Q359.2 309.0 359.2 309.0V323.0Q359.2 323.0 359.2 323.0H250.0Z" fill="#6250d6"/>
-<text x="776" y="321.0" class="val" text-anchor="end">2.54–2.77×</text>
-<rect x="808" y="305.0" width="101" height="22" rx="11" fill="#EEF4FA" stroke="#D3E2F0"/>
-<text x="858.7" y="320.5" class="chip" text-anchor="middle" style="fill:#2F5F8A">Task metric</text>
-<text x="50" y="352.5" class="rank" text-anchor="middle">6</text>
-<circle cx="87" cy="348.0" r="5" fill="#1baf7a"/>
-<text x="100" y="353.0" class="name">LLaVA</text>
-<path d="M250.0 341.0H348.8Q352.8 341.0 352.8 345.0V351.0Q352.8 355.0 348.8 355.0H250.0Z" fill="#1baf7a"/>
-<text x="776" y="353.0" class="val" text-anchor="end">2.39×</text>
-<rect x="808" y="337.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="352.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="384.5" class="rank" text-anchor="middle">7</text>
-<circle cx="87" cy="380.0" r="5" fill="#e87ba4"/>
-<text x="100" y="385.0" class="name">ProteinMPNN</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="377.2" r="2.1"/><path d="M230.4 385.5Q230.8 380.6 233.6 380.6Q236.6 380.6 237.2 385.5Z"/></g><circle cx="229.0" cy="377.9" r="2.5"/><path d="M224.6 386.0Q225.0 381.4 229.0 381.4Q233.0 381.4 233.4 386.0Z"/></g>
-<path d="M250.0 373.0H342.8Q346.8 373.0 346.8 377.0V383.0Q346.8 387.0 342.8 387.0H250.0Z" fill="#e87ba4"/>
-<text x="776" y="385.0" class="val" text-anchor="end">2.25×</text>
-<rect x="808" y="369.0" width="101" height="22" rx="11" fill="#FFFFFF" stroke="#D9CFCF" stroke-dasharray="3 2"/>
-<text x="858.7" y="384.5" class="chip" text-anchor="middle" style="fill:#867678">Exploratory</text>
-<text x="50" y="416.5" class="rank" text-anchor="middle">8</text>
-<circle cx="87" cy="412.0" r="5" fill="#2a78d6"/>
-<text x="100" y="417.0" class="name">YOCO</text>
-<path d="M250.0 405.0H337.2Q341.2 405.0 341.2 409.0V415.0Q341.2 419.0 337.2 419.0H250.0Z" fill="#2a78d6"/>
-<text x="776" y="417.0" class="val" text-anchor="end">2.12×</text>
-<rect x="808" y="401.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="416.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="448.5" class="rank" text-anchor="middle">9</text>
-<circle cx="87" cy="444.0" r="5" fill="#eda100"/>
-<text x="100" y="449.0" class="name">Self-Forcing</text>
-<path d="M250.0 437.0H335.4Q339.4 437.0 339.4 441.0V447.0Q339.4 451.0 335.4 451.0H250.0Z" fill="#eda100"/>
-<text x="776" y="449.0" class="val" text-anchor="end">2.08×</text>
-<rect x="808" y="433.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="448.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="480.5" class="rank" text-anchor="middle">10</text>
-<circle cx="87" cy="476.0" r="5" fill="#1baf7a"/>
-<text x="100" y="481.0" class="name">R3</text>
-<path d="M250.0 469.0H335.4Q339.4 469.0 339.4 473.0V479.0Q339.4 483.0 335.4 483.0H250.0Z" fill="#1baf7a"/>
-<text x="776" y="481.0" class="val" text-anchor="end">2.08×</text>
-<rect x="808" y="465.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
-<text x="843.9" y="480.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
-<text x="50" y="512.5" class="rank" text-anchor="middle">11</text>
-<circle cx="87" cy="508.0" r="5" fill="#eda100"/>
-<text x="100" y="513.0" class="name">MiniMax-H3</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="505.2" r="2.1"/><path d="M230.4 513.5Q230.8 508.6 233.6 508.6Q236.6 508.6 237.2 513.5Z"/></g><circle cx="229.0" cy="505.9" r="2.5"/><path d="M224.6 514.0Q225.0 509.4 229.0 509.4Q233.0 509.4 233.4 514.0Z"/></g>
-<path d="M250.0 501.0H325.9Q329.9 501.0 329.9 505.0V511.0Q329.9 515.0 325.9 515.0H250.0Z" fill="#eda100"/>
-<text x="776" y="513.0" class="val" text-anchor="end">1.86×</text>
-<rect x="808" y="497.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="512.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="544.5" class="rank" text-anchor="middle">12</text>
-<circle cx="87" cy="540.0" r="5" fill="#1baf7a"/>
-<text x="100" y="545.0" class="name">BAGEL</text>
-<path d="M250.0 533.0H324.3Q328.3 533.0 328.3 537.0V543.0Q328.3 547.0 324.3 547.0H250.0Z" fill="#1baf7a"/>
-<text x="776" y="545.0" class="val" text-anchor="end">1.82×</text>
-<rect x="808" y="529.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="544.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="576.5" class="rank" text-anchor="middle">13</text>
-<circle cx="87" cy="572.0" r="5" fill="#eb6834"/>
-<text x="100" y="577.0" class="name">DMD2</text>
-<path d="M250.0 565.0H320.0Q324.0 565.0 324.0 569.0V575.0Q324.0 579.0 320.0 579.0H250.0Z" fill="#eb6834"/>
-<text x="776" y="577.0" class="val" text-anchor="end">1.72×</text>
-<rect x="808" y="561.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="576.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="608.5" class="rank" text-anchor="middle">14</text>
-<circle cx="87" cy="604.0" r="5" fill="#2a78d6"/>
-<text x="100" y="609.0" class="name">LLM2Vec</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="601.2" r="2.1"/><path d="M230.4 609.5Q230.8 604.6 233.6 604.6Q236.6 604.6 237.2 609.5Z"/></g><circle cx="229.0" cy="601.9" r="2.5"/><path d="M224.6 610.0Q225.0 605.4 229.0 605.4Q233.0 605.4 233.4 610.0Z"/></g>
-<path d="M250.0 597.0H314.8Q318.8 597.0 318.8 601.0V607.0Q318.8 611.0 314.8 611.0H250.0Z" fill="#2a78d6"/>
-<text x="776" y="609.0" class="val" text-anchor="end">1.60×</text>
-<rect x="808" y="593.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="608.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="640.5" class="rank" text-anchor="middle">15</text>
-<circle cx="87" cy="636.0" r="5" fill="#eb6834"/>
-<text x="100" y="641.0" class="name">JiT</text>
-<path d="M250.0 629.0H313.1Q317.1 629.0 317.1 633.0V639.0Q317.1 643.0 313.1 643.0H250.0Z" fill="#eb6834"/>
-<text x="776" y="641.0" class="val" text-anchor="end">1.56×</text>
-<rect x="808" y="625.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="640.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="50" y="672.5" class="rank" text-anchor="middle">16</text>
-<circle cx="87" cy="668.0" r="5" fill="#e87ba4"/>
-<text x="100" y="673.0" class="name">Protenix</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="665.2" r="2.1"/><path d="M230.4 673.5Q230.8 668.6 233.6 668.6Q236.6 668.6 237.2 673.5Z"/></g><circle cx="229.0" cy="665.9" r="2.5"/><path d="M224.6 674.0Q225.0 669.4 229.0 669.4Q233.0 669.4 233.4 674.0Z"/></g>
-<path d="M250.0 661.0H312.8Q316.8 661.0 316.8 665.0V671.0Q316.8 675.0 312.8 675.0H250.0Z" fill="#e87ba4"/>
-<text x="776" y="673.0" class="val" text-anchor="end">1.55×</text>
-<rect x="808" y="657.0" width="116" height="22" rx="11" fill="#F8F1EA" stroke="#E6D5C3"/>
-<text x="866.1" y="672.5" class="chip" text-anchor="middle" style="fill:#7A5634">Manual review</text>
-<text x="50" y="704.5" class="rank" text-anchor="middle">17</text>
-<circle cx="87" cy="700.0" r="5" fill="#e87ba4"/>
-<text x="100" y="705.0" class="name">FermiNet</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="697.2" r="2.1"/><path d="M230.4 705.5Q230.8 700.6 233.6 700.6Q236.6 700.6 237.2 705.5Z"/></g><circle cx="229.0" cy="697.9" r="2.5"/><path d="M224.6 706.0Q225.0 701.4 229.0 701.4Q233.0 701.4 233.4 706.0Z"/></g>
-<path d="M250.0 693.0H299.8Q303.8 693.0 303.8 697.0V703.0Q303.8 707.0 299.8 707.0H250.0Z" fill="#e87ba4"/>
-<text x="776" y="705.0" class="val" text-anchor="end">1.25×</text>
-<rect x="808" y="689.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
-<text x="843.9" y="704.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
-<text x="50" y="736.5" class="rank" text-anchor="middle">18</text>
-<circle cx="87" cy="732.0" r="5" fill="#2a78d6"/>
-<text x="100" y="737.0" class="name">NanoChat</text>
-<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="729.2" r="2.1"/><path d="M230.4 737.5Q230.8 732.6 233.6 732.6Q236.6 732.6 237.2 737.5Z"/></g><circle cx="229.0" cy="729.9" r="2.5"/><path d="M224.6 738.0Q225.0 733.4 229.0 733.4Q233.0 733.4 233.4 738.0Z"/></g>
-<path d="M250.0 725.0H292.2Q296.2 725.0 296.2 729.0V735.0Q296.2 739.0 292.2 739.0H250.0Z" fill="#2a78d6"/>
-<text x="776" y="737.0" class="val" text-anchor="end">1.07×</text>
-<rect x="808" y="721.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
-<text x="858.7" y="736.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
-<text x="36" y="796" class="foot">* Hatched: extrapolated estimate · LLM2Vec: SimCSE stage (MNTP 1.29×) · details in docs/results</text>
+<rect x="480.8999999999999" y="106" width="12" height="12" rx="3" fill="#6250d6"/>
+<text x="498.8999999999999" y="117" class="leg">Embodied AI</text>
+<rect x="600.9999999999999" y="106" width="12" height="12" rx="3" fill="#e87ba4"/>
+<text x="618.9999999999999" y="117" class="leg">AI for Science</text>
+<rect x="742.3999999999999" y="106" width="12" height="12" rx="3" fill="#333333"/>
+<text x="760.3999999999999" y="117" class="leg">3D reconstruction</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="55.6" cy="133.2" r="2.1"/><path d="M52.4 141.5Q52.8 136.6 55.6 136.6Q58.6 136.6 59.2 141.5Z"/></g><circle cx="51.0" cy="133.9" r="2.5"/><path d="M46.6 142.0Q47.0 137.4 51.0 137.4Q55.0 137.4 55.4 142.0Z"/></g>
+<text x="66.0" y="141" class="leg">Community case</text>
+<text x="50" y="182" class="col" text-anchor="middle">#</text>
+<text x="82" y="182" class="col">Project</text>
+<text x="776" y="182" class="col" text-anchor="end">Speedup</text>
+<text x="808" y="182" class="col">Validation</text>
+<rect x="28" y="196" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="260" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="324" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="388" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="452" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="516" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="580" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="644" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="708" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<rect x="28" y="772" width="944" height="32" rx="6" fill="#FAF6F6"/>
+<line x1="250.0" y1="196" x2="250.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="250.0" y="854" class="tick" text-anchor="middle">0×</text>
+<line x1="336.0" y1="196" x2="336.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="336.0" y="854" class="tick" text-anchor="middle">2×</text>
+<line x1="422.0" y1="196" x2="422.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="422.0" y="854" class="tick" text-anchor="middle">4×</text>
+<line x1="508.0" y1="196" x2="508.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="508.0" y="854" class="tick" text-anchor="middle">6×</text>
+<line x1="594.0" y1="196" x2="594.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="594.0" y="854" class="tick" text-anchor="middle">8×</text>
+<line x1="680.0" y1="196" x2="680.0" y2="836" stroke="#F1EAEA" stroke-width="1"/>
+<text x="680.0" y="854" class="tick" text-anchor="middle">10×</text>
+<line x1="293.0" y1="190" x2="293.0" y2="836" stroke="#8C0000" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="298.0" y="182" class="tick" fill="#8C0000" style="fill:#8C0000">1× baseline</text>
+<text x="50" y="216.5" class="rank" text-anchor="middle">1</text>
+<circle cx="87" cy="212.0" r="5" fill="#6250d6"/>
+<text x="100" y="217.0" class="name">Motus</text>
+<path d="M250.0 205.0H658.4Q662.4 205.0 662.4 209.0V215.0Q662.4 219.0 658.4 219.0H250.0Z" fill="#6250d6"/>
+<text x="776" y="217.0" class="val" text-anchor="end">9.59×</text>
+<rect x="808" y="201.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
+<text x="843.9" y="216.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
+<text x="50" y="248.5" class="rank" text-anchor="middle">2</text>
+<circle cx="87" cy="244.0" r="5" fill="#eb6834"/>
+<text x="100" y="249.0" class="name">RAE</text>
+<path d="M250.0 237.0H474.8Q478.8 237.0 478.8 241.0V247.0Q478.8 251.0 474.8 251.0H250.0Z" fill="#eb6834"/>
+<text x="776" y="249.0" class="val" text-anchor="end">5.32×</text>
+<rect x="808" y="233.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="248.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="280.5" class="rank" text-anchor="middle">3</text>
+<circle cx="87" cy="276.0" r="5" fill="#6250d6"/>
+<text x="100" y="281.0" class="name">RoboTwin</text>
+<path d="M250.0 269.0H434.3Q438.3 269.0 438.3 273.0V279.0Q438.3 283.0 434.3 283.0H250.0Z" fill="url(#h-emb)"/>
+<text x="776" y="281.0" class="val" text-anchor="end">4.38×*</text>
+<rect x="808" y="265.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
+<text x="843.9" y="280.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
+<text x="50" y="312.5" class="rank" text-anchor="middle">4</text>
+<circle cx="87" cy="308.0" r="5" fill="#333333"/>
+<text x="100" y="313.0" class="name">PIDG (module)</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="305.2" r="2.1"/><path d="M230.4 313.5Q230.8 308.6 233.6 308.6Q236.6 308.6 237.2 313.5Z"/></g><circle cx="229.0" cy="305.9" r="2.5"/><path d="M224.6 314.0Q225.0 309.4 229.0 309.4Q233.0 309.4 233.4 314.0Z"/></g>
+<path d="M250.0 301.0H425.5Q429.5 301.0 429.5 305.0V311.0Q429.5 315.0 425.5 315.0H250.0Z" fill="#333333"/>
+<text x="776" y="313.0" class="val" text-anchor="end">4.17×</text>
+<rect x="808" y="297.0" width="101" height="22" rx="11" fill="#FFFFFF" stroke="#D9CFCF" stroke-dasharray="3 2"/>
+<text x="858.7" y="312.5" class="chip" text-anchor="middle" style="fill:#867678">Exploratory</text>
+<text x="50" y="344.5" class="rank" text-anchor="middle">5</text>
+<circle cx="87" cy="340.0" r="5" fill="#6250d6"/>
+<text x="100" y="345.0" class="name">FastWAM</text>
+<path d="M250.0 333.0H394.8Q398.8 333.0 398.8 337.0V343.0Q398.8 347.0 394.8 347.0H250.0Z" fill="#6250d6"/>
+<text x="776" y="345.0" class="val" text-anchor="end">3.46×</text>
+<rect x="808" y="329.0" width="101" height="22" rx="11" fill="#EEF4FA" stroke="#D3E2F0"/>
+<text x="858.7" y="344.5" class="chip" text-anchor="middle" style="fill:#2F5F8A">Task metric</text>
+<text x="50" y="376.5" class="rank" text-anchor="middle">6</text>
+<circle cx="87" cy="372.0" r="5" fill="#6250d6"/>
+<text x="100" y="377.0" class="name">OpenWAM</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="369.2" r="2.1"/><path d="M230.4 377.5Q230.8 372.6 233.6 372.6Q236.6 372.6 237.2 377.5Z"/></g><circle cx="229.0" cy="369.9" r="2.5"/><path d="M224.6 378.0Q225.0 373.4 229.0 373.4Q233.0 373.4 233.4 378.0Z"/></g>
+<path d="M250.0 365.0H365.1Q369.1 365.0 369.1 369.0V375.0Q369.1 379.0 365.1 379.0H250.0Z" fill="#6250d6" fill-opacity=".35"/>
+<path d="M250.0 365.0H359.2Q359.2 365.0 359.2 365.0V379.0Q359.2 379.0 359.2 379.0H250.0Z" fill="#6250d6"/>
+<text x="776" y="377.0" class="val" text-anchor="end">2.54–2.77×</text>
+<rect x="808" y="361.0" width="101" height="22" rx="11" fill="#EEF4FA" stroke="#D3E2F0"/>
+<text x="858.7" y="376.5" class="chip" text-anchor="middle" style="fill:#2F5F8A">Task metric</text>
+<text x="50" y="408.5" class="rank" text-anchor="middle">7</text>
+<circle cx="87" cy="404.0" r="5" fill="#1baf7a"/>
+<text x="100" y="409.0" class="name">LLaVA</text>
+<path d="M250.0 397.0H348.8Q352.8 397.0 352.8 401.0V407.0Q352.8 411.0 348.8 411.0H250.0Z" fill="#1baf7a"/>
+<text x="776" y="409.0" class="val" text-anchor="end">2.39×</text>
+<rect x="808" y="393.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="408.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="440.5" class="rank" text-anchor="middle">8</text>
+<circle cx="87" cy="436.0" r="5" fill="#e87ba4"/>
+<text x="100" y="441.0" class="name">ProteinMPNN</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="433.2" r="2.1"/><path d="M230.4 441.5Q230.8 436.6 233.6 436.6Q236.6 436.6 237.2 441.5Z"/></g><circle cx="229.0" cy="433.9" r="2.5"/><path d="M224.6 442.0Q225.0 437.4 229.0 437.4Q233.0 437.4 233.4 442.0Z"/></g>
+<path d="M250.0 429.0H342.8Q346.8 429.0 346.8 433.0V439.0Q346.8 443.0 342.8 443.0H250.0Z" fill="#e87ba4"/>
+<text x="776" y="441.0" class="val" text-anchor="end">2.25×</text>
+<rect x="808" y="425.0" width="101" height="22" rx="11" fill="#FFFFFF" stroke="#D9CFCF" stroke-dasharray="3 2"/>
+<text x="858.7" y="440.5" class="chip" text-anchor="middle" style="fill:#867678">Exploratory</text>
+<text x="50" y="472.5" class="rank" text-anchor="middle">9</text>
+<circle cx="87" cy="468.0" r="5" fill="#2a78d6"/>
+<text x="100" y="473.0" class="name">YOCO</text>
+<path d="M250.0 461.0H337.2Q341.2 461.0 341.2 465.0V471.0Q341.2 475.0 337.2 475.0H250.0Z" fill="#2a78d6"/>
+<text x="776" y="473.0" class="val" text-anchor="end">2.12×</text>
+<rect x="808" y="457.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="472.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="504.5" class="rank" text-anchor="middle">10</text>
+<circle cx="87" cy="500.0" r="5" fill="#eda100"/>
+<text x="100" y="505.0" class="name">Self-Forcing</text>
+<path d="M250.0 493.0H335.4Q339.4 493.0 339.4 497.0V503.0Q339.4 507.0 335.4 507.0H250.0Z" fill="#eda100"/>
+<text x="776" y="505.0" class="val" text-anchor="end">2.08×</text>
+<rect x="808" y="489.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="504.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="536.5" class="rank" text-anchor="middle">11</text>
+<circle cx="87" cy="532.0" r="5" fill="#1baf7a"/>
+<text x="100" y="537.0" class="name">R3</text>
+<path d="M250.0 525.0H335.4Q339.4 525.0 339.4 529.0V535.0Q339.4 539.0 335.4 539.0H250.0Z" fill="#1baf7a"/>
+<text x="776" y="537.0" class="val" text-anchor="end">2.08×</text>
+<rect x="808" y="521.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
+<text x="843.9" y="536.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
+<text x="50" y="568.5" class="rank" text-anchor="middle">12</text>
+<circle cx="87" cy="564.0" r="5" fill="#eda100"/>
+<text x="100" y="569.0" class="name">MiniMax-H3</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="561.2" r="2.1"/><path d="M230.4 569.5Q230.8 564.6 233.6 564.6Q236.6 564.6 237.2 569.5Z"/></g><circle cx="229.0" cy="561.9" r="2.5"/><path d="M224.6 570.0Q225.0 565.4 229.0 565.4Q233.0 565.4 233.4 570.0Z"/></g>
+<path d="M250.0 557.0H325.9Q329.9 557.0 329.9 561.0V567.0Q329.9 571.0 325.9 571.0H250.0Z" fill="#eda100"/>
+<text x="776" y="569.0" class="val" text-anchor="end">1.86×</text>
+<rect x="808" y="553.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="568.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="600.5" class="rank" text-anchor="middle">13</text>
+<circle cx="87" cy="596.0" r="5" fill="#1baf7a"/>
+<text x="100" y="601.0" class="name">BAGEL</text>
+<path d="M250.0 589.0H324.3Q328.3 589.0 328.3 593.0V599.0Q328.3 603.0 324.3 603.0H250.0Z" fill="#1baf7a"/>
+<text x="776" y="601.0" class="val" text-anchor="end">1.82×</text>
+<rect x="808" y="585.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="600.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="632.5" class="rank" text-anchor="middle">14</text>
+<circle cx="87" cy="628.0" r="5" fill="#eb6834"/>
+<text x="100" y="633.0" class="name">DMD2</text>
+<path d="M250.0 621.0H320.0Q324.0 621.0 324.0 625.0V631.0Q324.0 635.0 320.0 635.0H250.0Z" fill="#eb6834"/>
+<text x="776" y="633.0" class="val" text-anchor="end">1.72×</text>
+<rect x="808" y="617.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="632.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="664.5" class="rank" text-anchor="middle">15</text>
+<circle cx="87" cy="660.0" r="5" fill="#2a78d6"/>
+<text x="100" y="665.0" class="name">LLM2Vec</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="657.2" r="2.1"/><path d="M230.4 665.5Q230.8 660.6 233.6 660.6Q236.6 660.6 237.2 665.5Z"/></g><circle cx="229.0" cy="657.9" r="2.5"/><path d="M224.6 666.0Q225.0 661.4 229.0 661.4Q233.0 661.4 233.4 666.0Z"/></g>
+<path d="M250.0 653.0H314.8Q318.8 653.0 318.8 657.0V663.0Q318.8 667.0 314.8 667.0H250.0Z" fill="#2a78d6"/>
+<text x="776" y="665.0" class="val" text-anchor="end">1.60×</text>
+<rect x="808" y="649.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="664.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="696.5" class="rank" text-anchor="middle">16</text>
+<circle cx="87" cy="692.0" r="5" fill="#eb6834"/>
+<text x="100" y="697.0" class="name">JiT</text>
+<path d="M250.0 685.0H313.1Q317.1 685.0 317.1 689.0V695.0Q317.1 699.0 313.1 699.0H250.0Z" fill="#eb6834"/>
+<text x="776" y="697.0" class="val" text-anchor="end">1.56×</text>
+<rect x="808" y="681.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="696.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="50" y="728.5" class="rank" text-anchor="middle">17</text>
+<circle cx="87" cy="724.0" r="5" fill="#e87ba4"/>
+<text x="100" y="729.0" class="name">Protenix</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="721.2" r="2.1"/><path d="M230.4 729.5Q230.8 724.6 233.6 724.6Q236.6 724.6 237.2 729.5Z"/></g><circle cx="229.0" cy="721.9" r="2.5"/><path d="M224.6 730.0Q225.0 725.4 229.0 725.4Q233.0 725.4 233.4 730.0Z"/></g>
+<path d="M250.0 717.0H312.8Q316.8 717.0 316.8 721.0V727.0Q316.8 731.0 312.8 731.0H250.0Z" fill="#e87ba4"/>
+<text x="776" y="729.0" class="val" text-anchor="end">1.55×</text>
+<rect x="808" y="713.0" width="116" height="22" rx="11" fill="#F8F1EA" stroke="#E6D5C3"/>
+<text x="866.1" y="728.5" class="chip" text-anchor="middle" style="fill:#7A5634">Manual review</text>
+<text x="50" y="760.5" class="rank" text-anchor="middle">18</text>
+<circle cx="87" cy="756.0" r="5" fill="#e87ba4"/>
+<text x="100" y="761.0" class="name">FermiNet</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="753.2" r="2.1"/><path d="M230.4 761.5Q230.8 756.6 233.6 756.6Q236.6 756.6 237.2 761.5Z"/></g><circle cx="229.0" cy="753.9" r="2.5"/><path d="M224.6 762.0Q225.0 757.4 229.0 757.4Q233.0 757.4 233.4 762.0Z"/></g>
+<path d="M250.0 749.0H299.8Q303.8 749.0 303.8 753.0V759.0Q303.8 763.0 299.8 763.0H250.0Z" fill="#e87ba4"/>
+<text x="776" y="761.0" class="val" text-anchor="end">1.25×</text>
+<rect x="808" y="745.0" width="72" height="22" rx="11" fill="#FBEAEA" stroke="#E7C2C2"/>
+<text x="843.9" y="760.5" class="chip" text-anchor="middle" style="fill:#8C0000">Bitwise</text>
+<text x="50" y="792.5" class="rank" text-anchor="middle">19</text>
+<circle cx="87" cy="788.0" r="5" fill="#333333"/>
+<text x="100" y="793.0" class="name">3DGS</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="785.2" r="2.1"/><path d="M230.4 793.5Q230.8 788.6 233.6 788.6Q236.6 788.6 237.2 793.5Z"/></g><circle cx="229.0" cy="785.9" r="2.5"/><path d="M224.6 794.0Q225.0 789.4 229.0 789.4Q233.0 789.4 233.4 794.0Z"/></g>
+<path d="M250.0 781.0H294.7Q298.7 781.0 298.7 785.0V791.0Q298.7 795.0 294.7 795.0H250.0Z" fill="#333333"/>
+<text x="776" y="793.0" class="val" text-anchor="end">1.13×</text>
+<rect x="808" y="777.0" width="101" height="22" rx="11" fill="#FFFFFF" stroke="#D9CFCF" stroke-dasharray="3 2"/>
+<text x="858.7" y="792.5" class="chip" text-anchor="middle" style="fill:#867678">Exploratory</text>
+<text x="50" y="824.5" class="rank" text-anchor="middle">20</text>
+<circle cx="87" cy="820.0" r="5" fill="#2a78d6"/>
+<text x="100" y="825.0" class="name">NanoChat</text>
+<g fill="#867678"><g fill-opacity=".5"><circle cx="233.6" cy="817.2" r="2.1"/><path d="M230.4 825.5Q230.8 820.6 233.6 820.6Q236.6 820.6 237.2 825.5Z"/></g><circle cx="229.0" cy="817.9" r="2.5"/><path d="M224.6 826.0Q225.0 821.4 229.0 821.4Q233.0 821.4 233.4 826.0Z"/></g>
+<path d="M250.0 813.0H292.2Q296.2 813.0 296.2 817.0V823.0Q296.2 827.0 292.2 827.0H250.0Z" fill="#2a78d6"/>
+<text x="776" y="825.0" class="val" text-anchor="end">1.07×</text>
+<rect x="808" y="809.0" width="101" height="22" rx="11" fill="#F3F0F0" stroke="#E4DCDC"/>
+<text x="858.7" y="824.5" class="chip" text-anchor="middle" style="fill:#4E4244">Statistical</text>
+<text x="36" y="884" class="foot">* Hatched: extrapolated estimate · LLM2Vec: SimCSE stage (MNTP 1.29×) · details in docs/results</text>
+<text x="36" y="904" class="foot">PIDG: module group including PNG output; not complete-training time.</text>
 </svg>
