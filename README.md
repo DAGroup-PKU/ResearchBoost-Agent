@@ -29,6 +29,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · With the NextTransformer team, RBA's training speedups are now upstream in **[NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer)** ([NextTransformer#26](https://github.com/Interactive-Active-AI/NextTransformer/pull/26)): **1.38×** per update in the team's 8-GPU re-test, bitwise identical to the default path. Thanks to the NextTransformer team!
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Original 3DGS and PIDG](docs/results/3d-reconstruction.md)** by [@HaoqinHong](https://github.com/HaoqinHong): **1.13×** across three complete 3DGS pipelines and **4.17×** for the PIDG optical-flow module group on one A800.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)** by [@micky-li-hd](https://github.com/micky-li-hd): **1.55×** on Protenix 2.0.0 training over a fixed 128-update workload, validated by manual review.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)** by [@sen-ye](https://github.com/sen-ye): **1.25×** on FermiNet all-electron training for Fe, Kr, Cd and Xe.
