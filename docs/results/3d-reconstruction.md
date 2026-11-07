@@ -4,7 +4,7 @@
 
 2 projects · [Original 3DGS](#original-3dgs) · [PIDG](#pidg)
 
-Contributed by [@HaoqinHong](https://github.com/HaoqinHong). Both experiments use one NVIDIA A800-SXM4-80GB, original precision settings, and a shared GPU with existing viewers running. Speedup is baseline time divided by experimental time. Both cases are submitted as **Exploratory**, with the judge statuses below.
+Contributed by [@HaoqinHong](https://github.com/HaoqinHong). Both experiments use one NVIDIA A800-SXM4-80GB, original precision settings, and a shared GPU with existing viewers running. Speedup is baseline time divided by experimental time. Validation uses task metrics: held-out-view PSNR for Original 3DGS and module-output numerical checks for PIDG. Judge statuses are listed below.
 
 ## Original 3DGS
 
@@ -15,6 +15,7 @@ Contributed by [@HaoqinHong](https://github.com/HaoqinHong). Both experiments us
 | Speedup | **1.13×** across the three complete pipelines; **1.07–1.29×** per scene |
 | Hardware | 1 × NVIDIA A800-SXM4-80GB |
 | Measurement scope | 4269.73 → 3773.86 s total, including initialization, training, native evaluation and saving |
+| Validation | Held-out-view PSNR: ΔPSNR −0.014 to +0.038 dB per scene |
 | Judge status | `INCORRECT / exit 2`: 11 continuous-value violations among 1,287 checks; `formal_ResearchBoost_acceptance: false` |
 
 | Scene | Baseline (s) | Experimental (s) | Speedup | PSNR baseline → experimental (dB) | ΔPSNR (dB) |

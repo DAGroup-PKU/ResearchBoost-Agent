@@ -27,7 +27,7 @@ PROJECTS = [
     ("Motus", "emb", 9.59, "9.59×", False, "bitwise"),
     ("RAE", "img", 5.32, "5.32×", False, "stat"),
     ("RoboTwin", "emb", 4.38, "4.38×", True, "bitwise"),
-    ("PIDG (module)", "3d", 4.1749, "4.17×", False, "explore"),
+    ("PIDG (module)", "3d", 4.1749, "4.17×", False, "task"),
     ("FastWAM", "emb", 3.46, "3.46×", False, "task"),
     ("OpenWAM", "emb", (2.54, 2.77), "2.54–2.77×", False, "task"),
     ("LLaVA", "mllm", 2.39, "2.39×", False, "stat"),
@@ -42,7 +42,7 @@ PROJECTS = [
     ("JiT", "img", 1.56, "1.56×", False, "stat"),
     ("Protenix", "sci", 1.5524, "1.55×", False, "manual"),
     ("FermiNet", "sci", 1.252, "1.25×", False, "bitwise"),
-    ("3DGS", "3d", 1.1314, "1.13×", False, "explore"),
+    ("3DGS", "3d", 1.1314, "1.13×", False, "task"),
     ("NanoChat", "llm", 1.0744, "1.07×", False, "stat"),
 ]
 

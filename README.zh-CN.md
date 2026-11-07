@@ -29,8 +29,7 @@
 
 ## 动态
 
-- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Original 3DGS 与 PIDG](docs/results/3d-reconstruction.md)**，来自 [@HaoqinHong](https://github.com/HaoqinHong)：单张 A800 探索结果，三场景完整 3DGS 流程合计 **1.13×**，PIDG 光流模块组 **4.17×**。
-
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Original 3DGS 与 PIDG](docs/results/3d-reconstruction.md)**，来自 [@HaoqinHong](https://github.com/HaoqinHong)：单张 A800 上，三场景完整 3DGS 流程合计 **1.13×**，PIDG 光流模块组 **4.17×**。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：Protenix 2.0.0 训练在固定的 128 次更新上加速 **1.55×**，经人工复核验证。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-06** · **[Faster-FermiNet](https://github.com/sen-ye/faster-ferminet)**，来自 [@sen-ye](https://github.com/sen-ye)：FermiNet 全电子训练（Fe / Kr / Cd / Xe）加速 **1.25×**。
 - <img src="https://img.shields.io/badge/功能-2A78D6?style=flat-square" alt="功能" height="18"> **2026-11-05** · 轻量化 check：统计检查改为单种子 3σ，agent 自己的 `check` 只计时一次候选版本、与固定的基线计时比较，“基线 → 候选版本 → 基线”计时留给最终评测。每次 check 更快，一次运行中更多时间用于优化（[check 模式](docs/judge.md#check-modes)）。
