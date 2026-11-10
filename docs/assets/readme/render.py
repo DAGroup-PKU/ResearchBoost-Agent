@@ -38,7 +38,7 @@ def icon(name, size=24, stroke=2.2):
 DOMAINS = [
     ("emb", "#6250d6", "Embodied AI", "具身智能", "Motus", "9.59×"),
     ("img", "#eb6834", "Image gen", "图像生成", "RAE", "5.32×"),
-    ("mllm", "#1baf7a", "MLLM", "多模态模型", "LLaVA", "2.39×"),
+    ("mllm", "#1baf7a", "MLLM", "多模态模型", "LLaVA-OneVision-2", "3.0×"),
     ("sci", "#e87ba4", "AI for Science", "AI for Science", "ProteinMPNN", "2.25×"),
     ("llm", "#2a78d6", "LLM", "语言模型", "YOCO", "2.12×"),
     ("vid", "#eda100", "Video gen", "视频生成", "Self-Forcing", "2.08×"),
@@ -55,7 +55,7 @@ T = {
                     ("quickstart", "rocket", "Quick start", "light")],
         "cards": [
             ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across seven domains",
-             "20 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
+             "21 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
              "See all results"),
             ("prompt", "terminal", "02 · ONE PROMPT", "Paste one prompt,<br>get a verified speedup",
              "Open Codex or Claude Code on a GPU host. The agent finds the code, asks only what is yours to decide, and does the rest.",
@@ -129,7 +129,7 @@ T = {
                     ("quickstart", "rocket", "快速开始", "light")],
         "cards": [
             ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖七个领域",
-             "20 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",
+             "21 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",
              "查看全部结果"),
             ("prompt", "terminal", "02 · 一段提示词", "粘贴一段话，<br>拿到验证过的加速",
              "在 GPU 主机上打开 Codex 或 Claude Code。agent 自己找到代码，只问需要你决定的事，其余全部自己完成。",
@@ -243,7 +243,7 @@ def card_right(kind, t):
     if kind == "results":
         tiles = "".join(
             f'<div class="tile"><div class="th"><span class="sw" style="background:{c}"></span>{en if t is T["en"] else zh}</div>'
-            f'<div class="big">{x}</div><div class="pj">{pj}</div></div>'
+            f'<div class="big">{x}</div><div class="pj{" long" if len(pj) > 14 else ""}">{pj}</div></div>'
             for _, c, en, zh, pj, x in DOMAINS)
         return f'<div class="grid">{tiles}</div><div class="note">{t["domain_top"]}</div>'
     if kind == "prompt":
@@ -289,7 +289,8 @@ p {{ font-size:18px; line-height:1.55; color:var(--muted); }}
 .th {{ display:flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:var(--muted); white-space:nowrap; }}
 .sw {{ width:12px; height:12px; border-radius:4px; flex:none; }}
 .big {{ font-size:30px; font-weight:800; letter-spacing:-.02em; margin-top:6px; }}
-.pj {{ font-size:13.5px; color:var(--ink2); font-weight:600; }}
+.pj {{ font-size:13.5px; color:var(--ink2); font-weight:600; white-space:nowrap; }}
+.pj.long {{ font-size:12px; letter-spacing:-.015em; }}
 .note {{ position:absolute; right:24px; bottom:12px; font-size:12px; color:var(--muted); letter-spacing:.06em; }}
 /* prompt */
 .r:has(.term) {{ background:#221B1C; border-color:#221B1C; padding:0; overflow:hidden; }}

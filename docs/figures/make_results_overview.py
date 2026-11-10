@@ -29,6 +29,7 @@ PROJECTS = [
     ("RoboTwin", "emb", 4.38, "4.38×", True, "bitwise"),
     ("PIDG (module)", "3d", 4.1749, "4.17×", False, "task"),
     ("FastWAM", "emb", 3.46, "3.46×", False, "task"),
+    ("LLaVA-OneVision-2", "mllm", (2.2, 3.0), "2.2–3.0×", False, "stat"),
     ("OpenWAM", "emb", (2.54, 2.77), "2.54–2.77×", False, "task"),
     ("LLaVA", "mllm", 2.39, "2.39×", False, "stat"),
     ("ProteinMPNN", "sci", 2.25, "2.25×", False, "explore"),
@@ -47,7 +48,7 @@ PROJECTS = [
 ]
 
 # Projects contributed by the community; the leaderboard marks them with a people icon.
-COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS"}
+COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "LLaVA-OneVision-2", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS"}
 
 # (name, domain, baseline, optimized, unit-formatted labels, speedup label, estimate?, en/zh scope, en/zh quality)
 SHOWCASE = [
@@ -163,7 +164,7 @@ def leaderboard(lang):
     li = 1 if lang == "en" else 2
     n = len(PROJECTS)
     PAD, TOP, ROW_H, BAR_H = 36, 172, 32, 14
-    X_RANK, X_NAME, X0, PLOT_W, X_VAL, X_CHIP = PAD + 14, PAD + 46, 250, 430, 776, 808
+    X_RANK, X_NAME, X0, PLOT_W, X_VAL, X_CHIP = PAD + 14, PAD + 46, 290, 390, 776, 808
     sx = lambda v: X0 + v / 10.0 * PLOT_W
     # Include community provenance in the same wrapping legend as the domains.
     text_width = lambda label: sum(13.5 if ord(ch) > 0x2E80 else 7.1 for ch in label)
