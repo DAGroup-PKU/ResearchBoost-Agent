@@ -29,6 +29,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-09** · **[LLaVA-OneVision-2](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2)** 已把 RBA 的训练加速合入主分支（[LLaVA-OneVision-2#205](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2/pull/205)，来自 [@GONGSHUKAI](https://github.com/GONGSHUKAI)）：4B SFT 在 Blackwell / Hopper 上分别加速 **3.0×** / **2.2×**，MFU 从 11.6% / 22.1% 提升到 32.5% / 45.5%。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · 与 NextTransformer 团队合作，RBA 的训练加速已合入 **[NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer)**（[NextTransformer#26](https://github.com/Interactive-Active-AI/NextTransformer/pull/26)）：团队 8 卡复测每次更新加速 **1.38×**，与默认训练逐位一致。感谢 NextTransformer 团队！
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Original 3DGS 与 PIDG](docs/results/3d-reconstruction.md)**，来自 [@HaoqinHong](https://github.com/HaoqinHong)：单张 A800 上，三场景完整 3DGS 流程合计 **1.13×**，PIDG 光流模块组 **4.17×**。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix)**，来自 [@micky-li-hd](https://github.com/micky-li-hd)：Protenix 2.0.0 训练在固定的 128 次更新上加速 **1.55×**，经人工复核验证。
