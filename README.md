@@ -231,7 +231,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |
-| [`skills/`](skills) | Nine skill cards read before choosing what to try: `train-opt-*` (profiling, measurement, action ladder, numerics validation, fusion patterns, FSDP multi-forward), `kernel-utilization-analysis` (SM coverage, launch-bound kernels, bandwidth against peak, repeated kernel chains, with a trace-analysis script) and `sglang-diffusion-*` (diffusion benchmarking and performance) |
+| [`skills/`](skills) | Eleven skill cards read before choosing what to try: `train-opt-*` (profiling, measurement, action ladder, numerics validation, fusion patterns, FSDP multi-forward), `kernel-utilization-analysis` (SM coverage, launch-bound kernels, bandwidth against peak, repeated kernel chains, with a trace-analysis script), `sglang-diffusion-*` (diffusion benchmarking and performance) and `tpu-*` (Cloud TPU XProf Roofline decomposition, preflight, PyTorch/XLA and JAX/Pallas action ladder, with trace and sharding audit scripts) |
 | [`tasks/`](tasks) | Per task: the `GOAL.md` the agent saw, the frozen judge code, archived judge records, supervision notes and the prep scripts |
 
 ## Community
@@ -246,6 +246,8 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 ## Acknowledgements
 
 We thank the [SGLang](https://github.com/sgl-project/sglang) project. Part of the kernel-optimization skills in this repository are ported from SGLang: [`skills/sglang-diffusion-benchmark-profile`](skills/sglang-diffusion-benchmark-profile) and [`skills/sglang-diffusion-performance`](skills/sglang-diffusion-performance) are adapted from the skills in [`python/sglang/multimodal_gen/.agents/skills`](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills), released under the Apache-2.0 license.
+
+We thank [Feiyang Liu](https://zaychikliu.github.io/) for the [Open TPU Systems and Performance Engineering Handbook](https://zaychikliu.github.io/tpu-handbook/en/) ([`tpu-handbook`](https://github.com/ZaychikLiu/tpu-handbook)). [`skills/tpu-xprof-and-roofline`](skills/tpu-xprof-and-roofline) and [`skills/tpu-xla-action-ladder`](skills/tpu-xla-action-ladder) and their companion scripts are adapted from it under the Apache-2.0 license.
 
 We also thank [Enderfga](https://github.com/Enderfga) for [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator), which powers our goal-mode session orchestration.
 

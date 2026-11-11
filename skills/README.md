@@ -15,5 +15,8 @@ re-verify them on yours before treating them as facts. The verdict is always the
 | `train-opt-fsdp-multi-forward` | several forwards per step under FSDP/DDP |
 | `sglang-diffusion-benchmark-profile` | diffusion models: reproducible benchmark and profile workflow, existing fast paths to check first |
 | `sglang-diffusion-performance` | diffusion models: performance techniques (attention backends, compile, caching, parallelism) |
+| `tpu-xprof-and-roofline` | Cloud TPU (`v4`/`v5e`/`v5p`/`v6e`): preflight checks, device completion barriers, narrow-window XProf `.xplane.pb` Roofline-gap decomposition, `8KN` backward floor; `scripts/` run stdlib-only trace, Roofline and preflight checks |
+| `tpu-xla-action-ladder` | Cloud TPU (PyTorch/XLA and JAX/Flax/Pallas): symptom → first suspect, L0–L4 action ladder mapped to N0–N5 tiers, silent SPMD RNG and static-padding traps; `scripts/` audit CPU virtual-mesh sharding and HLO RNG |
 
 The two `sglang-diffusion-*` cards are adapted from [SGLang](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills) (Apache-2.0).
+The two `tpu-*` cards and their scripts are adapted from the [Open TPU Systems and Performance Engineering Handbook](https://zaychikliu.github.io/tpu-handbook/en/) ([`ZaychikLiu/tpu-handbook`](https://github.com/ZaychikLiu/tpu-handbook), Apache-2.0) by [Feiyang Liu](https://zaychikliu.github.io/).
