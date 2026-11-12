@@ -231,7 +231,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 | [`docs/`](docs) | 英文文档：[方法](docs/methodology.md)、[评测](docs/judge.md)、[goal 模式](docs/goal-mode.md)、[任务运行指南](docs/run-a-task.md)、[四个任务的经验](docs/lessons.md) |
 | [`goal/`](goal) | 在 claw-orchestrator 上运行 Codex 或 Claude Code `/goal` 会话的工具：建任务目录的脚本、沙箱、两种引擎的模型访问配置、启动 / 查看状态 / 发送提醒 / 恢复运行的脚本和最终评测、监控脚本，以及任务准备和监督 agent 的说明 |
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |
-| [`skills/`](skills) | 选择优化方向前阅读的 9 份技能文档：`train-opt-*`（性能分析、计时、分阶段优化步骤、数值验证、算子融合方法、FSDP 多次前向计算）、`kernel-utilization-analysis`（SM 占用、受启动开销限制的内核、实际带宽与峰值之比、重复出现的小内核链，附 trace 分析脚本）和 `sglang-diffusion-*`（扩散模型的性能测试与优化方法） |
+| [`skills/`](skills) | 选择优化方向前阅读的 11 份技能文档：`train-opt-*`（性能分析、计时、分阶段优化步骤、数值验证、算子融合方法、FSDP 多次前向计算）、`kernel-utilization-analysis`（SM 占用、受启动开销限制的内核、实际带宽与峰值之比、重复出现的小内核链，附 trace 分析脚本）、`sglang-diffusion-*`（扩散模型的性能测试与优化方法）和 `tpu-*`（Cloud TPU XProf Roofline 拆解、环境预检、PyTorch/XLA 与 JAX/Pallas 分阶段优化及分片审计脚本） |
 | [`tasks/`](tasks) | 各任务的材料：agent 使用的 `GOAL.md`、固定版本的评测代码、评测结果存档、监督记录和准备脚本 |
 
 ## 交流社区
@@ -246,6 +246,8 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 ## 致谢
 
 感谢 [SGLang](https://github.com/sgl-project/sglang) 项目。本仓库的部分计算内核优化技能文档移植自 SGLang：[`skills/sglang-diffusion-benchmark-profile`](skills/sglang-diffusion-benchmark-profile) 和 [`skills/sglang-diffusion-performance`](skills/sglang-diffusion-performance) 改编自 [`python/sglang/multimodal_gen/.agents/skills`](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills) 中的技能文档，这些文档采用 Apache-2.0 许可证。
+
+感谢 [Feiyang Liu](https://zaychikliu.github.io/) 开源的 [TPU 系统与性能工程手册](https://zaychikliu.github.io/tpu-handbook/)（[`tpu-handbook`](https://github.com/ZaychikLiu/tpu-handbook)）。[`skills/tpu-xprof-and-roofline`](skills/tpu-xprof-and-roofline) 和 [`skills/tpu-xla-action-ladder`](skills/tpu-xla-action-ladder) 及其配套脚本改编自该项目，采用 Apache-2.0 许可证。
 
 同时感谢 [Enderfga](https://github.com/Enderfga) 开发的 [claw-orchestrator](https://github.com/Enderfga/claw-orchestrator)，为我们的 goal 模式提供会话编排支持。
 
