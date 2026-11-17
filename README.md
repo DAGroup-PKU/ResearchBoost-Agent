@@ -14,6 +14,7 @@
 <a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img alt="RSI-Infra Bench" src="https://img.shields.io/badge/bench-RSI--Infra-D9480F?style=flat-square"></a>
 <a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DAGroup-PKU/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
 <a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
 <a href="#community"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
@@ -29,6 +30,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-11-17** · **[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** preview: eight real training workloads, ten hours each, scored by RBA's frozen judge. See the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) of eight models and the [blog post](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/) on what separates them.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-09** · **[LLaVA-OneVision-2](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2)** merged RBA's training speedups into main ([LLaVA-OneVision-2#205](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2/pull/205), by [@GONGSHUKAI](https://github.com/GONGSHUKAI)): 4B SFT runs **3.0×** faster on Blackwell and **2.2×** on Hopper, with MFU up from 11.6% to 32.5% and from 22.1% to 45.5%.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · With the NextTransformer team, RBA's training speedups are now upstream in **[NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer)** ([NextTransformer#26](https://github.com/Interactive-Active-AI/NextTransformer/pull/26)): **1.38×** per update in the team's 8-GPU re-test, bitwise identical to the default path. Thanks to the NextTransformer team!
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-07** · **[Original 3DGS and PIDG](docs/results/3d-reconstruction.md)** by [@HaoqinHong](https://github.com/HaoqinHong): **1.13×** across three complete 3DGS pipelines and **4.17×** for the PIDG optical-flow module group on one A800.
@@ -161,6 +163,16 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 [Full results index →](docs/results/README.md) · [Interactive results ↗](https://ai4ai-for-anything.github.io/#research) · [Add your case →](#contribute-a-case)
+
+## RSI-Infra Bench
+
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/bench-banner-en.jpg" alt="RSI-Infra Bench: how much faster can an agent make real training?" width="100%"></a>
+
+RBA's frozen judge, turned into a benchmark for the agents themselves. **[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** gives a coding agent a real training workload, 1–4 Hopper GPUs and ten hours; the judge accepts only the same training, faster. The preview has eight tasks and eight models and runs on [Harbor](https://pypi.org/project/harbor/0.24.0/).
+
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench preview, overall score (ECI; Claude Opus 5.5 = 40, Kimi k3.1-pro = 10): Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.76, MiniMax M3.1 Flash 20.77, Claude Haiku 5.5 19.33, GLM-5.3 13.84, DeepSeek V4.1 Flash-1017 13.83, GPT-6 Astra 13.79, Kimi k3.1-pro 10.00" width="100%"></a>
+
+[Benchmark and how to run →](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench) · [Leaderboard and traces ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) · [Blog ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)
 
 ## Quick start
 

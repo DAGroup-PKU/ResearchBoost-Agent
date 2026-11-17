@@ -14,6 +14,7 @@
 <a href="https://ai4ai-for-anything.github.io/#research"><img alt="Project page" src="https://img.shields.io/badge/project-page-8C0000?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/"><img alt="Blog" src="https://img.shields.io/badge/blog-read-7C3AED?style=flat-square"></a>
 <a href="https://ydove0324.github.io/hx_resume/blog/researchboost/#wishlist"><img alt="Wishlist" src="https://img.shields.io/badge/wishlist-submit-0891B2?style=flat-square"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img alt="RSI-Infra Bench" src="https://img.shields.io/badge/bench-RSI--Infra-D9480F?style=flat-square"></a>
 <a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img alt="GitHub stars" src="https://img.shields.io/github/stars/DAGroup-PKU/ResearchBoost-Agent?style=flat-square&logo=github&color=241B1C"></a>
 <a href="https://discord.gg/5k7Rr9hut"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white"></a>
 <a href="#交流社区"><img alt="WeChat group" src="https://img.shields.io/badge/WeChat-group-07C160?style=flat-square&logo=wechat&logoColor=white"></a>
@@ -29,6 +30,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/发布-6250D6?style=flat-square" alt="发布" height="18"> **2026-11-17** · **[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** 预览版发布：8 个真实训练任务，每个 10 小时，由 RBA 的冻结评测程序判分。8 个模型的结果见[排行榜](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)，它们差在哪里见[博客](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-09** · **[LLaVA-OneVision-2](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2)** 已把 RBA 的训练加速合入主分支（[LLaVA-OneVision-2#205](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2/pull/205)，来自 [@GONGSHUKAI](https://github.com/GONGSHUKAI)）：4B SFT 在 Blackwell / Hopper 上分别加速 **3.0×** / **2.2×**，MFU 从 11.6% / 22.1% 提升到 32.5% / 45.5%。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · 与 NextTransformer 团队合作，RBA 的训练加速已合入 **[NextTransformer](https://github.com/Interactive-Active-AI/NextTransformer)**（[NextTransformer#26](https://github.com/Interactive-Active-AI/NextTransformer/pull/26)）：团队 8 卡复测每次更新加速 **1.38×**，与默认训练逐位一致。感谢 NextTransformer 团队！
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-07** · **[Original 3DGS 与 PIDG](docs/results/3d-reconstruction.md)**，来自 [@HaoqinHong](https://github.com/HaoqinHong)：单张 A800 上，三场景完整 3DGS 流程合计 **1.13×**，PIDG 光流模块组 **4.17×**。
@@ -161,6 +163,16 @@
 </details>
 
 [完整结果索引（英文） →](docs/results/README.md) · [交互式官网 ↗](https://ai4ai-for-anything.github.io/#research) · [贡献你的结果 →](#贡献案例)
+
+## RSI-Infra Bench
+
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/bench-banner-en.jpg" alt="RSI-Infra Bench：agent 能让真实训练快多少？" width="100%"></a>
+
+把 RBA 的冻结评测程序变成考 agent 本身的基准。**[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** 给编码 agent 一个真实训练任务、1–4 张 Hopper GPU 和 10 小时，评测程序只接受训练不变、速度更快的改动。预览版有 8 道题、8 个模型，基于 [Harbor](https://pypi.org/project/harbor/0.24.0/) 运行。
+
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench 预览版综合分数（ECI；Claude Opus 5.5 = 40，Kimi k3.1-pro = 10）：Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.76, MiniMax M3.1 Flash 20.77, Claude Haiku 5.5 19.33, GLM-5.3 13.84, DeepSeek V4.1 Flash-1017 13.83, GPT-6 Astra 13.79, Kimi k3.1-pro 10.00" width="100%"></a>
+
+[基准与运行方法（英文） →](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench) · [排行榜与 trace ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) · [博客 ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)
 
 ## 快速开始
 
