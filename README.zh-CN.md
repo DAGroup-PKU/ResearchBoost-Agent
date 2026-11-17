@@ -62,7 +62,7 @@
 
 ## 已有结果
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="21 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.07×（NanoChat），附验证方式" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="21 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.13×（3DGS），附验证方式" width="100%"></a>
 
 <img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
 
@@ -73,7 +73,7 @@
 
 | 项目 | 工作负载 | 加速比 |
 |---|---|---:|
-| [Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)（[@Bool1020](https://github.com/Bool1020) 贡献） | D24 预训练（Tensorwise FP8） | **1.0744×** |
+| [Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat)（[@Bool1020](https://github.com/Bool1020) 贡献） | D24 预训练（Tensorwise FP8） | **1.20×** |
 | [Faster-YOCO](https://github.com/AI4AI-for-Anything/Faster-YOCO) | YOCO-3B 预训练 | **2.12×** |
 | [Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec)（[@Bool1020](https://github.com/Bool1020) 贡献） | Mistral-7B · BF16 LoRA；MNTP / SimCSE（独立阶段） | **1.2900× / 1.6009×** |
 

@@ -12,12 +12,12 @@ Contributed by [@Bool1020](https://github.com/Bool1020).
 
 | Item | Result |
 |---|---|
-| Speedup | **1.0744×** |
+| Speedup | **1.20×** (updated project-owner report) |
 | Hardware | 8 × H20 |
-| Measurement scope | 3,358.4 → 3,126.0 ms/update |
+| Measurement scope | Training-update speedup; updated timing pair not supplied |
 | Validation | N1 statistical equivalence |
 
-Steady-state timing after compilation and warmup; six-seed short-trajectory check passed.
+Historical evidence: the earlier **1.0744×** result measured 3,358.4 → 3,126.0 ms/update after compilation and warmup, with a six-seed short-trajectory N1 check. Those timings and checks describe the earlier result, not a newly measured 1.20× pair. The headline was updated from the project owner’s supplied result; no new millisecond timings are inferred.
 
 [Code & project README ↗](https://github.com/AI4AI-for-Anything/Faster-NanoChat) · [Detailed evidence ↗](https://github.com/AI4AI-for-Anything/Faster-NanoChat/blob/main/docs/training.md)
 

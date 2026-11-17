@@ -62,7 +62,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 21 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.07× (NanoChat), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 21 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -73,7 +73,7 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 
 | Project | Workload | Speedup |
 |---|---|---:|
-| [Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat) by [@Bool1020](https://github.com/Bool1020) | D24 (~1.384B) · Tensorwise FP8 training | **1.0744×** |
+| [Faster-NanoChat](https://github.com/AI4AI-for-Anything/Faster-NanoChat) by [@Bool1020](https://github.com/Bool1020) | D24 (~1.384B) · Tensorwise FP8 training | **1.20×** |
 | [Faster-YOCO](https://github.com/AI4AI-for-Anything/Faster-YOCO) | YOCO-3B pretraining · BF16, no FP8 | **2.12×** |
 | [Faster-LLM2Vec](https://github.com/AI4AI-for-Anything/Faster-LLM2Vec) by [@Bool1020](https://github.com/Bool1020) | Mistral-7B · BF16 LoRA; MNTP / SimCSE (independent stages) | **1.2900× / 1.6009×** |
 
