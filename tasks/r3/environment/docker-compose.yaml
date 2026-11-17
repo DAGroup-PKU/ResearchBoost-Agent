@@ -1,0 +1,14 @@
+# Host paths come from the environment of `harbor run` (see researchboost.env.example):
+#   RESEARCHBOOST_ASSETS_ROOT   asset root; this task reads <root>/r3 (BAGEL-7B-MoT @ 5019f57d, the Mask2Former
+#                               GenEval detector, the open_clip ViT-L-14 openai weights in an HF hub cache; see
+#                               ../README.md), provisioned on the host beforehand
+#   RESEARCHBOOST_SCRATCH_ROOT  scratch root; <root>/r3 is the trial's /tmp (the judge's scratch space); it is emptied
+#                               when a trial starts, so run one trial per host at a time
+services:
+  main:
+    shm_size: 256gb
+    environment:
+      RESEARCHBOOST_SMOKE: ${RESEARCHBOOST_SMOKE:-}
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT (see researchboost.env.example)}/r3:/opt/researchboost/assets:ro
+      - ${RESEARCHBOOST_SCRATCH_ROOT:?set RESEARCHBOOST_SCRATCH_ROOT (see researchboost.env.example)}/r3:/tmp

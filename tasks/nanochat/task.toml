@@ -1,0 +1,42 @@
+schema_version = "1.3"
+artifacts = ["/submission/nanochat", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/nanochat"
+description = "Speed up nanochat D24 FP8 pretraining updates on 2 H200-class GPUs; the result must be bitwise identical (N0) or statistically equivalent (N1)."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/nanochat"
+gpus = 2
+gpu_types = ["H200"]
+cpus = 48
+memory_mb = 262144
+storage_mb = 1048576
+# torch and its CUDA libraries are large downloads.
+build_timeout_sec = 3600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# Two deterministic reference records, six reference trajectories, the unchanged tree's quick and full checks and two
+# controls (each with up to six trajectories).
+start_period_sec = 21600
+retries = 3
+
+[verifier]
+# A full check: three timing runs, one deterministic record run and, when not bitwise identical, up to six trajectories.
+timeout_sec = 14400
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

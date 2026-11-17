@@ -1,0 +1,28 @@
+# Host paths come from the environment of `harbor run` (see researchboost.env.example):
+#   RESEARCHBOOST_ASSETS_ROOT   asset cache root; this task uses <root>/llava, filled by the assets service when missing
+#   RESEARCHBOOST_SCRATCH_ROOT  scratch root; <root>/llava is the trial's /tmp (the judge's scratch space); it
+#                               is emptied when a trial starts, so run one trial per host at a time
+services:
+  assets:
+    build:
+      context: ./asset-prep
+    environment:
+      HF_ENDPOINT: ${HF_ENDPOINT:-https://huggingface.co}
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT (see researchboost.env.example)}/llava:/cache
+  main:
+    depends_on:
+      assets:
+        condition: service_completed_successfully
+    shm_size: 16gb
+    environment:
+      RESEARCHBOOST_SMOKE: ${RESEARCHBOOST_SMOKE:-}
+      # Test-only: skip re-recording the reference against a matching preparation pack (bootstrap.py trust_pack).
+      RESEARCHBOOST_PREP_TRUST_PACK: ${RESEARCHBOOST_PREP_TRUST_PACK:-}
+      # Test-only: run at this world size with the same per-GPU load; not a bench score.
+      RESEARCHBOOST_TEST_WORLD_SIZE: ${RESEARCHBOOST_TEST_WORLD_SIZE:-}
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT (see researchboost.env.example)}/llava:/opt/researchboost/assets:ro
+      - ${RESEARCHBOOST_SCRATCH_ROOT:?set RESEARCHBOOST_SCRATCH_ROOT (see researchboost.env.example)}/llava:/tmp
+      # Preparation packs of this task (README), from the repository, read-only.
+      - ../prep-pack:/opt/researchboost/prep-pack:ro

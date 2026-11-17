@@ -1,0 +1,199 @@
+"""Run the existing LLaVA judge; translate its verdict without changing gates.
+
+LLaVA's `bench.py check` exits 0 for every verdict it writes (PASS, INCORRECT, UNAVAILABLE, ERROR, INVALID), so the
+verdict is read from check.json alone; a missing check.json is an evaluation failure, not a candidate result.
+"""
+import json
+import math
+import os
+from pathlib import Path
+import pwd
+import subprocess
+import tempfile
+import time
+
+AGENT = "agent"
+PYTHON = "/opt/llava-env/bin/python"
+WORKSPACE = Path("/opt/researchboost/ws")
+REJECTED = {"accepted": 0.0, "speedup": 0.0}
+SMOKE_REJECTED = {"smoke_quick_pass": 0.0, "smoke_bitwise": 0.0}
+
+
+def candidate_error(result):
+    """ERROR verdicts the candidate caused, scored as a rejection instead of being left unscored: a changed setup
+    (the judge's setup guard) or a candidate timing run that failed after the reference run succeeded."""
+    correctness = result.get("correctness") or {}
+    runs = (result.get("performance") or {}).get("runs") or {}
+    if correctness.get("stage") == "setup_guard":
+        return True
+    return (correctness.get("stage") == "benefit" and (runs.get("ref_a") or {}).get("status") == "ok"
+            and (runs.get("cand") or {}).get("status") == "ERROR")
+
+
+FINAL_MARKER = Path("/run/researchboost/final-evaluation")
+
+
+def allow_final():
+    """The judge refuses `check --final` to the agent user unless this root-owned marker exists in a root-owned
+    directory the agent cannot write (bench.py final_allowed); written here, after the agent's processes are stopped."""
+    FINAL_MARKER.parent.mkdir(parents=True, exist_ok=True)
+    os.chown(FINAL_MARKER.parent, 0, 0)
+    FINAL_MARKER.parent.chmod(0o755)
+    FINAL_MARKER.write_text("%d\n" % int(time.time()))
+    os.chown(FINAL_MARKER, 0, 0)
+    FINAL_MARKER.chmod(0o644)
+
+
+def reward(result):
+    if (result.get("quick") is not False or result.get("skip_timing") is not False or result.get("n1") is not False
+            or result.get("final") is not True):
+        raise ValueError("Only a full check --final can receive a reward")
+    status = result.get("status")
+    correctness = result.get("correctness") or {}
+    performance = result.get("performance") or {}
+    if status == "PASS":
+        speedup = performance.get("speedup")
+        if (correctness.get("passed") is not True
+                or correctness.get("verdict") not in ("bitwise", "equivalent")
+                or (performance.get("benefit") or {}).get("passed") is not True
+                or type(speedup) not in (int, float)
+                or not math.isfinite(speedup) or speedup <= 0):
+            raise ValueError("Incomplete full-check PASS; no reward written")
+        return {"accepted": 1.0, "speedup": float(speedup)}
+    if (status == "INCORRECT" or (status == "UNAVAILABLE" and correctness.get("verdict") == "no_benefit")
+            or (status == "ERROR" and candidate_error(result))):
+        return dict(REJECTED)
+    raise ValueError("Evaluation unavailable or inconsistent: %r (stage %r)" % (status, correctness.get("stage")))
+
+
+def smoke_reward(result):
+    """Smoke mode: the quick check only. Not a benchmark score: no timing, no trajectories.
+    The quick check fails only on exact checks; a non-bitwise candidate passes it and would be decided by the
+    statistical gate of a full check, which smoke mode does not prepare. smoke_bitwise tells the two apart."""
+    if result.get("quick") is not True:
+        raise ValueError("Smoke mode expects a quick check")
+    status = result.get("status")
+    if status == "PASS":
+        bitwise = (result.get("correctness") or {}).get("bitwise")
+        if type(bitwise) is not bool:
+            raise ValueError("Smoke quick-check PASS without a bitwise flag")
+        return {"smoke_quick_pass": 1.0, "smoke_bitwise": float(bitwise)}
+    if status == "INCORRECT" or (status == "ERROR" and candidate_error(result)):
+        return dict(SMOKE_REJECTED)
+    raise ValueError("Smoke quick check unavailable or inconsistent: %r" % status)
+
+
+def switches_problem(python, judge, switches, workspace):
+    """The judge's own candidate_environment decides; the judge exits before writing a verdict on a bad file."""
+    probe = """import importlib.util, sys
+from pathlib import Path
+p = Path(sys.argv[1]); sys.path.insert(0, str(p.parent))
+s = importlib.util.spec_from_file_location('judge', p)
+m = importlib.util.module_from_spec(s); s.loader.exec_module(m)
+m.candidate_environment(sys.argv[2])
+"""
+    done = subprocess.run([str(python), "-c", probe, str(judge), str(switches)], cwd=workspace,
+                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    return done.stdout.strip()[-2000:] if done.returncode else None
+
+
+def stop_agent_processes(timeout=60):
+    """Leftover agent processes would hold the GPU lock or GPU memory (INVALID) or disturb timing windows.
+    Returns the leftover processes found."""
+    found = subprocess.run(["pgrep", "-a", "-u", AGENT], stdout=subprocess.PIPE, text=True).stdout.splitlines()
+    deadline = time.time() + timeout
+    while subprocess.run(["pgrep", "-u", AGENT], stdout=subprocess.DEVNULL).returncode == 0:
+        if time.time() > deadline:
+            raise RuntimeError("Agent processes survive SIGKILL")
+        subprocess.run(["pkill", "-KILL", "-u", AGENT])
+        time.sleep(1)
+    return found
+
+
+def test_marker(reward, ready):
+    """A trial prepared at a test world size (RESEARCHBOOST_TEST_WORLD_SIZE, test-only) is not a bench
+    score; its reward carries the world size so that it cannot be mistaken for one."""
+    if ready.get("test_world_size"):
+        reward = dict(reward, test_world_size=float(ready["test_world_size"]))
+    return reward
+
+
+AGENT_NOTES_MAX_BYTES = 4 << 20
+
+
+def save_agent_notes(logs, tree, workspace):
+    """The agent's work log (/submission/WORK_LOG.md, if it wrote one) and the commit history of its tree since the
+    reference commit, with any uncommitted changes, kept as trial artifacts before judging. Not used for scoring;
+    never fails the verifier."""
+    work_log = Path("/submission/WORK_LOG.md")
+    try:
+        if work_log.is_file() and not work_log.is_symlink():
+            with work_log.open("rb") as stream:
+                (logs / "WORK_LOG.md").write_bytes(stream.read(AGENT_NOTES_MAX_BYTES))
+    except OSError as exc:
+        (logs / "WORK_LOG.md.error").write_text("%s\n" % exc)
+    try:
+        base = json.loads((Path(workspace) / "bench/bench.json").read_text()).get("reference_commit")
+        # As the agent (its repository, its configuration), never as root.
+        git = ["runuser", "-u", AGENT, "--", "git", "-c", "core.fsmonitor=false", "-c", "core.pager=cat", "-C",
+               str(tree)]
+        span = ["%s..HEAD" % base] if base else ["--max-count=200"]
+        out = []
+        for args in (["log", "--stat", "--no-color"] + span, ["status", "--porcelain", "--untracked-files=all"]):
+            done = subprocess.run(git + args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=300)
+            out.append(b"$ git %s\n" % " ".join(args).encode() + done.stdout[:AGENT_NOTES_MAX_BYTES])
+        (logs / "git-log-stat.txt").write_bytes(b"\n".join(out))
+    except Exception as exc:  # noqa: BLE001 - artifacts only
+        (logs / "git-log-stat.txt").write_text("git log failed: %r\n" % exc)
+
+
+def main():
+    logs = Path("/logs/verifier")
+    logs.mkdir(parents=True, exist_ok=True)
+    for name in ("reward.json", "reward.txt"):
+        (logs / name).unlink(missing_ok=True)
+    ready = json.loads((WORKSPACE / "task/ready.json").read_text())
+    smoke = ready.get("mode") == "smoke"
+    # How this trial was prepared (full or from the preparation cache), for the trial's records.
+    (logs / "ready.json").write_text(json.dumps(ready, indent=1) + "\n")
+    convert = smoke_reward if smoke else reward
+    switches = Path("/submission/switches.json")
+    leftover = stop_agent_processes()
+    save_agent_notes(logs, "/submission/llava", WORKSPACE)
+    problem = switches_problem(PYTHON, WORKSPACE / "bench/bench.py", switches, WORKSPACE)
+    if problem:
+        (logs / "harness.log").write_text("switches.json rejected by the judge before the check:\n%s\n" % problem)
+        (logs / "reward.json").write_text(json.dumps(test_marker(SMOKE_REJECTED if smoke else REJECTED, ready))
+                                          + "\n")
+        return
+    # The judge runs as the agent, like the agent's own checks: same HOME and caches, the tree under test in the
+    # agent's candidate environment, and candidate code never runs as root. Its output directory is kept for
+    # diagnosis.
+    user = pwd.getpwnam(AGENT)
+    output = tempfile.mkdtemp(prefix="llava-final-", dir=str(logs))
+    os.chown(output, user.pw_uid, user.pw_gid)
+    env = dict(os.environ, ASSETS="/opt/researchboost/assets", HOME=user.pw_dir, USER=AGENT, LOGNAME=AGENT,
+               PYTHONNOUSERSITE="1")
+    command = ["runuser", "-u", AGENT, "--", PYTHON, str(WORKSPACE / "bench/bench.py"), "check",
+               "--tree", "/submission/llava", "--config", str(switches), "--out", output]
+    command += ["--quick"] if smoke else ["--final"]   # gate 1 as reference -> candidate -> reference
+    if not smoke:
+        allow_final()
+    with (logs / "harness.log").open("w") as log:
+        log.write("verifier: stopped %d leftover agent process(es) %s; judge runs as %s (uid %d)\n"
+                  % (len(leftover), leftover[:5], AGENT, user.pw_uid))
+        log.flush()
+        completed = subprocess.run(command, cwd=WORKSPACE, env=env, stdout=log, stderr=subprocess.STDOUT)
+        log.write("verifier: judge exited %d\n" % completed.returncode)
+    stop_agent_processes()
+    check = Path(output) / "check.json"
+    if not check.is_file():
+        raise RuntimeError("Harness produced no verdict; see harness.log")
+    raw = check.read_text()
+    (logs / "check.json").write_text(raw)
+    converted = convert(json.loads(raw))
+    (logs / "reward.json").write_text(json.dumps(test_marker(converted, ready), allow_nan=False) + "\n")
+
+
+if __name__ == "__main__":
+    main()

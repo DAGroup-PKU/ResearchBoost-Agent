@@ -1,0 +1,39 @@
+schema_version = "1.3"
+artifacts = ["/submission/llava", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/llava"
+description = "Optimize LLaVA-1.5 7B instruction tuning on 2 x H200 GPUs while preserving the frozen numerical and workload checks."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/llava"
+gpus = 2
+gpu_types = ["H200"]
+cpus = 48
+memory_mb = 262144
+storage_mb = 524288
+# Installing torch and the training dependencies exceeds Harbor's 600 s default.
+build_timeout_sec = 3600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+start_period_sec = 21600
+retries = 3
+
+[verifier]
+timeout_sec = 14400
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

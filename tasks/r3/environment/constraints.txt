@@ -1,0 +1,18 @@
+# Upstream R3 (sen-ye/R3 @ 761b0b0) requirements.txt pins; opencv-python -> the headless build of the same version.
+torch==2.9.1
+torchvision==0.24.1
+flash_attn==2.5.8
+decord==0.6.0
+einops==0.8.1
+huggingface_hub==0.36.0
+matplotlib==3.7.0
+numpy==1.26.4
+opencv-python-headless==4.7.0.72
+pyarrow==23.0.1
+PyYAML==6.0.2
+requests==2.32.3
+safetensors==0.6.2
+scipy==1.10.1
+sentencepiece==0.1.99
+transformers==4.46.2
+accelerate==0.34.2

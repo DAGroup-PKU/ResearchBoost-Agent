@@ -1,0 +1,42 @@
+schema_version = "1.3"
+artifacts = ["/submission/gaussian-splatting", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/gaussian_splatting"
+description = "Speed up 3D Gaussian Splatting training (30k iterations, Tanks&Temples truck) on 1 H200-class GPU; the result must be statistically equivalent (N1)."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/gaussian-splatting"
+gpus = 1
+gpu_types = ["H200"]
+cpus = 24
+memory_mb = 262144
+storage_mb = 524288
+# torch, its CUDA libraries and three CUDA extensions built from source.
+build_timeout_sec = 3600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# Two reference quick records, eight full reference runs, the unchanged tree's quick and full checks and three
+# controls (two of them with up to six full runs).
+start_period_sec = 28800
+retries = 3
+
+[verifier]
+# A full check: the extension build, three full timing runs, one quick record and up to six full runs, each scored.
+timeout_sec = 14400
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

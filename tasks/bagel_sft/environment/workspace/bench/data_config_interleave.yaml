@@ -1,0 +1,51 @@
+# Gate 2b (bench/conform.py): the held-out data configuration. Upstream's bagel_example data and the groups of
+# upstream's data/configs/example.yaml, with the editing group mandatory and first (packed first in every batch; under
+# example.yaml it never fits the recipe's token limits and is always dropped) and its images at most 512 px, so that
+# two- and three-image editing chains fit the frozen recipe (--max_num_tokens_per_sample 10240, --max_num_tokens
+# 11520). The VLM group stays mandatory (upstream's training loop needs CE tokens in every batch), its images at most
+# 490 px so that the two mandatory samples fit the batch; text-to-image as example.yaml.
+unified_edit:
+  dataset_names:
+  - seedxedit_multi
+  image_transform_args:
+    image_stride: 16
+    max_image_size: 512
+    min_image_size: 256
+  vit_image_transform_args:
+    image_stride: 14
+    max_image_size: 518
+    min_image_size: 224
+  is_mandatory: true
+  num_used_data:
+  - 10
+  weight: 2
+
+t2i_pretrain:
+  dataset_names:
+  - t2i
+  image_transform_args:
+    image_stride: 16
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: false
+  num_used_data:
+  - 10
+  weight: 1
+
+vlm_sft:
+  dataset_names:
+  - llava_ov
+  image_transform_args:
+    image_stride: 14
+    max_image_size: 490
+    min_image_size: 224
+    max_pixels: 2_007_040
+  frame_sampler_args:
+    max_num_frames: 12
+    min_num_frames: 8
+  is_mandatory: true
+  shuffle_lines: True
+  shuffle_seed: 0
+  num_used_data:
+  - 1000
+  weight: 1

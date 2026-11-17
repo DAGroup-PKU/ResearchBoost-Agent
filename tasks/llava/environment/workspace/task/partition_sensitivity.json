@@ -1,0 +1,26 @@
+{
+ "what": "Sensitivity of gate 1's first logged loss to legitimate partitions of the same samples, measured with the reference's own code",
+ "why": "The task allows a candidate to choose how an optimizer step's samples are spread over its micro-batches. The first logged loss is the token-mean cross entropy of each micro-batch, averaged over the micro-batches, so it moves with the partition even when the step trains on exactly the same samples.",
+ "quantity": "the first entry of bench.py time's logged_loss (before any optimizer step)",
+ "frozen_reference": {
+  "step": "1",
+  "loss": 1.3809
+ },
+ "legal_partitions_measured": 2,
+ "observed": [
+  {
+   "arm": "A",
+   "first_logged_loss": 1.7149,
+   "rel_diff": 0.241871
+  },
+  {
+   "arm": "B",
+   "first_logged_loss": 1.3789,
+   "rel_diff": -0.001448
+  }
+ ],
+ "max_abs_rel_diff": 0.241871,
+ "tolerance": 0.484,
+ "rule": "tolerance = 2 x the largest observed shift, rounded up to 0.1%, and not below the plain band 0.005",
+ "note": "Applies only to candidates whose data probe shows a different partition. Which samples each optimizer step trains on is checked exactly by the multiset items of gates 0 and 2, not by this band."
+}

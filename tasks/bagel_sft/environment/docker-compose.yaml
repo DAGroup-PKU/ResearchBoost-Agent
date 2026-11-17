@@ -1,0 +1,25 @@
+# Host paths come from the environment of `harbor run` (see researchboost.env.example):
+#   RESEARCHBOOST_ASSETS_ROOT   asset cache root; this task uses <root>/bagel_sft (BAGEL-7B-MoT and upstream's
+#                               bagel_example data; see ../README.md), filled by the assets service when missing
+#   RESEARCHBOOST_SCRATCH_ROOT  scratch root; <root>/bagel_sft is the trial's /tmp (the judge's scratch space); it is
+#                               emptied when a trial starts, so run one trial per host at a time
+services:
+  assets:
+    build:
+      context: ./asset-prep
+    environment:
+      HF_ENDPOINT: ${HF_ENDPOINT:-https://huggingface.co}
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT (see researchboost.env.example)}/bagel_sft:/cache
+  main:
+    depends_on:
+      assets:
+        condition: service_completed_successfully
+    shm_size: 256gb
+    environment:
+      RESEARCHBOOST_SMOKE: ${RESEARCHBOOST_SMOKE:-}
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT (see researchboost.env.example)}/bagel_sft:/opt/researchboost/assets:ro
+      - ${RESEARCHBOOST_SCRATCH_ROOT:?set RESEARCHBOOST_SCRATCH_ROOT (see researchboost.env.example)}/bagel_sft:/tmp
+      # Preparation packs of this task (README), from the repository, read-only.
+      - ../prep-pack:/opt/researchboost/prep-pack:ro

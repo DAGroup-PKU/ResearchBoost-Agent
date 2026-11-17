@@ -1,0 +1,4 @@
+# Bytecode caches of the checkout (from running the unit tests) must not reach the image: the judge digests its
+# own files.
+**/__pycache__
+**/*.pyc

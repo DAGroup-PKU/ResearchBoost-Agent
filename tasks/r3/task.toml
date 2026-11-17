@@ -1,0 +1,41 @@
+schema_version = "1.3"
+artifacts = ["/submission/r3", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/r3"
+description = "Speed up R3 Tree-RL steps of BAGEL-7B-MoT on 4 H200-class GPUs (one policy group); the result must stay bitwise identical (N0)."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/r3"
+gpus = 4
+gpu_types = ["H200"]
+cpus = 192
+memory_mb = 1048576
+storage_mb = 1048576
+# flash-attn and mmcv-full are compiled from source.
+build_timeout_sec = 7200
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# Two deterministic reference records, the unchanged tree's quick and full checks and one control.
+start_period_sec = 21600
+retries = 3
+
+[verifier]
+# A full check: three timing runs and one deterministic record run.
+timeout_sec = 14400
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

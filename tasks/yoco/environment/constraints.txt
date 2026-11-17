@@ -1,0 +1,5 @@
+# The only pinned Python packages: the torch, torchvision and numpy versions the judge was formulated on. Every install
+# in the image uses this file as a constraints file (pip -c), so no dependency can replace them.
+torch==2.3.1+cu121
+torchvision==0.18.1+cu121
+numpy==1.23.0

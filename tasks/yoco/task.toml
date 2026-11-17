@@ -1,0 +1,42 @@
+schema_version = "1.3"
+artifacts = ["/submission/yoco", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/yoco"
+description = "Optimize YOCO-3B pretraining on 2 x H200 GPUs while preserving the frozen numerical and workload checks."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/yoco"
+gpus = 2
+gpu_types = ["H200"]
+cpus = 48
+memory_mb = 262144
+storage_mb = 524288
+# Installing torch and the training dependencies exceeds Harbor's 600 s default.
+build_timeout_sec = 3600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# The full preparation measured 154 min on an unpinned host and over 6 h with the trial container pinned to its
+# GPUs' share of the CPUs (24 cores: its CPU-bound record and comparison steps) beside other trials.
+start_period_sec = 43200
+retries = 3
+
+[verifier]
+# A full check with the statistical gate takes 3-4 h with the trial pinned to its share of the CPUs.
+timeout_sec = 21600
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

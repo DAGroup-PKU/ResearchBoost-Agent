@@ -1,0 +1,41 @@
+schema_version = "1.3"
+artifacts = ["/submission/slime_grpo", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/slime_grpo"
+description = "Speed up one RL step of Qwen3.5-9B GRPO in slime (sglang rollout + Megatron training, colocated on 4 Hopper GPUs); the rollout must stay distribution-equivalent and the training bitwise identical (N0) or statistically equivalent (N1)."
+
+[agent]
+# 10 hours for the agent (a run may set another budget).
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py).
+network_mode = "public"
+
+[environment]
+workdir = "/submission/slime_grpo"
+gpus = 4
+gpu_types = ["H200"]
+cpus = 96
+# CPU-offloaded Adam (fp32 master weights and moments of 9B parameters), Ray and two sglang engines.
+memory_mb = 1048576
+storage_mb = 1048576
+# The base image is about 17 GB.
+build_timeout_sec = 7200
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# The rollout fixture, the reference rollout scored by the stock engine, ten reference train records, the unchanged
+# tree's quick and full checks, two side timings and seven controls.
+start_period_sec = 57600
+retries = 3
+
+[verifier]
+# A full check: three full-loop timing runs, one rollout run scored by the stock engine with its mismatch run, and
+# one train record run.
+timeout_sec = 18000
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

@@ -1,0 +1,41 @@
+{
+ "world_size": 4,
+ "python": "/opt/r3-env/bin/python",
+ "candidate_python": "/opt/candidate-env/bin/python",
+ "cuda_home": "/usr/local/cuda",
+ "gpu_lock": "/tmp/r3_gpu.lock",
+ "scratch": "/tmp",
+ "min_scratch_free_gib": 100,
+ "idle_memory_mib": 2048,
+ "reference": "targets/reference",
+ "reference_commit": "761b0b0713352a52128cbd39a004dc383bd082bd",
+ "model": "$ASSETS/BAGEL-7B-MoT",
+ "train_data": "bench/data/train_geneval.jsonl",
+ "val_data": "bench/data/test_geneval_first8.jsonl",
+ "reward": {
+  "python": "/opt/reward-env/bin/python",
+  "server_dir": "/opt/reward-server",
+  "detector_config": "/opt/mmdetection/configs/mask2former/mask2former_swin-s-p4-w7-224_lsj_8x2_50e_coco.py",
+  "detector_dir": "$ASSETS/mask2former",
+  "hf_cache": "$ASSETS/hf/hub"
+ },
+ "timing": {
+  "steps": 16,
+  "windows": [[10, 11], [12, 13], [14, 15]],
+  "spread_band": 0.15
+ },
+ "benefit": {"min_speedup": 1.02},
+ "record": {
+  "steps": 14,
+  "reference": "bench/records/ref.json",
+  "environment": {"CUBLAS_WORKSPACE_CONFIG": ":4096:8"}
+ },
+ "timeouts_s": {"timing": 5400, "record": 5400, "reward_start": 900},
+ "reserved_env": ["CUBLAS_WORKSPACE_CONFIG", "TMPDIR", "TMP", "TEMP", "TORCHINDUCTOR_CACHE_DIR", "TRITON_CACHE_DIR",
+                  "CUDA_CACHE_PATH", "XDG_CACHE_HOME", "MPLCONFIGDIR", "HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE",
+                  "HF_DATASETS_OFFLINE", "HF_HUB_CACHE", "HF_HOME", "WANDB_MODE", "WANDB_DIR", "WANDB_SILENT",
+                  "PYTHONPATH", "PYTHONNOUSERSITE", "PATH", "CUDA_HOME", "CUDA_VISIBLE_DEVICES", "MASTER_ADDR",
+                  "MASTER_PORT", "RANK", "WORLD_SIZE", "LOCAL_RANK", "LOCAL_WORLD_SIZE", "TRITON_LIBCUDA_PATH",
+                  "LD_PRELOAD", "LD_LIBRARY_PATH", "ASSETS"],
+ "invalid_run_signatures": []
+}

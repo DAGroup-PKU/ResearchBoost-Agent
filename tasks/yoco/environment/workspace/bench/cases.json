@@ -1,0 +1,9 @@
+[
+ {
+  "name": "main",
+  "seed": 1,
+  "steps": 4,
+  "phases": ["warmup", "warmup", "post", "post"],
+  "post_start": 60
+ }
+]

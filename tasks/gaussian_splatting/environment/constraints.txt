@@ -1,0 +1,4 @@
+# The only pinned Python packages: the torch and torchvision wheels the judge was formulated on. Every install in
+# the image uses this file as a constraints file (pip -c), so no dependency can replace them.
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128

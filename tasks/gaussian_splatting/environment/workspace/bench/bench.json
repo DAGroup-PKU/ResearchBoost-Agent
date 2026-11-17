@@ -1,0 +1,107 @@
+{
+ "world_size": 1,
+ "python": "/opt/gs-env/bin/python",
+ "candidate_python": "/opt/candidate-env/bin/python",
+ "cuda_home": "/usr/local/cuda",
+ "gpu_lock": "/tmp/gs_gpu.lock",
+ "scratch": "/tmp",
+ "min_scratch_free_gib": 20,
+ "idle_memory_mib": 2048,
+ "reference": "targets/reference",
+ "reference_ext": "/opt/researchboost/ext/reference",
+ "ext_cache": "/tmp/gs-ext",
+ "extensions": [
+  "submodules/diff-gaussian-rasterization",
+  "submodules/simple-knn",
+  "submodules/fused-ssim"
+ ],
+ "assets": "/opt/researchboost/assets",
+ "torch_home": "/opt/researchboost/assets/torch",
+ "timing": {
+  "steps": 29999,
+  "marks": [
+   1,
+   10000,
+   20000,
+   29999
+  ],
+  "spread_band": 0.05
+ },
+ "benefit": {
+  "min_speedup": 1.02
+ },
+ "record": {
+  "steps": 3000,
+  "marks": [
+   1,
+   500,
+   1000,
+   1500,
+   2000,
+   2500,
+   3000
+  ],
+  "reference": "bench/records/ref.json"
+ },
+ "trajectory": {
+  "steps": 29999,
+  "marks": [
+   1,
+   1000,
+   2000,
+   3000,
+   7000,
+   15000,
+   29999
+  ],
+  "reference": "bench/traj/frozen.json",
+  "reference_records": "bench/traj/records",
+  "reference_seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "endpoints": [
+   "psnr",
+   "ssim",
+   "lpips",
+   "log_count"
+  ],
+  "seeds": 1,
+  "sigma_k": 3
+ },
+ "timeouts_s": {
+  "build": 3600,
+  "timing": 3600,
+  "record": 1200,
+  "traj": 3600,
+  "eval": 1800
+ },
+ "reserved_env": [
+  "TMPDIR",
+  "TMP",
+  "TEMP",
+  "TORCHINDUCTOR_CACHE_DIR",
+  "TRITON_CACHE_DIR",
+  "CUDA_CACHE_PATH",
+  "XDG_CACHE_HOME",
+  "MPLCONFIGDIR",
+  "PYTHONPATH",
+  "PYTHONNOUSERSITE",
+  "PATH",
+  "CUDA_HOME",
+  "CUDA_VISIBLE_DEVICES",
+  "TORCH_HOME",
+  "TRITON_LIBCUDA_PATH",
+  "LD_PRELOAD",
+  "LD_LIBRARY_PATH",
+  "TORCH_CUDA_ARCH_LIST",
+  "MAX_JOBS"
+ ],
+ "invalid_run_signatures": []
+}

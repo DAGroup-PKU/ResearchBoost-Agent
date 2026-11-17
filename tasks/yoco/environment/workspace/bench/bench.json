@@ -1,0 +1,107 @@
+{
+ "task": "YOCO-3B pretraining (microsoft/unilm YOCO @ f4f7b27a, upstream scripts/train.sh with --arch yoco_3b, --zero-sharding os, seed 1, no validation set) on 2 data-parallel GPUs, 2048 tokens per GPU, bf16",
+ "world_size": 2,
+ "math_mode": "default",
+ "python": "/opt/yoco-env/bin/python",
+ "candidate_python": "/opt/candidate-env/bin/python",
+ "reference": "targets/reference",
+ "reference_commit": "d1ed474155db05546d953c4d2aece86bd01c0e64",
+ "gpu_lock": "/tmp/yoco_gpu.lock",
+ "scratch": "/tmp",
+ "cpu_affinity": null,
+ "cuda_home": "/usr/local/cuda",
+ "tiktoken_cache": "$ASSETS/tiktoken_cache",
+ "min_scratch_free_gib": 50,
+ "idle_memory_mib": 2048,
+ "numerics": {
+  "adapter": "bench.yoco_adapter:YocoAdapter",
+  "cases": "bench/cases.json",
+  "sketch_dim": 4096,
+  "ref": "bench/records/ref",
+  "thresholds": "bench/thresholds.json",
+  "keep_records": false,
+  "exclude": []
+ },
+ "loader": {
+  "shards": 2,
+  "batches": 3,
+  "frozen": "task/loader_digest.json"
+ },
+ "timing": {
+  "warmup": 5,
+  "window": 10,
+  "repeats": 2,
+  "reference_runs": 3,
+  "max_window_spread": 0.06,
+  "max_reference_drift": 0.15
+ },
+ "benefit": {
+  "min_speedup": 1.02
+ },
+ "trajectory": {
+  "spec": "bench/traj/spec.json",
+  "frozen": "bench/traj/frozen.json",
+  "ref": "bench/traj/ref",
+  "seeds": 1,
+  "sigma_k": 3,
+  "rule_note": "gate 3 of every check: the first frozen reference seed; each endpoint's |candidate - reference| <= sigma_k x the reference's seed-to-seed sigma"
+ },
+ "timeouts_s": {
+  "timing": 1800,
+  "profile": 1800,
+  "numerics": 7200,
+  "trajectory": 2400,
+  "probe": 900
+ },
+ "reserved_env": [
+  "TMPDIR",
+  "TMP",
+  "TEMP",
+  "TORCHINDUCTOR_CACHE_DIR",
+  "TRITON_CACHE_DIR",
+  "CUDA_CACHE_PATH",
+  "XDG_CACHE_HOME",
+  "MPLCONFIGDIR",
+  "CUDA_VISIBLE_DEVICES",
+  "CUDA_DEVICE_ORDER",
+  "PYTHONPATH",
+  "PYTHONHOME",
+  "PYTHONNOUSERSITE",
+  "PYTHONHASHSEED",
+  "HF_HOME",
+  "HF_HUB_OFFLINE",
+  "TRANSFORMERS_OFFLINE",
+  "HF_DATASETS_OFFLINE",
+  "WANDB_MODE",
+  "WANDB_DISABLED",
+  "TIKTOKEN_CACHE_DIR",
+  "NVIDIA_TF32_OVERRIDE",
+  "CUBLAS_WORKSPACE_CONFIG",
+  "LD_PRELOAD",
+  "LD_LIBRARY_PATH",
+  "MASTER_ADDR",
+  "MASTER_PORT",
+  "RANK",
+  "WORLD_SIZE",
+  "LOCAL_RANK",
+  "LOCAL_WORLD_SIZE",
+  "CUDA_HOME",
+  "TRITON_LIBCUDA_PATH",
+  "LOGLEVEL",
+  "PATH"
+ ],
+ "invalid_run_signatures": [
+  {
+   "regex": "hit config\\.(recompile_limit|cache_size_limit)",
+   "reason": "torch.compile hit the recompile limit: that code runs eager from then on, not the configuration requested"
+  },
+  {
+   "regex": "skipping cudagraphs due to",
+   "reason": "CUDA graphs were requested but skipped: the run measured the path without graphs"
+  },
+  {
+   "regex": "gradient overflow detected",
+   "reason": "an update was skipped (overflow): the run did not do the recipe's work in every iteration"
+  }
+ ]
+}

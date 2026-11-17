@@ -1,0 +1,44 @@
+schema_version = "1.3"
+artifacts = ["/submission/bagel_sft", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/bagel_sft"
+description = "Speed up BAGEL-7B-MoT supervised fine-tuning steps on 4 x H200; the result must be bitwise identical (N0) or statistically equivalent (N1)."
+
+[agent]
+# 10 hours for the agent.
+timeout_sec = 36000
+user = "agent"
+# Internet access. The container holds no credentials (checked at startup by /opt/researchboost/no_credentials.py),
+# so private repositories stay out of reach.
+network_mode = "public"
+
+[environment]
+workdir = "/submission/bagel_sft"
+gpus = 4
+gpu_types = ["H200"]
+# 4 x H200: 12 physical cores (24 hardware threads) per GPU, the machine's share (2 sockets x 48 cores for 8 GPUs).
+cpus = 96
+# Every rank builds the model and its EMA in fp32 on the host and loads the released checkpoint into both.
+memory_mb = 1048576
+storage_mb = 1048576
+# flash-attn is compiled from source.
+build_timeout_sec = 7200
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60  # Harbor fails the trial when one check exec times out (11-05: two trials on a busy host)
+# Two deterministic reference records, seven reference trajectories, the reference timing baseline, the unchanged
+# tree's quick and full checks and three controls (two with up to six trajectories).
+start_period_sec = 28800
+retries = 3
+
+[verifier]
+# A full check: three timing runs, one deterministic record run and, when not bitwise identical, up to six trajectories.
+timeout_sec = 14400
+# The judge runs in the agent's container after the agent finishes; Harbor's Docker backend switches that container
+# to no network for this phase (its egress-control sidecar).
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"
