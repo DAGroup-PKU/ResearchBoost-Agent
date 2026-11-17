@@ -11,7 +11,7 @@
 </p>
 
 <p>
-<a href="https://r.yeyeah.life/rbb-timeline/"><img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-live-8C0000?style=flat-square"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-live-8C0000?style=flat-square"></a>
 <a href="docs/eval-protocol.md"><img alt="Eight tasks" src="https://img.shields.io/badge/tasks-8-0891B2?style=flat-square"></a>
 <a href="https://pypi.org/project/harbor/0.24.0/"><img alt="Harbor 0.24" src="https://img.shields.io/badge/Harbor-0.24.0-7C3AED?style=flat-square"></a>
 <a href="docs/how-to-run.md#hardware"><img alt="Hopper GPUs" src="https://img.shields.io/badge/GPUs-Hopper%20%E2%89%A5130%20GiB-2A78D6?style=flat-square"></a>
@@ -36,7 +36,7 @@
 ![Per-Task](docs/assets/readme/leaderboard-table.png)
 
 Final judged speedups against each task’s baseline.
-[Interactive leaderboard and run traces →](https://r.yeyeah.life/rbb-timeline/)
+[Interactive leaderboard and run traces →](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)
 
 <sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.</sub>
 
@@ -49,8 +49,8 @@ A frozen judge verifies correctness and measures the final speedup.
   depending on the task.
 - **Timing:** startup and warmup are excluded; the judge measures
   the task’s fixed workload.
-- **Score:** average normalized log-speedup across eight tasks,
-  scaled to 100.
+- **Score:** an ECI-style fit of the eight normalized log-speedups,
+  anchored at Claude Opus 5.5 = 40 and Kimi k3.1-pro = 10.
 
 [Tasks, numerical checks and scoring details →](docs/eval-protocol.md)
 
