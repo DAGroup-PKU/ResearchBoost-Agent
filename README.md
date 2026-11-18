@@ -40,7 +40,10 @@ Final judged speedups against each task’s baseline.
 [Interactive leaderboard and run traces →](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)
 · [How the models differ, in the blog post →](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/#analysis)
 
-<sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.</sub>
+<sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.
+GPT-6.2 Astra joined on 18 November with the same setup (Codex, reasoning effort max, 10 hours).
+Scores come from an ECI fit over all models together, so every rank is dynamic:
+each new model refits the scale, and the scores and ranks of the others can move.</sub>
 
 ## Eval Protocol
 
