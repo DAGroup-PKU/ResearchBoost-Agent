@@ -55,7 +55,7 @@
 
 ## Highlights
 
-<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 23 projects, each measured against its own baseline." width="100%"></a>
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 24 projects, each measured against its own baseline." width="100%"></a>
 
 <a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
 
@@ -65,7 +65,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 23 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 24 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -126,7 +126,7 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 <details>
-<summary><strong>Embodied AI</strong> · 4 projects — RoboTwin, Motus, FastWAM, OpenWAM</summary>
+<summary><strong>Embodied AI</strong> · 5 projects — RoboTwin, Motus, FastWAM, OpenWAM, SuperMimic</summary>
 
 | Project | Workload | Speedup |
 |---|---|---:|
@@ -134,6 +134,7 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 | [Faster-Motus](https://github.com/AI4AI-for-Anything/Faster-Motus) | RoboTwin 2.0 fine-tuning · 27,244 episodes | **9.59×** |
 | [Faster-FastWAM](https://github.com/AI4AI-for-Anything/Faster-FastWAM) | FastWAM-LIBERO training recipe | **3.46×** |
 | [OpenWAM](https://github.com/OpenWAM-Official/OpenWAM#training-acceleration) by [@GONGSHUKAI](https://github.com/GONGSHUKAI) | OpenWAM-α fine-tuning · seven SFT benchmarks · merged upstream | **2.54–2.77×** |
+| [Faster-SuperMimic](https://github.com/hwbhwbhwb/Faster-SuperMimic) by [@hwbhwbhwb](https://github.com/hwbhwbhwb) | SuperMimic world-model + BPTT training · 40 LAFAN1 clips | **1.38×** |
 
 [Measurement setup & validation →](docs/results/embodied-ai.md)
 
@@ -246,7 +247,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 
 | Path | Contents |
 |---|---|
-| [`docs/results/`](docs/results) | Results from 23 projects, grouped by domain, with measurement scope and validation records |
+| [`docs/results/`](docs/results) | Results from 24 projects, grouped by domain, with measurement scope and validation records |
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |
