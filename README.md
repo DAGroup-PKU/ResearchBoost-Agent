@@ -5,9 +5,10 @@
 <h3>Eight training-speed tasks for coding agents on Harbor,<br>scored by a frozen judge that accepts only the same training, faster</h3>
 
 <p>
-<a href="#leaderboard"><img src="docs/assets/readme/button-leaderboard-en.png" alt="Leaderboard" height="56"></a>
-<a href="#how-to-run"><img src="docs/assets/readme/button-run-en.png" alt="How to run" height="56"></a>
-<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img src="docs/assets/readme/button-agent-en.png" alt="ResearchBoost-Agent" height="56"></a>
+<a href="#leaderboard"><img src="docs/assets/readme/button-leaderboard-en.png" alt="Leaderboard" height="48"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/"><img src="docs/assets/readme/button-blog-en.png" alt="Blog post" height="48"></a>
+<a href="#how-to-run"><img src="docs/assets/readme/button-run-en.png" alt="How to run" height="48"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img src="docs/assets/readme/button-agent-en.png" alt="ResearchBoost-Agent" height="48"></a>
 </p>
 
 <p>
@@ -37,6 +38,7 @@
 
 Final judged speedups against each task’s baseline.
 [Interactive leaderboard and run traces →](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)
+· [How the models differ, in the blog post →](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/#analysis)
 
 <sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.</sub>
 

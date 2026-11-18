@@ -27,6 +27,7 @@ ICONS = {
             '<rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/>',
     "rocket": '<path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"/><path d="M9 15l-3-3c1-4 4.5-8 12-9-1 7.5-5 11-9 12z"/><circle cx="14.5" cy="9.5" r="1.5"/>',
     "github": '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
+    "book": '<path d="M5 4h9a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H5z"/><path d="M5 4v13"/>',
     "arrow": '<path d="M5 12h14M13 6l6 6-6 6"/>',
 }
 
@@ -54,7 +55,8 @@ T = {
         "eyebrow": "AI4AI · TRAINING-SPEED BENCHMARK",
         "tagline": "How much faster can an agent make real training?",
         "steps": ["Pinned workload", "Agent optimizes", "Frozen judge scores"],
-        "buttons": [("leaderboard", "chart", "Leaderboard", "crimson"), ("run", "rocket", "How to run", "ink"),
+        "buttons": [("leaderboard", "chart", "Leaderboard", "crimson"), ("blog", "book", "Read the blog", "light"),
+                    ("run", "rocket", "How to run", "ink"),
                     ("agent", "github", "ResearchBoost-Agent", "light")],
         "cards": [],  # the README has no highlight cards; card() and card_right() stay for reuse
         "domain_note": "workload · task · GPUs",
