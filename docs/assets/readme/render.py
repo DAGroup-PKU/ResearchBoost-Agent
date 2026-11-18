@@ -52,7 +52,10 @@ T = {
         "tagline": "AI that accelerates the research that advances AI.",
         "steps": ["Profile", "Optimize", "Verify"],
         "buttons": [("blog", "book", "Read the blog", "crimson"), ("results", "chart", "Explore results", "ink"),
-                    ("quickstart", "rocket", "Quick start", "light")],
+                    ("quickstart", "rocket", "Quick start", "light"),
+                    # RSI-Infra Bench section: benchmark, leaderboard, bench blog post
+                    ("bench-run", "terminal", "Run the benchmark", "crimson"), ("bench-board", "chart", "Leaderboard & traces", "ink"),
+                    ("bench-blog", "book", "Read the blog post", "light")],
         "cards": [
             ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across seven domains",
              "21 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
@@ -126,7 +129,9 @@ T = {
         "tagline": "用 AI 加速 AI 研究。",
         "steps": ["分析", "优化", "验证"],
         "buttons": [("blog", "book", "阅读项目 Blog", "crimson"), ("results", "chart", "查看全部结果", "ink"),
-                    ("quickstart", "rocket", "快速开始", "light")],
+                    ("quickstart", "rocket", "快速开始", "light"),
+                    ("bench-run", "terminal", "基准与运行方法", "crimson"), ("bench-board", "chart", "排行榜与 trace", "ink"),
+                    ("bench-blog", "book", "阅读博客", "light")],
         "cards": [
             ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖七个领域",
              "21 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",

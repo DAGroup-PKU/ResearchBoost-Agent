@@ -172,7 +172,11 @@
 
 <a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench 预览版综合分数（ECI；Claude Opus 5.5 = 40，Kimi k3.1-pro = 10）：Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.76, MiniMax M3.1 Flash 20.77, Claude Haiku 5.5 19.33, GLM-5.3 13.84, DeepSeek V4.1 Flash-1017 13.83, GPT-6 Astra 13.79, Kimi k3.1-pro 10.00" width="100%"></a>
 
-[基准与运行方法（英文） →](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench) · [排行榜与 trace ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) · [博客 ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)
+<p align="center">
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/button-bench-run-zh.png" alt="基准与运行方法（英文）" height="56"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/button-bench-board-zh.png" alt="排行榜与 trace" height="56"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/"><img src="docs/assets/readme/button-bench-blog-zh.png" alt="博客" height="56"></a>
+</p>
 
 ## 快速开始
 

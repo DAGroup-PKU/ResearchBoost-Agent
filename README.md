@@ -172,7 +172,11 @@ RBA's frozen judge, turned into a benchmark for the agents themselves. **[RSI-In
 
 <a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench preview, overall score (ECI; Claude Opus 5.5 = 40, Kimi k3.1-pro = 10): Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.76, MiniMax M3.1 Flash 20.77, Claude Haiku 5.5 19.33, GLM-5.3 13.84, DeepSeek V4.1 Flash-1017 13.83, GPT-6 Astra 13.79, Kimi k3.1-pro 10.00" width="100%"></a>
 
-[Benchmark and how to run →](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench) · [Leaderboard and traces ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) · [Blog ↗](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)
+<p align="center">
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/button-bench-run-en.png" alt="Benchmark and how to run" height="56"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/button-bench-board-en.png" alt="Leaderboard and traces" height="56"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/"><img src="docs/assets/readme/button-bench-blog-en.png" alt="Blog post" height="56"></a>
+</p>
 
 ## Quick start
 
