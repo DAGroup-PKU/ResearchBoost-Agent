@@ -67,16 +67,24 @@ for v in ASSETS LOCAL CODEX_ENV CLAUDE_ENV TOOLS SANDBOX_MODE SANDBOX_NET BWRAP 
   if [ -n "${!v:-}" ]; then ENVP+=("$v=${!v}"); fi
 done
 
-# Both checks are written here, by the caller; the agent never sees or edits them.
-python3 - "$C/contract.json" "$HERE" "$TASK" "$GPUS" "${BENCH:-bench/bench.py}" "$MIN_SPEEDUP" \
+# The checks are written here, by the caller; the agent never sees or edits them.
+python3 - "$C/contract.json" "$HERE" "$SANDBOX" "$TASK" "$GPUS" "${BENCH:-bench/bench.py}" "$MIN_SPEEDUP" \
   "${CHECK_TIMEOUT_MIN:-360}" "${ENVP[@]}" <<'PY'
-import json, sys
-out, here, task, gpus, bench, min_speedup, minutes, *envp = sys.argv[1:]
+import hashlib, json, os, sys
+out, here, sandbox, task, gpus, bench, min_speedup, minutes, *envp = sys.argv[1:]
+# The final check's own programs, and the judge digests accept.py compares against, as they are now. The digests
+# go into the check's arguments, so they are kept in clawo's run record (outside the sandbox, whose HOME is a
+# tmpfs) and in the contract's fingerprint: a script or judge.sha256 that changed since launch, by a pull of this
+# repository or otherwise, fails this check, which runs first, so the full check is not spent on it.
+pinned = [f'{here}/judge.sh', f'{here}/accept.py', sandbox, os.path.join(os.path.dirname(out), 'judge.sha256')]
+digests = [f'{hashlib.sha256(open(p, "rb").read()).hexdigest()}  {p}' for p in pinned]
 json.dump({
     'id': f'{task}-final-check',
     # The bench is the only verdict; the runtime's test-file snapshot does not apply to a judged workspace.
     'protectTests': False,
     'checks': [
+        {'id': 'harness-unchanged', 'type': 'command', 'cmd': 'sh',
+         'args': ['-c', 'printf "%s\\n" "$@" | sha256sum -c -', 'sh', *digests], 'timeoutMs': 60_000},
         {'id': 'full-check', 'type': 'command', 'cmd': envp[0],
          'args': [*envp[1:], f'{here}/judge.sh', task, gpus, bench], 'timeoutMs': int(float(minutes) * 60_000)},
         {'id': 'accept', 'type': 'command', 'cmd': envp[0],

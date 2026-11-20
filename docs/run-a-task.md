@@ -90,7 +90,7 @@ goal/clawo/status.sh <task>                          # goal status, tokens, time
 goal/clawo/steer.sh <task> "Log this round in WORK_LOG.md before starting the next one."
 ```
 
-A usage limit or a stalled goal is resumed by `clawo` on its own (see [goal-mode.md](goal-mode.md#run-resume-supervise-goalclawo)). After a host restart, run `goal/clawo/resume.sh <task>`: it starts `clawo serve` again, and the goal continues on the same thread. When the agent stops, `clawo` runs the full check on the candidate the agent named in `ws/FINAL.json`; `status.sh` then shows the run as `completed` (accepted) or `failed`, and the verdict is in `ws/runs/clawo-final/latest/check.json`.
+A usage limit or a stalled goal is resumed by `clawo` on its own (see [goal-mode.md](goal-mode.md#run-resume-supervise-goalclawo)). After a host restart, run `goal/clawo/resume.sh <task>`: it starts `clawo serve` again, and the goal continues on the same thread (claw-orchestrator 7.27.0 or later; with an earlier version a clean shutdown cancels the run, see [goal-mode.md](goal-mode.md#run-resume-supervise-goalclawo)). When the agent stops, `clawo` runs the full check on the candidate the agent named in `ws/FINAL.json`; `status.sh` then shows the run as `completed` (accepted) or `failed`, and the verdict is in `ws/runs/clawo-final/latest/check.json`.
 
 Supervision rules are in [goal-mode.md](goal-mode.md#supervision-rules): intervene on rules and facts only, never on optimization direction.
 
