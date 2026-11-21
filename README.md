@@ -89,3 +89,14 @@ specified Hopper GPUs.
    ```
 
 [GPU requirements, assets and build instructions →](docs/how-to-run.md)
+
+## Citation
+
+```bibtex
+@misc{researchBoost_Agent_Team_RSI_Infra_Bench_2026,
+  author = {{researchBoost-Agent Team}},
+  title = {{RSI-Infra Bench Preview}},
+  url = {https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/},
+  year = {2026}
+}
+```
