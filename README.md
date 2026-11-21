@@ -280,6 +280,17 @@ If you use ResearchBoost-Agent in your research or project, please cite:
 }
 ```
 
+If you use RSI-Infra Bench, please cite:
+
+```bibtex
+@misc{researchBoost_Agent_Team_RSI_Infra_Bench_2026,
+  author = {{researchBoost-Agent Team}},
+  title = {{RSI-Infra Bench Preview}},
+  url = {https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/},
+  year = {2026}
+}
+```
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AI4AI-for-Anything/ResearchBoost-Agent&type=Date)](https://star-history.com/#AI4AI-for-Anything/ResearchBoost-Agent&Date)
