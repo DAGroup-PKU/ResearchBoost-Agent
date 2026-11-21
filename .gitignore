@@ -8,3 +8,6 @@ records/
 *.pkl
 goal/codex.env
 goal/claude.env
+
+# Local development and review material
+/.artifact/

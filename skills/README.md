@@ -17,3 +17,10 @@ re-verify them on yours before treating them as facts. The verdict is always the
 | `sglang-diffusion-performance` | diffusion models: performance techniques (attention backends, compile, caching, parallelism) |
 
 The two `sglang-diffusion-*` cards are adapted from [SGLang](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills) (Apache-2.0).
+
+## Ascend NPU backend
+
+[Ascend task tree and card list](ascend-opt/README.md) — 20 task-oriented cards for NPU/CANN
+use, model migration, MindSpeed/VERL training, Ascend C, profiling and runtime/accuracy
+debugging. Load only the current task and its references. These supplement the nine
+cards above and keep the task's frozen measurement and numerical verdict unchanged.
