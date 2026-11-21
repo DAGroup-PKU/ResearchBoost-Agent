@@ -98,8 +98,9 @@ for a in "${ENVP[@]}" "$SANDBOX" "$TASK" "$GPUS"; do LAUNCH+=(--launcher "$a"); 
 args=(goal --objective-file "$C/objective.txt" --cwd "$W" "${LAUNCH[@]}"
       --sandbox danger-full-access --contract "$C/contract.json"
       --max-repairs "${MAX_REPAIRS:-1}" --json)
-# Codex is clawo's default engine; naming it keeps older clawo versions working.
-if [ "$ENGINE" = claude ]; then args+=(--engine claude); fi
+# The engine is always named: a goal that names none runs on clawo's configured default engine, which is Claude
+# Code out of the box from clawo 7.30.0. A clawo whose goal has no --engine flag runs Codex only.
+if "$CLAWO" goal --help | grep -q -- '--engine'; then args+=(--engine "$ENGINE"); fi
 if [ -n "${THREAD:-}" ]; then args+=(--thread "$THREAD"); fi
 if [ -n "${TOKEN_BUDGET:-}" ]; then args+=(--token-budget "$TOKEN_BUDGET"); fi
 if [ -n "${GOAL_TIMEOUT_MIN:-}" ]; then args+=(--goal-timeout "$GOAL_TIMEOUT_MIN"); fi
