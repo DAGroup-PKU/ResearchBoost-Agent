@@ -15,5 +15,6 @@ re-verify them on yours before treating them as facts. The verdict is always the
 | `train-opt-fsdp-multi-forward` | several forwards per step under FSDP/DDP |
 | `sglang-diffusion-benchmark-profile` | diffusion models: reproducible benchmark and profile workflow, existing fast paths to check first |
 | `sglang-diffusion-performance` | diffusion models: performance techniques (attention backends, compile, caching, parallelism) |
+| `backend-musa-mp31` | Moore Threads MUSA GPUs (MP31 / MTT S5000) only: CUDA-to-MUSA tool/library mapping, L0–L4 overrides, MP31 architecture (64-bank SMEM, SQMMA/TME), `msys`/`mcu` profiling, and cross-platform numerics attribution |
 
 The two `sglang-diffusion-*` cards are adapted from [SGLang](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills) (Apache-2.0).
