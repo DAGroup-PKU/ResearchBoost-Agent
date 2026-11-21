@@ -6,7 +6,7 @@ description: Collect and interpret msprof or msOpProf operator traces, counters 
 # Ascend operator profiling tools
 
 1. Choose the operator collection route using the bundled guide and actual tool/SoC support.
-2. Use the counter and visualization references for diagnosis. The existing ResearchBoost task evaluator remains the workload verdict.
+2. Use the counter and visualization references for diagnosis. Use the task-provided evaluator to determine the workload result.
 
 ## Working references
 
