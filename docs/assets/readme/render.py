@@ -57,7 +57,7 @@ T = {
         "steps": ["Pinned workload", "Agent optimizes", "Frozen judge scores"],
         "buttons": [("leaderboard", "chart", "Leaderboard", "crimson"), ("blog", "book", "Read the blog", "light"),
                     ("run", "rocket", "How to run", "ink"),
-                    ("agent", "github", "ResearchBoost-Agent", "light")],
+                    ("agent", "github", "RBA Home", "light")],
         "cards": [],  # the README has no highlight cards; card() and card_right() stay for reuse
         "domain_note": "workload · task · GPUs",
         "gates": [("0", "Structure", "entry points, data, exact items"), ("1", "Benefit", "clears the speedup bar"),
