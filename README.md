@@ -8,7 +8,7 @@
 <a href="#leaderboard"><img src="docs/assets/readme/button-leaderboard-en.png" alt="Leaderboard" height="48"></a>
 <a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/"><img src="docs/assets/readme/button-blog-en.png" alt="Blog post" height="48"></a>
 <a href="#how-to-run"><img src="docs/assets/readme/button-run-en.png" alt="How to run" height="48"></a>
-<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent"><img src="docs/assets/readme/button-agent-en.png" alt="ResearchBoost-Agent" height="48"></a>
+<a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/main"><img src="https://img.shields.io/badge/Back_to_Main_Repo-241B1C?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Back to main repo" height="48"></a>
 </p>
 
 <p>
