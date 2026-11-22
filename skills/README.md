@@ -20,7 +20,10 @@ The two `sglang-diffusion-*` cards are adapted from [SGLang](https://github.com/
 
 ## Ascend NPU backend
 
-[Ascend task tree and card list](ascend-opt/README.md) — 20 task-oriented cards for NPU/CANN
-use, model migration, MindSpeed/VERL training, Ascend C, profiling and runtime/accuracy
-debugging. Load only the current task and its references. These supplement the nine
-cards above and keep the task's frozen measurement and numerical verdict unchanged.
+The [Ascend optimization collection](ascend-opt/README.md) contains 13 skills for
+NPU environment and communication, performance best practices, profiling, and Ascend C
+operator development. Use the task's frozen measurement and numerical verdict.
+
+Pass `ascend-opt` to `goal/setup_home.sh <task>` to install the collection. To install
+specific cards, pass their names, such as `ascend-model-profiling`. Name any required
+general-purpose cards in the same command.

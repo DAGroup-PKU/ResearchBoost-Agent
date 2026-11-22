@@ -1,59 +1,38 @@
 # Ascend performance optimization skills
 
-Twenty task-oriented skills for performance optimization agents working on Huawei Ascend NPUs. Select a task below and load only its relevant phase references. All twenty skill folders are peers. Deployment includes environment preparation, framework training and inference serving.
+These skills help an optimization agent run, profile and improve workloads on Ascend NPUs. Start with the task's baseline and correctness contract. Profiling and experiments explain results, and the task's evaluator determines the final performance and numerical verdict.
 
-## Deployment · environment, training and serving
+## Environment
 
-| Skill | Purpose |
+| Skill | Use it for |
 |---|---|
-| [ascend-npu-environment](ascend-npu-environment/SKILL.md) | Inspect assigned Ascend devices, architecture, CANN/OPP and development or HCCL prerequisites. |
-| [ascend-mindspeed-llm-training](ascend-mindspeed-llm-training/SKILL.md) | Run the Ascend MindSpeed-LLM environment, model/weight, data and distributed-training pipeline for a selected model and backend. |
-| [ascend-mindspeed-mm-training](ascend-mindspeed-mm-training/SKILL.md) | Deploy MindSpeed-MM understanding or generative workloads on Ascend with model-specific dependencies, data and weight conversion. |
-| [ascend-verl-training](ascend-verl-training/SKILL.md) | Prepare a compatible Ascend VERL environment, data and model, then launch a selected training/rollout backend combination. |
-| [ascend-om-deployment](ascend-om-deployment/SKILL.md) | Analyze source IO/state contracts, convert an appropriate ONNX subgraph with ATC and reconnect the OM path into the application. |
-| [ascend-vllm-quantized-serving](ascend-vllm-quantized-serving/SKILL.md) | Inspect existing msModelSlim or compressed-tensors weights and start a single-instance vLLM-Ascend service with format-specific parameters. |
+| [ascend-environment](ascend-environment/SKILL.md) | NPU and SoC identification, CANN/OPP readiness, and container device visibility. |
+| [ascend-communication](ascend-communication/SKILL.md) | HCCL collective tests with the workload's rank mapping, topology, and payload sizes. |
 
-## Migration
+## Best Practice
 
-| Skill | Purpose |
+| Skill | Cases and guidance |
 |---|---|
-| [ascend-pytorch-migration](ascend-pytorch-migration/SKILL.md) | Migrate PyTorch training or inference code to torch_npu, preserving device, dependency and input/output contracts. |
-| [ascend-fsdp2-migration](ascend-fsdp2-migration/SKILL.md) | Adapt model registration, datasets and configuration to MindSpeed-MM FSDP2 and verify distributed functional execution. |
-
-## Ascend C operators
-
-| Skill | Purpose |
-|---|---|
-| [ascendc-api-guide](ascendc-api-guide/SKILL.md) | Resolve Ascend C API overloads, DMA alignment and units, vector/Cube operations, buffers and synchronization. |
-| [ascendc-operator-project](ascendc-operator-project/SKILL.md) | Create a direct-launch or registered Ascend C operator project with matching build, tiling and test resources. |
-| [ascendc-pytorch-integration](ascendc-pytorch-integration/SKILL.md) | Connect a working Ascend C direct-launch or ACLNN operator to PyTorch with the corresponding schema and graph interface. |
-| [ascendc-kernel-tuning](ascendc-kernel-tuning/SKILL.md) | Tune an Ascend C hotspot through target-specific tiling, buffer budgets and applicable single-core or inter-core pipelines. |
+| [ascendc-perf-optimize](ascendc-perf-optimize/SKILL.md) | Use measured metrics to choose inter-core or intra-core pipeline changes, including ping-pong prefetch. |
+| [ascendc-performance-best-practices](ascendc-performance-best-practices/SKILL.md) | Choose implementation approaches by NPU generation and operator family, including MatMul, FlashAttention, and gather/scatter. |
+| [ascend-npugraph-performance](ascend-npugraph-performance/SKILL.md) | Diagnose redundant copies or clones in graph capture and replay using FX graphs and reinplace diagnostics. |
+| [ascendc-mc2-best-practice](ascendc-mc2-best-practice/SKILL.md) | Pick an MC2 route and consult the pipeline and synchronization examples for computation–communication fusion. |
+| [ascendc-api-best-practices](ascendc-api-best-practices/SKILL.md) | Look up API contracts for buffers, copies, alignment, vector operations, and synchronization. |
 
 ## Profiling
 
-| Skill | Purpose |
+| Skill | Start here when |
 |---|---|
-| [ascend-operator-profiling](ascend-operator-profiling/SKILL.md) | Collect and interpret msprof or msOpProf operator traces, counters and pipeline evidence. |
-| [ascend-profiler-integration](ascend-profiler-integration/SKILL.md) | Integrate torch_npu.profiler into training, inference or RL code with framework-specific injection and control examples. |
-| [ascend-trace-analysis](ascend-trace-analysis/SKILL.md) | Interpret Ascend kernel_details/trace artifacts, AICPU exposure, device gaps and model-component execution. |
+| [ascend-model-profiling](ascend-model-profiling/SKILL.md) | You have a runnable model and need to enable a framework hook, integrate `torch_npu.profiler`, or collect and validate a training, inference, or RL trace. |
+| [ascend-ops-profiling](ascend-ops-profiling/SKILL.md) | You have a runnable operator case or msOpProf collection and need operator timing, metric analysis, runtime triage, or a visual report. |
+| [ascend-profiling-analysis](ascend-profiling-analysis/SKILL.md) | You have existing model profiling artifacts and need to locate bottlenecks or timeline gaps, or [attribute time to model components](ascend-profiling-analysis/references/model-perf-breakdown.md). |
 
-## Accuracy and runtime debugging
+## Ascend C Operator Development
 
-| Skill | Purpose |
+| Skill | Use it for |
 |---|---|
-| [ascend-operator-accuracy](ascend-operator-accuracy/SKILL.md) | Locate Ascend operator mismatches, tail/alignment faults and unstable intermediate values, then verify a targeted kernel repair. |
-| [ascend-runtime-debug](ascend-runtime-debug/SKILL.md) | Investigate ACLNN/CANN failures, kernel crashes or hangs using plog, exception dumps and AI Core fault evidence. |
-| [ascend-memory-debug](ascend-memory-debug/SKILL.md) | Run supported Ascend C or Triton sanitizer checks for bounds, initialization, races and synchronization faults. |
-| [ascend-npugraph-debug](ascend-npugraph-debug/SKILL.md) | Diagnose npugraph_ex/aclgraph capture, replay and graph-generated copy/clone performance regressions. |
-| [ascend-training-debug](ascend-training-debug/SKILL.md) | Locate Ascend training OOM, nonfinite values, finite reference mismatch or repeated-run nondeterminism using the relevant evidence. |
+| [ascendc-tiling-design](ascendc-tiling-design/SKILL.md) | Design core partitioning and UB tiling, with elementwise and Welford examples. |
+| [torch-ascendc-op-extension](torch-ascendc-op-extension/SKILL.md) | Connect an Ascend C operator to PyTorch through direct launch or ACLNN. |
+| [ascend-npu-objdump](ascend-npu-objdump/SKILL.md) | Inspect operator binaries and correlate device PCs with instruction windows. |
 
-# Ascend sources
-
-These cards group task phases while retaining the upstream technical manuals and resources. Names in the index show the original entry points. Source revisions and file provenance are recorded in [upstream.json](upstream.json).
-
-- cannbot: [2af66d732e59](https://gitcode.com/cann/cannbot-skills/tree/2af66d732e595297cf34159cf8e1d49fa7354c2c)
-- agent-skills: [25ff511dc01e](https://gitcode.com/Ascend/agent-skills/tree/25ff511dc01e4db903e5ffdfd178425671881086)
-- awesome: [75ec89ce9d40](https://github.com/ascend-ai-coding/awesome-ascend-skills/tree/75ec89ce9d401be8ac95980e1c3f42f8d4315057)
-
-Upstream notices are retained under [licenses/](licenses/). Awesome Ascend publishes its MIT notice in the README license section; that notice is included verbatim. Local changes are limited to entry-point grouping, portable workflow/document references and concrete examples corrections.
-
+Some specialized tools require a matching CANN installation or additional packages. See [skills/upstream.md](upstream.md) for source revisions and external resources.

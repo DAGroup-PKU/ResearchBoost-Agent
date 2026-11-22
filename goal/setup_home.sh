@@ -1,6 +1,7 @@
 #!/bin/bash
 # Prepare $WORK/<task>/home for the sandboxed agent: the engine's configuration and model access, plus the skill
-# cards named on the command line (default: all of ../skills). Records the engine in $WORK/<task>/engine, where
+# cards named on the command line (default: top-level cards in ../skills). Pass ascend-opt to install the
+# Ascend collection. Records the engine in $WORK/<task>/engine, where
 # clawo/run.sh reads it.
 #   usage: [ENGINE=auto|codex|claude] setup_home.sh <task> [skill ...]
 #
@@ -135,8 +136,32 @@ PY
 *) echo "ENGINE must be auto, codex or claude"; exit 1 ;;
 esac
 
-for s in ${@:-$(ls "$SKILLS_SRC")}; do
-  [ -f "$SKILLS_SRC/$s/SKILL.md" ] && cp -r "$SKILLS_SRC/$s" "$C/skills/"
+ASCEND_SKILLS_SRC=$SKILLS_SRC/ascend-opt
+if [ "$#" -eq 0 ]; then
+  cards=("$SKILLS_SRC"/*/SKILL.md)
+else
+  cards=()
+  for name in "$@"; do
+    if [ "$name" = ascend-opt ]; then
+      cards+=("$ASCEND_SKILLS_SRC"/*/SKILL.md)
+    elif [ -f "$SKILLS_SRC/$name/SKILL.md" ]; then
+      cards+=("$SKILLS_SRC/$name/SKILL.md")
+    else
+      cards+=("$ASCEND_SKILLS_SRC/$name/SKILL.md")
+    fi
+  done
+fi
+
+install_ascend_index=false
+for card in "${cards[@]}"; do
+  [ -f "$card" ] || continue
+  cp -r -- "${card%/SKILL.md}" "$C/skills/"
+  if [[ "$card" == "$ASCEND_SKILLS_SRC/"* ]]; then
+    install_ascend_index=true
+  fi
 done
+if "$install_ascend_index"; then
+  cp -- "$ASCEND_SKILLS_SRC/upstream.md" "$C/skills/upstream.md"
+fi
 echo "$ENGINE" > "$T/engine"
 echo "$DONE; engine $ENGINE; skills: $(ls "$C/skills" | tr '\n' ' ')"
