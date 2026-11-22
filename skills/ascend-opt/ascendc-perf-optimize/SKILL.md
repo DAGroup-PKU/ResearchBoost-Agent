@@ -373,5 +373,5 @@ Tiling 侧同时验证 `2 * inputTileBytes + workspaceBytes + outputTileBytes`�
 
 ### 关联
 
-- 源（5 次）：[ops-nn `eafe7968`](https://gitcode.com/cann/ops-nn/commit/eafe7968)（arch35 Conv2D：预热首块并在循环内预取下一 `cin` block 到另一 L1 buffer）、[ops-nn `162dd73b9`](https://gitcode.com/cann/ops-nn/commit/162dd73b9)（arch35 BatchNorm：BlockSplitR 流水）、[ops-transformer `a2ee2d928`](https://gitcode.com/cann/ops-transformer/commit/a2ee2d928)（arch35 QKV：tile 流水重排）、[ops-transformer `de8e0d03b`](https://gitcode.com/cann/ops-transformer/commit/de8e0d03b)（arch35 MegaMoE：动态 wave pipeline）、[ops-transformer `cad87fee0`](https://gitcode.com/cann/ops-transformer/commit/cad87fee0)（arch35 MegaMoE：按 UB 预算调整 pipeline buffer/batch）。
+- [工程示例](../upstream.md#ascendc-perf-optimize-ping-pong-prefetch-examples)包括arch35 Conv2D：预热首块并在循环内预取下一 `cin` block 到另一 L1 buffer、arch35 BatchNorm：BlockSplitR 流水、arch35 QKV：tile 流水重排、arch35 MegaMoE：动态 wave pipeline、arch35 MegaMoE：按 UB 预算调整 pipeline buffer/batch。
 - 相邻卡片：mem-03（多 buffer 可同时服务于按行批搬）、mem-04（跨阶段临时量的复用）。

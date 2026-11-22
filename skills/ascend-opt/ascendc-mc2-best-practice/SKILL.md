@@ -154,7 +154,7 @@ SHMEM 通信库（cann/shmem，与 HCOMM 无关）驱动 AIV+URMA 跨卡搬运�
 
 APACE（Ascend PArallel Communication-compute Engine）是通算融合算子的架构底座，提供可复用的 block 层接口、kernel 层参考实现和 tiling 算法。APACE 自建通信基础 API（基于 HCOMM 通信基础库构建，与 HCCL 集合通信库无关）。apace 路线在 `kernel/<op>/` 下新建算子，复用稳定共享层 `block/` `tiling/`。
 
-> **apace 路线接口契约基准**：[cann/ops-transformer](https://gitcode.com/cann/ops-transformer) `mc2/common/op_kernel/apace/` 子树，以 pin 的已验证快照为结构基准。样例代码可使用 [fetch_apace.sh](../upstream.md#ascendc-mc2-best-practice-scripts-fetch-apace-sh) 及其依赖，从 [MC2 工具目录](../upstream.md#ascendc-mc2-best-practice-workspace) 运行该脚本（支持 `--ref`/`APACE_PIN_REF` 锚定 commit）；⚠️ master 结构会演进（如目录迁移、新增算子），拉取 master 后必须与快照 diff 校验，文档引用失效时更新文档——**已知漂移登记（pin 之后 10 个提交：block/→core/ 迁移、ReduceScatter UBMEM 官方模板、hcomm dcci 等）见 [`references/foundations/apace/fundamentals/communication.md`](../upstream.md#ascendc-mc2-best-practice-foundations-apace-fundamentals-communication-md) §8，核对 master 前必读**。
+> **apace 路线接口契约基准**：[cann/ops-transformer](https://gitcode.com/cann/ops-transformer) `mc2/common/op_kernel/apace/` 子树，以 pin 的已验证快照为结构基准。样例代码可使用 [fetch_apace.sh](../upstream.md#ascendc-mc2-best-practice-scripts-fetch-apace-sh) 及其依赖，从 [MC2 工具目录](../upstream.md#ascendc-mc2-best-practice-workspace) 运行该脚本（支持 `--ref`/`APACE_PIN_REF` 锚定 commit）。若采用其他版本，先与基准版本比较，确认目录和接口契约。
 >
 > **工程实现默认事实源**：CANN 内置 apace 框架（路径随 CANN 打包形态实测定位，Step 1 登记；两种已验证形态：`opp/built-in/op_impl/ai_core/tbe/impl/ops_transformer/ascendc/common/apace/`（cann-9.2.0）、`vendors/custom_transformer/op_impl/ai_core/tbe/custom_transformer_impl/ascendc/common/apace/`（cann-9.1.0）），**直调独立工程默认 CMake 直引该路径，禁止整包复制**。
 

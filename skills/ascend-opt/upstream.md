@@ -198,6 +198,7 @@ The skill table maps this collection to pinned source revisions. External resour
 
 ### ascendc-perf-optimize
 
+- <a id="ascendc-perf-optimize-ping-pong-prefetch-examples"></a>Ping-pong 预取示例包括[Conv2D 的 L1 预取](https://gitcode.com/cann/ops-nn/commit/eafe7968)、[BatchNorm 的 BlockSplitR 流水](https://gitcode.com/cann/ops-nn/commit/162dd73b9)、[QKV 的 tile 流水](https://gitcode.com/cann/ops-transformer/commit/a2ee2d928)、[MegaMoE 的动态 wave pipeline](https://gitcode.com/cann/ops-transformer/commit/de8e0d03b)、[MegaMoE 的缓冲预算](https://gitcode.com/cann/ops-transformer/commit/cad87fee0)。
 - <a id="ascendc-blaze-development"></a>[`ops/ascendc-blaze-best-practice`](https://gitcode.com/cann/cannbot-skills/tree/2af66d732e595297cf34159cf8e1d49fa7354c2c/ops/ascendc-blaze-best-practice)
 - <a id="ascendc-blaze-migration"></a>[`ops/ascendc-blaze-migration`](https://gitcode.com/cann/cannbot-skills/tree/2af66d732e595297cf34159cf8e1d49fa7354c2c/ops/ascendc-blaze-migration)
 - <a id="ascendc-perf-optimize-workspace"></a>[`ops/ascendc-perf-optimize/`](https://gitcode.com/cann/cannbot-skills/tree/2af66d732e595297cf34159cf8e1d49fa7354c2c/ops/ascendc-perf-optimize)

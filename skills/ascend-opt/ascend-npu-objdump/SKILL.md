@@ -18,7 +18,7 @@ The objdump helper scripts are bundled in `scripts/`; run their commands from th
   - [使用说明](#使用说明)
   - [异常 PC 工作流](#异常-pc-工作流)
   - [结果说明](#结果说明)
-  - [修改验证](#修改验证)
+  - [工具自检](#工具自检)
   - [参考资料](#参考资料)
 
 ## npu-objdump/msobjdump 功能与用法
@@ -75,9 +75,9 @@ python3 scripts/check_interface.py --tool "$OBJDUMP_CMD"
 - `--sass` 对多个 device 镜像分别输出来源和反汇编内容；没有 device ELF 或反汇编依赖不可用时，不应声称反汇编成功。
 - `--extract-elf` 和 Shell 重定向会写文件；使用独立输出目录，检查同名覆盖，并保留输入路径和哈希。其他步骤只读，不执行待分析二进制。
 
-### 修改验证
+### 工具自检
 
-改动本技能或脚本后，从本技能目录检查 Python 语法、ERR_INFO 解码及 Git 差异。ERR_INFO 算术回归应确认 CCU `0x32b510506c8000e9` 与 MTE `0xd9000000e9` 都得到 `0x367a4`；真实对象回归还要确认 AIC/AIV 物理符号分别可反汇编，窄窗口包含目标对象 PC，错误符号和越界偏移返回非零。
+从本技能目录检查 Python 语法和 ERR_INFO 解码。ERR_INFO 算术回归应确认 CCU `0x32b510506c8000e9` 与 MTE `0xd9000000e9` 都得到 `0x367a4`；真实对象回归还要确认 AIC/AIV 物理符号分别可反汇编，窄窗口包含目标对象 PC，错误符号和越界偏移返回非零。
 
 ```bash
 python3 -m py_compile scripts/*.py
@@ -89,7 +89,6 @@ python3 scripts/decode_err_info_pc.py \
   --pc-base 0x36000 --direct-offset 0x7a4
 python3 scripts/gen_interface.py \
   --source-root /path/to/asc-tools --check
-git diff --check
 ```
 
 验证结果应同时覆盖：接口快照与 asc-tools 源码一致、`decodedPcBytes=0x367a4`、同域比较得到 `equal=true`、真实 MIX 对象的 AIC/AIV 符号可分别输出指令，以及非法参数返回非零。没有真实对象时明确标记该项未验证，不能以语法检查代替反汇编回归。
