@@ -24,6 +24,10 @@
 
 <br>
 
+## News
+
+- <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-11-17** · We release **RSI-Infra Bench Preview**. See the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) and the [blog post](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/) on what separates the models.
+
 ## LeaderBoard
 
 ### 8 training-optimization tasks · 10 hours per task
