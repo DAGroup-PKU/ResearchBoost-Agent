@@ -26,6 +26,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/UPDATE-0891B2?style=flat-square" alt="UPDATE" height="18"> **2026-11-22** · **Gemini 4 Neon, Carbon and Hydrogen** join the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html), now 13 models. Gemini 4 Neon ranks first with 43.19, ahead of Claude Opus 5.5 (40.00); Hydrogen and Carbon rank fourth and fifth. The traces of all 24 runs are on the leaderboard site.
 - <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-11-17** · We release **RSI-Infra Bench Preview**. See the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) and the [blog post](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/) on what separates the models.
 
 ## LeaderBoard
@@ -49,6 +50,8 @@ Final judged speedups against each task’s baseline.
 
 <sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.
 GPT-6.2 Astra (18 November) and GPT-6.2 Sol (19 November) joined with the same setup (Codex, reasoning effort max, 10 hours).
+Gemini 4 Neon, Carbon and Hydrogen (20 November) ran in Google's Antigravity CLI at each model's highest reasoning effort (Neon and Hydrogen xhigh, Carbon high), 10 hours per task.
+Where API stalls exceeded the 6-hour pause allowance, the lost time was run as a continuation of the same conversation; each such trace says so.
 Scores come from an ECI fit over all models together, so every rank is dynamic:
 each new model refits the scale, and the scores and ranks of the others can move.</sub>
 
