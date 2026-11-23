@@ -26,7 +26,7 @@
 
 ## News
 
-- <img src="https://img.shields.io/badge/UPDATE-0891B2?style=flat-square" alt="UPDATE" height="18"> **2026-11-23** · **Qwen4-Max, Step-5 Preview and Hy4** join the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html), now 16 models. Qwen4-Max ranks tenth (15.27), Step-5 Preview eleventh (14.66) and Hy4 sixteenth (3.10). The top nine are unchanged; with the refit, GPT-6 Astra (suspected nerf) moves to twelfth and DeepSeek V4.1 Flash-1017 to fourteenth. The traces of all 24 new runs are on the leaderboard site.
+- <img src="https://img.shields.io/badge/UPDATE-0891B2?style=flat-square" alt="UPDATE" height="18"> **2026-11-23** · **Qwen4-Max** (#10), **Step-5 Preview** (#11) and **Hy4** (#16) join the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html), now 16 models.
 - <img src="https://img.shields.io/badge/UPDATE-0891B2?style=flat-square" alt="UPDATE" height="18"> **2026-11-22** · **Gemini 4 Neon, Carbon and Hydrogen** join the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html), now 13 models. Gemini 4 Neon ranks first with 43.19, ahead of Claude Opus 5.5 (40.00); Hydrogen and Carbon rank fourth and fifth. The traces of all 24 runs are on the leaderboard site.
 - <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-11-17** · We release **RSI-Infra Bench Preview**. See the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) and the [blog post](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/) on what separates the models.
 
