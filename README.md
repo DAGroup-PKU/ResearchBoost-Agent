@@ -49,14 +49,7 @@ Final judged speedups against each task’s baseline.
 <a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/#analysis"><img src="docs/assets/readme/button-bench-blog-en.png" alt="How the models differ, in the blog post" height="56"></a>
 </p>
 
-<sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.
-GPT-6.2 Astra (18 November) and GPT-6.2 Sol (19 November) joined with the same setup (Codex, reasoning effort max, 10 hours).
-Gemini 4 Neon, Carbon and Hydrogen (20 November) ran in Google's Antigravity CLI at each model's highest reasoning effort (Neon and Hydrogen xhigh, Carbon high), 10 hours per task.
-Where API stalls exceeded the 6-hour pause allowance, the lost time was run as a continuation of the same conversation; each such trace says so.
-Step-5 Preview (19 November) ran in Claude Code at reasoning effort max with a 1M context, 10 hours per task.
-Qwen4-Max (Qwen Code, 256k context) and Hy4 (Codex, 272k context) ran at reasoning effort max, 10 hours per task (18–19 November).
-Scores come from an ECI fit over all models together, so every rank is dynamic:
-each new model refits the scale, and the scores and ranks of the others can move.</sub>
+<sub>\* GPT-6 Astra: suspected nerf; it feels different from our early testing.</sub>
 
 ## Eval Protocol
 
