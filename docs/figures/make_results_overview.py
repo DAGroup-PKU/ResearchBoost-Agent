@@ -26,6 +26,8 @@ DOMAINS = {
 PROJECTS = [
     ("Motus", "emb", 9.59, "9.59×", False, "bitwise"),
     ("RAE", "img", 5.32, "5.32×", False, "stat"),
+    ("Wan2.2-VSA", "vid", 5.2816, "5.28×", False, "stat"),
+    ("SANA-WM", "vid", 4.8543, "4.85×", False, "stat"),
     ("RoboTwin", "emb", 4.38, "4.38×", True, "bitwise"),
     ("PIDG (module)", "3d", 4.1749, "4.17×", False, "task"),
     ("FastWAM", "emb", 3.46, "3.46×", False, "task"),
@@ -48,7 +50,7 @@ PROJECTS = [
 ]
 
 # Projects contributed by the community; the leaderboard marks them with a people icon.
-COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "OpenWAM", "LLaVA-OneVision-2", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS"}
+COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "Wan2.2-VSA", "SANA-WM", "OpenWAM", "LLaVA-OneVision-2", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS"}
 
 # (name, domain, baseline, optimized, unit-formatted labels, speedup label, estimate?, en/zh scope, en/zh quality)
 SHOWCASE = [
