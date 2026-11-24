@@ -30,6 +30,7 @@
 
 ## News
 
+- <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-25** · **[G-STAR](https://github.com/DAGroup-PKU/G-STAR)**, an autoregressive text-to-image model that represents images as grouped discrete tokens at 32× / 64× compression, merged RBA's inference speedups upstream ([G-STAR#2](https://github.com/DAGroup-PKU/G-STAR/pull/2)): **6.18×** per image for G-STAR-Pro-8B with its one-step refiner, **2.73×** with the 52-step refiner and **2.72×** for G-STAR-Flash-1.7B on one H200, with bit-identical image codes.
 - <img src="https://img.shields.io/badge/COMMUNITY-1BAF7A?style=flat-square" alt="COMMUNITY" height="18"> **2026-11-24** · **[Faster-Wan22-VSA-MUSA](https://github.com/JoeyXuquant11/Faster-Wan22-VSA-MUSA)** and **[Faster-SANA-WM-MUSA](https://github.com/JoeyXuquant11/Faster-SANA-WM-MUSA)** by [@JoeyXuquant11](https://github.com/JoeyXuquant11): **5.28×** on Wan2.2-TI2V-5B + VSA fine-tuning and **4.85×** on SANA-WM Stage-1 training, on Moore Threads MTT S5000, our **first cases beyond NVIDIA GPUs**. Thanks [@JoeyXuquant11](https://github.com/JoeyXuquant11)!
 - <img src="https://img.shields.io/badge/UPDATE-0891B2?style=flat-square" alt="UPDATE" height="18"> **2026-11-22** · **Gemini 4 Neon, Carbon and Hydrogen** join the [RSI-Infra Bench leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html), now 13 models: Gemini 4 Neon ranks first with 43.19, ahead of Claude Opus 5.5 (40.00); Hydrogen and Carbon rank fourth and fifth. Traces of all 24 runs are on the leaderboard site.
 - <img src="https://img.shields.io/badge/RELEASE-6250D6?style=flat-square" alt="RELEASE" height="18"> **2026-11-17** · **[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** preview: eight real training workloads, ten hours each, scored by RBA's frozen judge. See the [leaderboard](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html) of eight models and the [blog post](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/) on what separates them.
@@ -56,7 +57,7 @@
 
 ## Highlights
 
-<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 23 projects, each measured against its own baseline." width="100%"></a>
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 24 projects, each measured against its own baseline." width="100%"></a>
 
 <a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
 
@@ -66,7 +67,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 23 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 24 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -100,10 +101,11 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 <details>
-<summary><strong>Image Generation</strong> · 3 projects — RAE, DMD2, JiT</summary>
+<summary><strong>Image Generation</strong> · 4 projects — G-STAR, RAE, DMD2, JiT</summary>
 
 | Project | Workload | Speedup |
 |---|---|---:|
+| [G-STAR](https://github.com/DAGroup-PKU/G-STAR) (merged upstream) | Text-to-image inference · Pro-8B with one-step / 52-step refiner, Flash-1.7B | **2.72–6.18×** |
 | [Faster-RAE](https://github.com/AI4AI-for-Anything/Faster-RAE) | Stage-1 decoder + GAN training | **5.32×** |
 | [Faster-DMD](https://github.com/AI4AI-for-Anything/Faster-DMD) | DMD2 one-step SD1.5 distillation + GAN | **1.72×** |
 | [Faster-JiT](https://github.com/AI4AI-for-Anything/Faster-JiT) | JiT-B/16 · ImageNet 256 training | **1.56×** |
@@ -247,7 +249,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 
 | Path | Contents |
 |---|---|
-| [`docs/results/`](docs/results) | Results from 23 projects, grouped by domain, with measurement scope and validation records |
+| [`docs/results/`](docs/results) | Results from 24 projects, grouped by domain, with measurement scope and validation records |
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |
