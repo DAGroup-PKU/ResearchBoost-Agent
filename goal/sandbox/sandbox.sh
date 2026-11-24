@@ -36,7 +36,9 @@
 # Direct mode, for hosts where no namespace can be created (no bubblewrap, or a container that forbids them):
 # the same HOME, TMPDIR, working directory and sandbox.env, and only the listed GPUs through CUDA_VISIBLE_DEVICES.
 # Nothing is hidden and nothing is read-only; the judge is protected only by the final check, which refuses a
-# verdict when any file under bench/, numerics/ or task/ changed since launch (goal/clawo/accept.py).
+# verdict when any file under bench/, numerics/ or task/ changed since launch (goal/clawo/accept.py), or when the
+# final check's own scripts did (the harness-unchanged check goal/clawo/run.sh writes). An agent in direct mode
+# can reach those records too, so they catch accidents and drift, not a deliberate rewrite.
 set -euo pipefail
 TASK=$1; GPUS=$2; shift 2
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -126,6 +128,9 @@ if [ "${PREP:-0}" != 1 ]; then
 fi
 for d in ${ro[@]+"${ro[@]}"}; do args+=(--ro-bind "$d" "$d"); done
 [ -f "$T/sandbox.env" ] && args+=(--ro-bind "$T/sandbox.env" "$T/sandbox.env")
+# The run's launch record (the final check's contract, the judge digests accept.py compares against) is the
+# harness's: $T is writable inside, so without this the agent could rewrite it.
+[ -d "$T/clawo" ] && args+=(--ro-bind "$T/clawo" "$T/clawo")
 # Claude Code refuses to skip permission prompts as root unless it is told it runs in a sandbox, which it does here.
 exec "$B" "${args[@]}" --chdir "$T/ws" --setenv HOME "$T/home" --setenv TMPDIR /tmp \
   --setenv WORK "$WORK" --setenv ASSETS "$A" --setenv PATH "$P" --setenv IS_SANDBOX 1 \
