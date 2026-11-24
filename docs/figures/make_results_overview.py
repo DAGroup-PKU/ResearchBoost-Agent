@@ -25,6 +25,7 @@ DOMAINS = {
 # (name, domain, speedup that sets the bar length (a (low, high) pair for a range), label, extrapolated estimate?, validation)
 PROJECTS = [
     ("Motus", "emb", 9.59, "9.59×", False, "bitwise"),
+    ("G-STAR", "img", (2.72, 6.18), "2.72–6.18×", False, "stat"),
     ("RAE", "img", 5.32, "5.32×", False, "stat"),
     ("Wan2.2-VSA", "vid", 5.2816, "5.28×", False, "stat"),
     ("SANA-WM", "vid", 4.8543, "4.85×", False, "stat"),
