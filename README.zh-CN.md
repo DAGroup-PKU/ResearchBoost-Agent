@@ -55,7 +55,7 @@
 
 ## 亮点
 
-<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖七个研究领域：21 个项目，每个都与自身的基线对比。" width="100%"></a>
+<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖七个研究领域：23 个项目，每个都与自身的基线对比。" width="100%"></a>
 
 <a href="#快速开始"><img src="docs/assets/readme/card-prompt-zh.png" alt="在 Codex 或 Claude Code 里粘贴一段话；agent 自己找到代码，只问需要你决定的事，其余全部自己完成。" width="100%"></a>
 
@@ -65,7 +65,7 @@
 
 ## 已有结果
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="21 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.13×（3DGS），附验证方式" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="23 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.13×（3DGS），附验证方式" width="100%"></a>
 
 <img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
 
@@ -112,10 +112,12 @@
 </details>
 
 <details>
-<summary><strong>视频生成</strong> · 2 个项目 — Self-Forcing, MiniMax-H3</summary>
+<summary><strong>视频生成</strong> · 4 个项目 — Wan2.2-VSA, SANA-WM, Self-Forcing, MiniMax-H3</summary>
 
 | 项目 | 工作负载 | 加速比 |
 |---|---|---:|
+| [Faster-Wan22-VSA-MUSA](https://github.com/JoeyXuquant11/Faster-Wan22-VSA-MUSA)（[@JoeyXuquant11](https://github.com/JoeyXuquant11) 贡献） | Wan2.2-TI2V-5B + VSA 全量微调 · 8× MTT S5000 | **5.28×** |
+| [Faster-SANA-WM-MUSA](https://github.com/JoeyXuquant11/Faster-SANA-WM-MUSA)（[@JoeyXuquant11](https://github.com/JoeyXuquant11) 贡献） | SANA-WM Stage-1 双向 720p FSDP2 · 4× MTT S5000 | **4.85×** |
 | [Faster-SelfForcing](https://github.com/AI4AI-for-Anything/Faster-SelfForcing) | 视频 DMD 训练 | **2.08×** |
 | [Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3)（[@2018cx](https://github.com/2018cx) 贡献） | MiniMax-H3 FL2VA · BF16 LoRA / ZeRO-3 | **1.8570×** |
 
@@ -244,7 +246,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 | 路径 | 内容 |
 |---|---|
-| [`docs/results/`](docs/results) | 21 个项目的分类报告、测量范围与验证记录（英文） |
+| [`docs/results/`](docs/results) | 23 个项目的分类报告、测量范围与验证记录（英文） |
 | [`docs/`](docs) | 英文文档：[方法](docs/methodology.md)、[评测](docs/judge.md)、[goal 模式](docs/goal-mode.md)、[任务运行指南](docs/run-a-task.md)、[四个任务的经验](docs/lessons.md) |
 | [`goal/`](goal) | 在 claw-orchestrator 上运行 Codex 或 Claude Code `/goal` 会话的工具：建任务目录的脚本、沙箱、两种引擎的模型访问配置、启动 / 查看状态 / 发送提醒 / 恢复运行的脚本和最终评测、监控脚本，以及任务准备和监督 agent 的说明 |
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |

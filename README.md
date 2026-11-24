@@ -55,7 +55,7 @@
 
 ## Highlights
 
-<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 21 projects, each measured against its own baseline." width="100%"></a>
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 23 projects, each measured against its own baseline." width="100%"></a>
 
 <a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
 
@@ -65,7 +65,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 21 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 23 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -112,10 +112,12 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 <details>
-<summary><strong>Video Generation</strong> · 2 projects — Self-Forcing, MiniMax-H3</summary>
+<summary><strong>Video Generation</strong> · 4 projects — Wan2.2-VSA, SANA-WM, Self-Forcing, MiniMax-H3</summary>
 
 | Project | Workload | Speedup |
 |---|---|---:|
+| [Faster-Wan22-VSA-MUSA](https://github.com/JoeyXuquant11/Faster-Wan22-VSA-MUSA) by [@JoeyXuquant11](https://github.com/JoeyXuquant11) | Wan2.2-TI2V-5B + VSA full fine-tuning · 8× MTT S5000 | **5.28×** |
+| [Faster-SANA-WM-MUSA](https://github.com/JoeyXuquant11/Faster-SANA-WM-MUSA) by [@JoeyXuquant11](https://github.com/JoeyXuquant11) | SANA-WM Stage-1 bidirectional 720p FSDP2 · 4× MTT S5000 | **4.85×** |
 | [Faster-SelfForcing](https://github.com/AI4AI-for-Anything/Faster-SelfForcing) | Self-Forcing video DMD training | **2.08×** |
 | [Faster-MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3) by [@2018cx](https://github.com/2018cx) | MiniMax-H3 FL2VA · BF16 LoRA / ZeRO-3 | **1.8570×** |
 
@@ -244,7 +246,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 
 | Path | Contents |
 |---|---|
-| [`docs/results/`](docs/results) | Results from 21 projects, grouped by domain, with measurement scope and validation records |
+| [`docs/results/`](docs/results) | Results from 23 projects, grouped by domain, with measurement scope and validation records |
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |
