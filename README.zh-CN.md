@@ -30,6 +30,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-24** · **[Faster-VGGT](https://github.com/SuperFCR/Faster-VGGT)**，来自 [@SuperFCR](https://github.com/SuperFCR)：单张 A100 上 VGGT-1B 微调加速 **2.19×**（N2，峰值显存 −31.7%）/ **1.86×**（纯无损 N1）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-24** · **[Faster-Wan22-VSA-MUSA](https://github.com/JoeyXuquant11/Faster-Wan22-VSA-MUSA)** 和 **[Faster-SANA-WM-MUSA](https://github.com/JoeyXuquant11/Faster-SANA-WM-MUSA)**，来自 [@JoeyXuquant11](https://github.com/JoeyXuquant11)：在摩尔线程 MTT S5000 上，Wan2.2-TI2V-5B + VSA 微调加速 **5.28×**，SANA-WM Stage-1 训练加速 **4.85×**，是**第一批 NVIDIA GPU 以外的案例**。感谢 [@JoeyXuquant11](https://github.com/JoeyXuquant11)！
 - <img src="https://img.shields.io/badge/更新-0891B2?style=flat-square" alt="更新" height="18"> **2026-11-22** · **Gemini 4 Neon、Carbon 和 Hydrogen** 加入 [RSI-Infra Bench 排行榜](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)，现有 13 个模型：Gemini 4 Neon 以 43.19 分排第一，高于 Claude Opus 5.5（40.00）；Hydrogen 和 Carbon 分列第四、第五。24 次运行的 trace 都在排行榜网站上。
 - <img src="https://img.shields.io/badge/发布-6250D6?style=flat-square" alt="发布" height="18"> **2026-11-17** · **[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** 预览版发布：8 个真实训练任务，每个 10 小时，由 RBA 的冻结评测程序判分。8 个模型的结果见[排行榜](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html)，它们差在哪里见[博客](https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/)。
@@ -56,7 +57,7 @@
 
 ## 亮点
 
-<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖七个研究领域：23 个项目，每个都与自身的基线对比。" width="100%"></a>
+<a href="#已有结果"><img src="docs/assets/readme/card-results-zh.png" alt="最高 9.59× 加速，覆盖七个研究领域：24 个项目，每个都与自身的基线对比。" width="100%"></a>
 
 <a href="#快速开始"><img src="docs/assets/readme/card-prompt-zh.png" alt="在 Codex 或 Claude Code 里粘贴一段话；agent 自己找到代码，只问需要你决定的事，其余全部自己完成。" width="100%"></a>
 
@@ -66,7 +67,7 @@
 
 ## 已有结果
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="23 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.13×（3DGS），附验证方式" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.zh-CN.svg" alt="24 个项目按相对自身基线的加速比排名，从 9.59×（Motus）到 1.13×（3DGS），附验证方式" width="100%"></a>
 
 <img src="docs/figures/results-time.zh-CN.svg" alt="6 个项目的基线与优化后耗时对比，例如 Motus 微调每次迭代从 7.47 s 降到 0.78 s，RoboTwin 完整评测从 73.5 h 降到 16.8 h" width="100%">
 
@@ -155,12 +156,13 @@
 
 
 <details>
-<summary><strong>三维重建</strong> · 2 个项目 — Original 3DGS, PIDG</summary>
+<summary><strong>三维重建</strong> · 3 个项目 — Original 3DGS, PIDG, VGGT</summary>
 
 | 项目 | 工作负载 | 加速比 |
 |---|---|---:|
 | [Original 3DGS](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost)（[@HaoqinHong](https://github.com/HaoqinHong) 贡献） | Mip-NeRF360 · bonsai / bicycle / garden · 完整 30000 步原生流程 | 合计 **1.13×**；分场景 **1.07–1.29×** |
 | [PIDG](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost)（[@HaoqinHong](https://github.com/HaoqinHong) 贡献） | dry_ice · 光流模块组 | **4.17×** |
+| [Faster-VGGT](https://github.com/SuperFCR/Faster-VGGT)（[@SuperFCR](https://github.com/SuperFCR) 贡献） | VGGT-1B 微调 · Virtual KITTI 2.0.3 | **2.19×**（N2）/ **1.86×**（N1） |
 
 [实验设置、画质与验证记录（英文） →](docs/results/3d-reconstruction.md)
 
@@ -247,7 +249,7 @@ Codex 用 `codex --enable default_mode_request_user_input` 启动时会弹出提
 
 | 路径 | 内容 |
 |---|---|
-| [`docs/results/`](docs/results) | 23 个项目的分类报告、测量范围与验证记录（英文） |
+| [`docs/results/`](docs/results) | 24 个项目的分类报告、测量范围与验证记录（英文） |
 | [`docs/`](docs) | 英文文档：[方法](docs/methodology.md)、[评测](docs/judge.md)、[goal 模式](docs/goal-mode.md)、[任务运行指南](docs/run-a-task.md)、[四个任务的经验](docs/lessons.md) |
 | [`goal/`](goal) | 在 claw-orchestrator 上运行 Codex 或 Claude Code `/goal` 会话的工具：建任务目录的脚本、沙箱、两种引擎的模型访问配置、启动 / 查看状态 / 发送提醒 / 恢复运行的脚本和最终评测、监控脚本，以及任务准备和监督 agent 的说明 |
 | [`numerics/`](numerics) | 各任务评测复制并固定版本的数值等价性检查组件：数据记录、逐位和分级比对、配对随机种子的训练轨迹比对、任务适配器基类及自测 |

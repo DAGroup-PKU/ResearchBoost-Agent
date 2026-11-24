@@ -2,9 +2,9 @@
 
 [← All results](README.md) · [ResearchBoost-Agent](../../README.md#results)
 
-2 projects · [Original 3DGS](#original-3dgs) · [PIDG](#pidg)
+3 projects · [Original 3DGS](#original-3dgs) · [PIDG](#pidg) · [Faster-VGGT](#faster-vggt)
 
-Contributed by [@HaoqinHong](https://github.com/HaoqinHong). Both experiments use one NVIDIA A800-SXM4-80GB, original precision settings, and a shared GPU with existing viewers running. Speedup is baseline time divided by experimental time. Validation uses task metrics: held-out-view PSNR for Original 3DGS and module-output numerical checks for PIDG. Judge statuses are listed below.
+Original 3DGS and PIDG are contributed by [@HaoqinHong](https://github.com/HaoqinHong) on one NVIDIA A800-SXM4-80GB (shared GPU, original precision settings, task-metric validation). Faster-VGGT is contributed by [@SuperFCR](https://github.com/SuperFCR) on one NVIDIA A100-SXM4-80GB with a frozen-judge four-gate `PASS` and end-to-end training/validation verification. Judge statuses are listed below.
 
 ## Original 3DGS
 
@@ -89,3 +89,33 @@ The gather optimization omits exactly-zero gradient vectors, preserving forward 
 The public repository includes pinned upstream versions, retained and rejected patches, public-data SHA256 manifests, benchmark drivers and result tables. These runs used ResearchBoost methodology, skill cards and its unmodified generic numerical component; they did not launch `clawo`.
 
 [Reproduction commands ↗](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost/blob/89241769ce2dccf2b80323e9a7e4f57ee09e006b/docs/reproduce.md) · [Environment ↗](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost/blob/89241769ce2dccf2b80323e9a7e4f57ee09e006b/docs/environment.md)
+
+## Faster-VGGT
+
+Contributed by [@SuperFCR](https://github.com/SuperFCR).
+
+**VGGT-1B fine-tuning (`facebookresearch/vggt @ a288dd0f`) · Virtual KITTI 2.0.3 · frozen 908M aggregator + trainable 202M `camera_head` & 12M `depth_head`**
+
+| Item | Result |
+|---|---|
+| Speedup | **2.19×** (`2.1857×`, Tier N2 `configs/final.json`) · **1.86×** (`1.8630×`, pure lossless Tier N1 `configs/final_n1.json`) |
+| Peak memory | **19.15 GiB** vs `28.04 GiB` (**−31.7%** allocated) on N2; `30.48 GiB` on N1 |
+| Hardware | 1 × NVIDIA A100-SXM4-80GB, 12 vCPU, PyTorch `2.14.1+cu130`, Triton `3.8.0`, CUDA 13.0 |
+| Measurement scope | Steady-state iteration time (`1.9250 → 0.8807 s/iter` N2; `1.9283 → 1.0351 s/iter` N1): `bench.py check --final` A-B-A (`ref_a → cand → ref_b`) in fresh cold-cache `torchrun` processes, 6 warm-up + 2 × 15 timed iterations each (`ref_spread = 0.13%` / `0.32%`) |
+| Judge status | **`PASS` (`final: true`)** across all four gates; frozen `evaluator_sha256 = c5b59bf5…c966d` unchanged throughout; default-off tree is `3,776/3,776` tensors bitwise identical (`N0`) |
+| Validation | Gate 3 (20-step deterministic trajectory vs 6 frozen seeds at `3σ`): `equivalent`, max `\|d\|/σ = 0.0642σ` on both N2 and N1 (`lr × 1.02` control arm rejected at `+12.18σ` / `+9.24σ`); real end-to-end training + checkpoint save/reload + held-out validation match baseline |
+
+Six optimization rounds behind default-off `VGGT_OPT_*` switches (executed with Gemini 4 Neon `xhigh`): (1) pinned memory, 1-frame RoPE cos/sin cache across 48 alternating-attention blocks, branchless `nan_to_num` with single end-of-step scalar flush, and GPU camera/point normalization; (2) `_version`-keyed BF16 weight cache for the frozen aggregator plus fused Triton `LayerNorm→BF16`, `LayerScale+Add+LayerNorm→BF16` (exact FP32 residual), and fused QKV unpack + FP32 QK-Norm + 2D RoPE with zero-copy FlashAttention layout; (3) a 4-pass 8-bit multi-SM Triton radix-select quantile kernel (**160.2×** faster than `kthvalue`, bitwise N0) and dense branchless masked loss (**10.6×** faster `multitask_loss`); (4) cached DPT UV positional embeddings, NHWC `DPTHead`, unchunked frames, and fused `AdamW` with deferred clip sync; (5) cross-block `ls2+norm1` fusion across 70 block boundaries, zero-sync `rotation.py`, `do_not_specialize` on all 8 Triton kernels to eliminate dynamic-resolution JIT recompiles, and a deterministic atomic-free Triton NHWC bilinear upsample kernel (reaching **1.86×** pure lossless N1); and (6) local BF16 `DPTHead` convolutions with FP32 `F.linear` on the final 32→2 NHWC projection and FP32 `activate_head`, loss, optimizer and `CameraHead` (reaching **2.19×** N2 and **−31.7%** peak VRAM).
+
+### End-to-end training & held-out validation
+
+Executed via the unmodified upstream entrypoint `training/launch.py` (`seed=42`, 41 training steps / 82 microbatches, real `6.17 GiB` `checkpoint_0.pt` save and `strict=True` reload into a fresh `VGGT`, and held-out validation on Virtual KITTI 2.0.3 `split=test`, 10 batches):
+
+| Arm | `val_loss_camera` | `val_loss_T` | `val_loss_R` | `val_loss_FL` | `val_loss_conf_depth` | `val_loss_reg_depth` | `val_loss_grad_depth` | Train `objective` | Steady-state Train / Val `Batch Time` | Peak Mem (Train / Val) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Original (`targets/reference`) | 0.0039 | 0.0026 | 0.0002 | 0.0021 | −0.0542 | 0.0591 | 0.0464 | 0.0344 | 2.8256 s / 1.9073 s | 29.0 / 32.0 GB |
+| Optimized (`configs/final.json`) | **0.0039** | **0.0027** | **0.0002** | **0.0021** | **−0.0560** | **0.0590** | **0.0466** | **0.0344** | **1.2702 s (2.22×) / 1.0178 s (1.87×)** | **20.0 / 19.0 GB** |
+
+Full end-to-end wall clock (including 5 GiB checkpoint load, cold Triton JIT, 41 steps, 6.17 GiB checkpoint write and held-out validation): `192.74 → 145.01 s` (**1.33×**). Both checkpoints (`1,341` keys) have `0` non-finite tensors and reload cleanly with `strict=True`.
+
+[Code & project README ↗](https://github.com/SuperFCR/Faster-VGGT) · [End-to-end validation ↗](https://github.com/SuperFCR/Faster-VGGT/blob/main/docs/validation.md) · [Frozen judge & measurement ↗](https://github.com/SuperFCR/Faster-VGGT/blob/main/docs/measurement.md) · [Final check JSON ↗](https://github.com/SuperFCR/Faster-VGGT/blob/main/results/final_check.json) · [Work log ↗](https://github.com/SuperFCR/Faster-VGGT/blob/main/WORK_LOG.md)
