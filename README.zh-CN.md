@@ -178,9 +178,9 @@
 
 <a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/bench-banner-en.jpg" alt="RSI-Infra Bench：agent 能让真实训练快多少？" width="100%"></a>
 
-把 RBA 的冻结评测程序变成考 agent 本身的基准。**[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** 给编码 agent 一个真实训练任务、1–4 张 Hopper GPU 和 10 小时，评测程序只接受训练不变、速度更快的改动。预览版有 8 道题、16 个模型，基于 [Harbor](https://pypi.org/project/harbor/0.24.0/) 运行。
+把 RBA 的冻结评测程序变成考 agent 本身的基准。**[RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)** 给编码 agent 一个真实训练任务、1–4 张 Hopper GPU 和 10 小时，评测程序只接受训练不变、速度更快的改动。预览版有 8 道题、17 个模型，基于 [Harbor](https://pypi.org/project/harbor/0.24.0/) 运行。
 
-<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench 预览版综合分数（ECI；Claude Opus 5.5 = 40，Kimi k3.1-pro = 10）：Gemini 4 Neon 43.22, Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.47, Gemini 4 Hydrogen 31.93, Gemini 4 Carbon 31.86, GPT-6.2 Astra 28.35, GPT-6.2 Sol 22.13, MiniMax M3.1 Flash 20.70, Claude Haiku 5.5 19.68, Qwen4-Max 15.27, Step-5 Preview 14.66, GPT-6 Astra (suspected nerf) 14.49, GLM-5.3 13.76, DeepSeek V4.1 Flash-1017 13.56, Kimi k3.1-pro 10.00, Hy4 3.10" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/blog/rsi-infra-bench/leaderboard/index.html"><img src="docs/assets/readme/bench-leaderboard-en.png" alt="RSI-Infra Bench 预览版综合分数（ECI；Claude Opus 5.5 = 40，Kimi k3.1-pro = 10）：Gemini 4 Neon 43.20, Claude Opus 5.5 40.00, Claude Sonnet 5.5 36.56, Gemini 4 Hydrogen 32.12, Gemini 4 Carbon 31.96, GPT-6.2 Astra 28.48, GPT-6.2 Sol 22.18, MiniMax M3.1 Flash 20.84, GLM-5.4 20.35, Claude Haiku 5.5 19.76, Qwen4-Max 15.47, Step-5 Preview 14.80, GPT-6 Astra (suspected nerf) 14.21, DeepSeek V4.1 Flash-1017 14.15, GLM-5.3 13.80, Kimi k3.1-pro 10.00, Hy4 3.10" width="100%"></a>
 
 <p align="center">
 <a href="https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench"><img src="docs/assets/readme/button-bench-run-zh.png" alt="基准与运行方法（英文）" height="56"></a>
