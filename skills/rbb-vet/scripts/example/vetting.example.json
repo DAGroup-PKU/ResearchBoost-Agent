@@ -1,0 +1,189 @@
+{
+ "task": "example_sft",
+ "_doc": "Format of a task's scorecard (scorecard.py). Made-up values. Every number cites where it came from in REPORT.md. A field left out counts as not measured, never as a pass.",
+ "upstream": {
+  "repo": "https://github.com/<org>/<repo>",
+  "commit": "<40-hex>",
+  "command": "<the upstream's own command>",
+  "gpus": 2,
+  "scaling": "upstream 8 GPUs x 4 micro-batches -> 2 GPUs, same per-GPU load, global batch / 4",
+  "unit": "s per optimizer update",
+  "accepted_tiers": [
+   "N0",
+   "N1"
+  ],
+  "precision_floor": "bf16 + fp32 master"
+ },
+ "A": {
+  "_doc": "Desk review, no GPU. realism = the realism card; ambiguities_open = rules with two readings not yet settled.",
+  "realism": {
+   "upstream_command": true,
+   "public": true,
+   "expert_anchor": "upstream performance PR #123 (measured on the same GPUs in B)",
+   "bottleneck_class": [
+    "gemm",
+    "comm"
+   ],
+   "published_fast_versions": [
+    "<fork or PR that is off limits; also the log search that audits it>"
+   ]
+  },
+  "ambiguities": [
+   {
+    "rule": "may the agent change ZeRO stage?",
+    "settled": "no: ZeRO-1 as upstream, checked by gate 0"
+   }
+  ],
+  "ambiguities_open": 0,
+  "est_full_check_min": 35
+ },
+ "B": {
+  "_doc": "Bounds and baseline strength, about one GPU-day per GPU. t_* in the unit above; aa_spread = |a-b|/mean of two reference timings; ladder = best combination of existing switches within the rules; scale_shift = largest change of the GEMM / memory / comm / host time shares at full scale (0.04 = 4 points).",
+  "t_ref": 2.45,
+  "t0": 0.796,
+  "t1": 1.109,
+  "t1_source": "measured",
+  "t2": null,
+  "t_expert": 1.71,
+  "ladder": {
+   "speedup": 1.12,
+   "steps": [
+    [
+     "torch.compile",
+     1.06
+    ],
+    [
+     "fused AdamW",
+     1.03
+    ],
+    [
+     "NCCL bucket 100 MB",
+     1.02
+    ]
+   ]
+  },
+  "aa_spread": 0.008,
+  "full_check_min": 38,
+  "scale_shift": 0.06
+ },
+ "C": {
+  "_doc": "Judge and mutation testing. got = the verdict the startup preparation or a check gave the mutant; must_accept rejected = runs rejected; frr_predicted from frr.py --measured.",
+  "accepts_n1": true,
+  "must_reject": [
+   {
+    "name": "lr_x1.02",
+    "expected": "INCORRECT",
+    "got": "INCORRECT",
+    "gate": 3
+   },
+   {
+    "name": "drop_aux_loss_grad",
+    "expected": "INCORRECT",
+    "got": "INCORRECT",
+    "gate": 2
+   },
+   {
+    "name": "skip_last_microbatch",
+    "expected": "INCORRECT",
+    "got": "INCORRECT",
+    "gate": 2
+   },
+   {
+    "name": "shuffle_rank_rows",
+    "expected": "INCORRECT",
+    "got": "INCORRECT",
+    "gate": 0
+   },
+   {
+    "name": "cache_across_runs",
+    "expected": "ERROR",
+    "got": "ERROR",
+    "gate": 1
+   },
+   {
+    "name": "timing_only_shortcut",
+    "expected": "INCORRECT",
+    "got": "INCORRECT",
+    "gate": 3
+   }
+  ],
+  "must_accept": [
+   {
+    "name": "microbatch_8x2",
+    "runs": 3,
+    "rejected": 0
+   },
+   {
+    "name": "fused_rmsnorm",
+    "runs": 3,
+    "rejected": 0
+   },
+   {
+    "name": "ce_chunked",
+    "runs": 3,
+    "rejected": 0
+   }
+  ],
+  "frr_predicted": 0.004,
+  "red_team": {
+   "hours": 3,
+   "holes_found": 1,
+   "holes_closed": 1,
+   "notes": "read the frozen timing file to detect timing"
+  },
+  "leak_scan_hits": 0,
+  "rules_aligned": true,
+  "prep_controls_pass": true,
+  "heldout_timing": true
+ },
+ "D": {
+  "_doc": "Pilot: the model(s) the owner names, at least one full-budget cell; label = the model, a replicate is <label>-rep, rank = leaderboard rank (optional). speedup = the final check's; cause for every non-PASS: model | judge | infra.",
+  "pilots": [
+   {
+    "label": "model-a", "rank": 1,
+    "model": "<top of the leaderboard>",
+    "verdict": "PASS",
+    "tier": "N1",
+    "speedup": 1.78
+   },
+   {
+    "label": "model-a-rep",
+    "model": "<same>",
+    "verdict": "PASS",
+    "tier": "N1",
+    "speedup": 1.69
+   },
+   {
+    "label": "model-b", "rank": 5,
+    "model": "<middle>",
+    "verdict": "PASS",
+    "tier": "N0",
+    "speedup": 1.41
+   },
+   {
+    "label": "model-c", "rank": 9,
+    "model": "<bottom>",
+    "verdict": "PASS",
+    "tier": "N0",
+    "speedup": 1.12
+   }
+  ],
+  "failures": [
+   {
+    "cell": "mid, check 7 of 9 (not final)",
+    "verdict": "INCORRECT",
+    "cause": "model",
+    "notes": "changed the loss reduction order across ranks; real error"
+   }
+  ]
+ },
+ "E": {
+  "clean_build": true,
+  "nop_reward": 0,
+  "oracle_pass": true,
+  "oracle_runs": "3/3",
+  "versioned": true,
+  "judge_hash": "<sha256 of the judge workspace>",
+  "image_digest": "<sha256>"
+ }
+}

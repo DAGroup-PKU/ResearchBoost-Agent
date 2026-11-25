@@ -1,0 +1,32 @@
+# A toy CPU-only task for the end-to-end test of vetkit (tests/e2e/run_e2e.sh). Not a bench task.
+schema_version = "1.3"
+artifacts = ["/submission/toytask", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/toytask"
+description = "Toy task: make train.py faster; its output must stay bitwise identical."
+
+[agent]
+timeout_sec = 36000
+user = "agent"
+network_mode = "public"
+
+[environment]
+workdir = "/submission/toytask"
+gpus = 0
+cpus = 2
+memory_mb = 2048
+build_timeout_sec = 600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 5
+timeout_sec = 60
+start_period_sec = 600
+retries = 3
+
+[verifier]
+timeout_sec = 600
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"

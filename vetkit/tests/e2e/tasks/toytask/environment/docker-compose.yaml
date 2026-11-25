@@ -1,0 +1,4 @@
+services:
+  main:
+    environment:
+      TOY_FLAG: "1"

@@ -1,0 +1,60 @@
+{
+ "task": "nanochat D24 base pretraining (karpathy/nanochat @ 92d63d4, scripts/base_train.py: depth 24, SSSL windows, sequence 2048, 16 sequences per GPU, 262,144 tokens per update, tensorwise FP8, data:param ratio 8) on 2 GPUs",
+ "world_size": 2,
+ "python": "/opt/nanochat-env/bin/python",
+ "candidate_python": "/opt/candidate-env/bin/python",
+ "cuda_home": "/usr/local/cuda",
+ "hf_home": "/opt/researchboost/hf",
+ "data": "$ASSETS/data",
+ "probe": "bench/data/probe.pt",
+ "gpu_lock": "/tmp/nanochat_gpu.lock",
+ "scratch": "/tmp",
+ "min_scratch_free_gib": 50,
+ "idle_memory_mib": 2048,
+ "reference": "targets/reference",
+ "reference_commit": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+ "rows_per_rank_per_step": 64,
+ "timing": {
+  "steps": 34,
+  "windows": [[10, 17], [18, 25], [26, 33]],
+  "spread_band": 0.05
+ },
+ "benefit": {"min_speedup": 1.02},
+ "record": {
+  "steps": 10,
+  "reference": "bench/records/ref.json",
+  "environment": {"CUBLAS_WORKSPACE_CONFIG": ":4096:8"}
+ },
+ "trajectory": {
+  "steps": 150,
+  "seeds": 1,
+  "sigma_k": 3,
+  "rule_note": "gate 3 of every check: the first frozen reference seed; each endpoint's |candidate - reference| <= sigma_k x the reference's seed-to-seed sigma (sigma_seed of the frozen file)",
+  "k": 2.0,
+  "reference": "bench/traj/ref_runs.json",
+  "frozen": "bench/traj/frozen.json",
+  "endpoints": [
+   {"name": "probe_s005_015", "steps": [5, 15]},
+   {"name": "probe_s015_030", "steps": [15, 30]},
+   {"name": "probe_s030_050", "steps": [30, 50]},
+   {"name": "probe_s050_080", "steps": [50, 80]},
+   {"name": "probe_s080_115", "steps": [80, 115]},
+   {"name": "probe_s115_150", "steps": [115, 150]}
+  ]
+ },
+ "timeouts_s": {"timing": 2700, "record": 3600, "trajectory": 3600},
+ "reserved_env": ["CUBLAS_WORKSPACE_CONFIG", "TMPDIR", "TMP", "TEMP", "TORCHINDUCTOR_CACHE_DIR", "TRITON_CACHE_DIR",
+                  "CUDA_CACHE_PATH", "XDG_CACHE_HOME", "MPLCONFIGDIR", "HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE",
+                  "HF_DATASETS_OFFLINE", "HF_HUB_CACHE", "HF_HOME", "HF_HUB_DISABLE_PROGRESS_BARS", "WANDB_MODE",
+                  "WANDB_DIR", "WANDB_SILENT", "WANDB_DISABLED", "PYTHONPATH", "PYTHONHOME", "PYTHONNOUSERSITE",
+                  "PYTHONHASHSEED", "PATH", "CUDA_HOME", "CUDA_VISIBLE_DEVICES", "CUDA_DEVICE_ORDER", "MASTER_ADDR",
+                  "MASTER_PORT", "RANK", "WORLD_SIZE", "LOCAL_RANK", "LOCAL_WORLD_SIZE", "TRITON_LIBCUDA_PATH",
+                  "LD_PRELOAD", "LD_LIBRARY_PATH", "ASSETS", "NANOCHAT_BASE_DIR", "NANOCHAT_DTYPE",
+                  "NVIDIA_TF32_OVERRIDE", "TORCH_DETERMINISTIC", "TORCHINDUCTOR_DETERMINISTIC"],
+ "invalid_run_signatures": [
+  {"regex": "hit config\\.(recompile_limit|cache_size_limit)",
+   "reason": "torch.compile hit the recompile limit: that code runs eager from then on, not the configuration requested"},
+  {"regex": "skipping cudagraphs due to",
+   "reason": "CUDA graphs were requested but skipped: the run measured the path without graphs"}
+ ]
+}

@@ -1,0 +1,10 @@
+# Reviewed false positives of tools/scan_sensitive.py: <path glob><TAB><regex of the matched text>.
+# A CUDA library version pinned by the public nanochat task (nvidia-cufft), not an address.
+vetkit/examples/tasks/nanochat/environment/requirements.txt	10\.3\.9\.90
+# The agent user's home directory inside every task container (a container path, not a person).
+vetkit/*	/home/agent/
+skills/rbb-vet/*	/home/agent/
+# nanochat's two startup controls: part of the task as already published on the public bench branch (vendored as is).
+vetkit/examples/tasks/nanochat/environment/bootstrap.py	softcap_half|micro8
+# The SSH clone URL of GitHub, not an e-mail address.
+*	git@github\.com

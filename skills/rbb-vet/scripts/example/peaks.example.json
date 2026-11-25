@@ -1,0 +1,141 @@
+{
+ "device": "example (made-up numbers to show the format; run peaks.py for real ones)",
+ "gemm": [
+  {
+   "m": 4096,
+   "n": 12288,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0005726623061333334,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 4096,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.00019088743537777777,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 22016,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0010260199651555555,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 4096,
+   "k": 11008,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0005130099825777777,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 4096,
+   "k": 12288,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0005726623061333334,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 4096,
+   "k": 22016,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0010260199651555555,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 11008,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0005130099825777777,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 11008,
+   "n": 4096,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0005130099825777777,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 32000,
+   "k": 4096,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0014913080888888889,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  },
+  {
+   "m": 4096,
+   "n": 4096,
+   "k": 32000,
+   "batch": 1,
+   "dtype": "bf16",
+   "seconds": 0.0014913080888888889,
+   "flops_per_s": 720000000000000.0,
+   "backend": "cublas"
+  }
+ ],
+ "attn": [
+  {
+   "b": 1,
+   "h": 32,
+   "s": 4096,
+   "s_kv": 4096,
+   "d": 128,
+   "causal": true,
+   "dtype": "bf16",
+   "pass": "fwd+bwd",
+   "seconds": 0.0009250698791384615,
+   "backend": "fa3"
+  }
+ ],
+ "comm": [
+  {
+   "op": "reduce_scatter",
+   "bytes": 25000000.0,
+   "world": 2,
+   "busbw": 360000000000.0
+  },
+  {
+   "op": "all_gather",
+   "bytes": 25000000.0,
+   "world": 2,
+   "busbw": 365000000000.0
+  }
+ ],
+ "hbm_bytes_per_s": 4300000000000.0,
+ "clocks_during_gemm": {
+  "sm_mhz_median": 1755,
+  "power_w_median": 690
+ },
+ "gemm_best_flops": {
+  "bf16": 720000000000000.0
+ }
+}

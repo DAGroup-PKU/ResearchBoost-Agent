@@ -1,0 +1,134 @@
+{
+ "task": "example_sft",
+ "unit": "s per optimizer update",
+ "gpus": 2,
+ "datasheet": "h200_sxm",
+ "t_ref": 2.45,
+ "_doc": "Made-up 7B-class SFT on 2 GPUs (4 micro-batches of 4096 tokens per GPU, ZeRO-1), per GPU per update. gemms: forward, input-gradient and weight-gradient shapes of 32 layers x 4 micro-batches plus the LM head; the gradient reduce-scatter overlaps the backward pass, so it sits in the same stage.",
+ "stages": [
+  {
+   "name": "linear layers fwd+bwd (+grad RS)",
+   "t_ref": 1.6,
+   "gemms": [
+    {
+     "m": 4096,
+     "n": 12288,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 256
+    },
+    {
+     "m": 4096,
+     "n": 4096,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 384
+    },
+    {
+     "m": 4096,
+     "n": 22016,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 256
+    },
+    {
+     "m": 4096,
+     "n": 4096,
+     "k": 11008,
+     "dtype": "bf16",
+     "count": 128
+    },
+    {
+     "m": 4096,
+     "n": 4096,
+     "k": 12288,
+     "dtype": "bf16",
+     "count": 128
+    },
+    {
+     "m": 4096,
+     "n": 4096,
+     "k": 22016,
+     "dtype": "bf16",
+     "count": 128
+    },
+    {
+     "m": 4096,
+     "n": 11008,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 128
+    },
+    {
+     "m": 11008,
+     "n": 4096,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 128
+    },
+    {
+     "m": 4096,
+     "n": 32000,
+     "k": 4096,
+     "dtype": "bf16",
+     "count": 8
+    },
+    {
+     "m": 4096,
+     "n": 4096,
+     "k": 32000,
+     "dtype": "bf16",
+     "count": 4
+    }
+   ],
+   "bytes": 400000000000.0,
+   "comm": [
+    {
+     "op": "reduce_scatter",
+     "bytes": 25000000.0,
+     "count": 536
+    }
+   ]
+  },
+  {
+   "name": "attention fwd+bwd",
+   "t_ref": 0.33,
+   "attn": [
+    {
+     "b": 1,
+     "h": 32,
+     "s": 4096,
+     "d": 128,
+     "causal": true,
+     "dtype": "bf16",
+     "count": 128,
+     "pass": "fwd+bwd"
+    }
+   ]
+  },
+  {
+   "name": "norms, rope, activations, loss",
+   "t_ref": 0.25,
+   "bytes": 200000000000.0
+  },
+  {
+   "name": "AdamW (fp32 master, half the params)",
+   "t_ref": 0.17,
+   "bytes": 100000000000.0,
+   "flops": {
+    "fp32": 37000000000.0
+   }
+  },
+  {
+   "name": "param all-gather",
+   "t_ref": 0.1,
+   "comm": [
+    {
+     "op": "all_gather",
+     "bytes": 25000000.0,
+     "count": 536
+    }
+   ]
+  }
+ ]
+}
