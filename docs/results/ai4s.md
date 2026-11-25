@@ -2,7 +2,7 @@
 
 [← All results](README.md) · [ResearchBoost-Agent](../../README.md#results)
 
-3 projects · [ProteinMPNN](#faster-proteinmpnn) · [Protenix](#faster-protenix) · [FermiNet](#faster-ferminet)
+4 projects · [ProteinMPNN](#faster-proteinmpnn) · [Protenix](#faster-protenix) · [FermiNet](#faster-ferminet) · [State](#faster-state)
 
 ## Faster-ProteinMPNN
 
@@ -73,3 +73,25 @@ Timing uses default XLA flags and independent baseline A → candidate → basel
 The measurements cover single-device, real ground-state training with the default Laplacian on the pinned H20 stack. Pretraining and burn-in are shortened for benchmarking; the timed step is unchanged. Full training to convergence and deterministic-mode timing were not run. The portable reproduction launchers package the recorded protocol but have not themselves been rerun end to end. Revalidate the kernel on a different GPU or software stack.
 
 [Code & project README ↗](https://github.com/sen-ye/faster-ferminet) · [Timing & validation evidence ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/validation/h20.json) · [Bitwise records ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/validation/bitwise_records.json) · [Frozen judge ↗](https://github.com/sen-ye/faster-ferminet/blob/master/task/formulation.json) · [Optimization history ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/history.md) · [Reproduction ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/reproduction.md)
+
+
+## Faster-State
+
+Contributed by [@YHDGD5](https://github.com/YHDGD5).
+
+**State transition model (`tahoe_best`) · one training step · Tahoe-100M 13-plate slice**
+
+| Item | Result |
+|---|---|
+| Speedup | **1.68×** (1.675×) |
+| Hardware | 1 × A800 80 GB PCIe, no NVLink, shared host; reference spread 11–20 % run to run |
+| Measurement scope | One training step — batch 8 cell sentences × 512 cells = 4,096 cell rows over 47,942 genes — at 0.371 → 0.2215 s/iteration against a live reference in the same check. A 200-step end-to-end run from seed 42 on the same slice. |
+| Validation | Frozen judge, tier N1. Trajectory gate PASS: worst z 3.00, 0 of 30 steps outside a bound frozen from ten reference repeats per seed; threshold 6.11, calibrated so the reference passes 95 % of its own leave-one-out checks (at 3σ it passes 3 %). Batches from the candidate's own dataloader are bitwise identical to the reference's. End-to-end, `train_loss` is 1.9557 vs 1.9630 and `decoder_loss` 3.1258 vs 3.1211 over steps 150–199 (0.38 % and 0.15 %). |
+
+The step turned out to be bound by the host, not the GPU: a step with no model at all — just the batch and a trivial loss — took as long as the full model. `cell_load` built each cell's 47,942-gene row through a one-row `sparse_csr_tensor(...).to_dense()` at 2.81 ms per cell, and the collate ran two full-tensor scans whose result was discarded. Densifying the CSR row with a NumPy scatter and shipping the non-zeros to the device instead of the 97.6 % zeros took the step from 0.396 to 0.2215 s/iteration; the model-side work was marginal by comparison.
+
+The certified tree is round 1's tree with its two `torch.compile` calls disabled by hand after the run, one line each in `utils.py` and `state_transition.py`. The agent's own runs reached 1.885× (cold, round 1) and 2.02–2.08× (warm, round 2), and both trees kept compile; both fail the trajectory gate (worst z 16.05 and 16.35, 27 of 30 steps outside at 6.11). They stay in the repository as `round-1` and `round-2` so the call can be re-checked.
+
+The tier is N1 because the timed path is not bitwise reproducible: flash attention's backward accumulates with atomics, so two runs of the same tree at the same seed differ from the second step on. The gate is therefore statistical, and its bound is frozen before any candidate is recorded. The reference is the gate's positive control, reported next to a deliberately wrong arm (`lr × 1.02` from step 5) that lands at z 1864.96.
+
+[Code & project README ↗](https://github.com/YHDGD5/Faster-State) · [Judge change record ↗](https://github.com/YHDGD5/Faster-State/blob/case/task/judge_changes.md) · [Case report ↗](https://github.com/YHDGD5/Faster-State/blob/case/docs/case-report.md) · [Reproduction ↗](https://github.com/YHDGD5/Faster-State/blob/case/reproduce.sh)

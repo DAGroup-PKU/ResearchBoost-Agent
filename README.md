@@ -59,7 +59,7 @@
 
 ## Highlights
 
-<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 26 projects, each measured against its own baseline." width="100%"></a>
+<a href="#results"><img src="docs/assets/readme/card-results-en.png" alt="Up to 9.59× faster across seven research domains: 27 projects, each measured against its own baseline." width="100%"></a>
 
 <a href="#quick-start"><img src="docs/assets/readme/card-prompt-en.png" alt="Paste one prompt into Codex or Claude Code; the agent finds the code, asks only what is yours to decide, and does the rest." width="100%"></a>
 
@@ -69,7 +69,7 @@
 
 ## Results
 
-<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 26 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
+<a href="https://ai4ai-for-anything.github.io/#research"><img src="docs/figures/results-overview.svg" alt="All 27 projects ranked by speedup over their own baselines, from 9.59× (Motus) to 1.13× (3DGS), with how each was validated" width="100%"></a>
 
 <img src="docs/figures/results-time.svg" alt="Baseline vs optimized time for six projects, such as Motus fine-tuning from 7.47 s to 0.78 s per iteration and the RoboTwin benchmark from 73.5 h to 16.8 h" width="100%">
 
@@ -146,13 +146,14 @@ Open a domain for the workloads, or the reports for experiment settings and vali
 </details>
 
 <details>
-<summary><strong>AI for Science</strong> · 3 projects — ProteinMPNN, Protenix, FermiNet</summary>
+<summary><strong>AI for Science</strong> · 4 projects — ProteinMPNN, Protenix, FermiNet, State</summary>
 
 | Project | Workload | Speedup |
 |---|---|---:|
 | [Faster-ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN) by [@micky-li-hd](https://github.com/micky-li-hd) | ProteinMPNN v_48_020 training · full public dataset | **2.25×** |
 | [Faster-Protenix](https://github.com/micky-li-hd/Faster-Protenix) by [@micky-li-hd](https://github.com/micky-li-hd) | Protenix 2.0.0 training · 128 updates · crop 384 | **1.55×** |
 | [Faster-FermiNet](https://github.com/sen-ye/faster-ferminet) by [@sen-ye](https://github.com/sen-ye) | Fe / Kr / Cd / Xe all-electron training · KFAC, 1024 walkers per GPU | **1.25×** |
+| [Faster-State](https://github.com/YHDGD5/Faster-State) by [@YHDGD5](https://github.com/YHDGD5) | State transition model · one Tahoe-100M training step | **1.68×** |
 
 [Measurement setup & validation →](docs/results/ai4s.md)
 
@@ -253,7 +254,7 @@ The quick start does this for you. By hand: read [AGENTS.md](AGENTS.md) and [doc
 
 | Path | Contents |
 |---|---|
-| [`docs/results/`](docs/results) | Results from 26 projects, grouped by domain, with measurement scope and validation records |
+| [`docs/results/`](docs/results) | Results from 27 projects, grouped by domain, with measurement scope and validation records |
 | [`docs/`](docs) | [Methodology](docs/methodology.md), [the judge](docs/judge.md), [goal mode](docs/goal-mode.md), [running a task](docs/run-a-task.md), [lessons from four tasks](docs/lessons.md) |
 | [`goal/`](goal) | Running one Codex or Claude Code `/goal` session on claw-orchestrator: the task scaffold, the sandbox, model access for both engines, run / status / steer / resume scripts and the final check, the watchdog, the brief for the formulating and supervising agent |
 | [`numerics/`](numerics) | The equivalence component every task judge copies and freezes: recording, bitwise and tiered comparison, paired-seed trajectories, the task adapter base class, a self-test |

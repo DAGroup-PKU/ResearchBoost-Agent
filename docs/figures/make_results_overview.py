@@ -43,6 +43,7 @@ PROJECTS = [
     ("MiniMax-H3", "vid", 1.857, "1.86×", False, "stat"),
     ("BAGEL", "mllm", 1.82, "1.82×", False, "stat"),
     ("DMD2", "img", 1.72, "1.72×", False, "stat"),
+    ("State", "sci", 1.675, "1.68×", False, "stat"),
     ("LLM2Vec", "llm", 1.6009, "1.60×", False, "stat"),
     ("JiT", "img", 1.56, "1.56×", False, "stat"),
     ("Protenix", "sci", 1.5524, "1.55×", False, "manual"),
@@ -53,7 +54,7 @@ PROJECTS = [
 ]
 
 # Projects contributed by the community; the leaderboard marks them with a people icon.
-COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "Wan2.2-VSA", "SANA-WM", "OpenWAM", "LLaVA-OneVision-2", "ProteinMPNN", "Protenix", "FermiNet", "PIDG (module)", "3DGS", "SuperMimic", "VGGT"}
+COMMUNITY = {"NanoChat", "LLM2Vec", "MiniMax-H3", "Wan2.2-VSA", "SANA-WM", "OpenWAM", "LLaVA-OneVision-2", "ProteinMPNN", "Protenix", "FermiNet", "State", "PIDG (module)", "3DGS", "SuperMimic", "VGGT"}
 
 # (name, domain, baseline, optimized, unit-formatted labels, speedup label, estimate?, en/zh scope, en/zh quality)
 SHOWCASE = [
