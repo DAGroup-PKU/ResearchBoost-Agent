@@ -13,6 +13,19 @@ None of it runs inside the optimizing agent's sandbox.
 | `time_loader.py`, `time_loader2.py` | the loader probe that showed the step was data-bound |
 | `rebuild_slice.sh` | the whole chain: preprocess → normalize → fixture → record twice and compare bit for bit → calibrate thresholds → freeze timing → freeze inputs |
 
+## The reference tree
+
+`bench.json` points `reference` at `targets/reference`, and `check_reference()` refuses to run unless that
+directory is a **clean git checkout of `9bbfe78a434a55205e4de834e1ea99f85f7a3add`** with no modified tracked
+files. It is not committed, like the other tasks. Create it before anything else:
+
+```bash
+git clone https://github.com/arcinstitute/state.git targets/reference
+git -C targets/reference checkout 9bbfe78a434a55205e4de834e1ea99f85f7a3add
+```
+
+Gate 1 times this tree twice per check, and gate 0 compares the candidate's launch path against it.
+
 ## Two things that are not obvious
 
 1. **Reference records are machine-specific and are not committed.** `bench/records/ref` (2 steps x 397

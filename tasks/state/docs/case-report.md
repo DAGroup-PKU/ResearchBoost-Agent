@@ -116,6 +116,13 @@ separately because they answer different questions.
 | 1 — cold, unmodified tree | `9bbfe78` | PASS, **1.8848x**, N0 | 0.1883 |
 | 2 — warm, from round 1's tree | round 1 (`opt`) | PASS, **2.0611x**, N0 | 0.1797 |
 
+A third harness run measured 2.0797x (candidate 0.1776, reference 0.3693). Between 2.06x and 2.08x is one
+candidate at 0.178-0.180 s/iteration and a denominator that moves by 11 %.
+
+The published artifacts were verified end to end: `Faster-State` was cloned from GitHub into a fresh
+directory and judged by the frozen bench — `check --quick` passed bitwise, and its `source_digest`
+(`4cf4e2bd…`) is identical to the tree the 2.08x verdict was measured on.
+
 Round 1 took 81 minutes and 1.23 M tokens; round 2 took 2 hours 34 minutes and 2.91 M tokens. Round 2's
 workspace contained round 1's work log and a hotspot map written by the formulator, so its number measures
 how much headroom is left once the obvious work is done — not what an unassisted agent achieves from the
