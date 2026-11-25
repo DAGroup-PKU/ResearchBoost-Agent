@@ -29,6 +29,7 @@ body:
         - Video Generation
         - Embodied AI
         - AI for Science
+        - 3D Reconstruction
         - Other (name it below)
     validations:
       required: true

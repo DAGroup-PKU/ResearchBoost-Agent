@@ -2,7 +2,22 @@
 
 [← All results](README.md) · [ResearchBoost-Agent](../../README.md#results)
 
-3 projects · [RAE](#faster-rae) · [DMD2](#faster-dmd) · [JiT](#faster-jit)
+4 projects · [G-STAR](#g-star) · [RAE](#faster-rae) · [DMD2](#faster-dmd) · [JiT](#faster-jit)
+
+## G-STAR
+
+**Text-to-image inference with the public code and weights: G-STAR-Pro-8B (32× compression) and G-STAR-Flash-1.7B (effective 64×), refiner included** · merged upstream in [G-STAR#2](https://github.com/DAGroup-PKU/G-STAR/pull/2)
+
+| Item | Result |
+|---|---|
+| Speedup | **6.18×** Pro-8B + one-step SR2x refiner (the default) · **2.73×** Pro-8B + 52-step SR2x refiner · **2.72×** Flash-1.7B + g8 refiner |
+| Hardware | 1 × H200 |
+| Measurement scope | Seconds per image with the model loaded (language model, refiner and VAE decode; loading and the first warm-up image excluded), batch 1, 1024 × 1024 codes, two timed images after one warm-up; reference → optimized → reference in fresh processes: 65.07 → 10.53 s, 138.56 → 50.76 s, 33.25 → 12.21 s |
+| Validation | Image codes bit-identical to the reference; refiner pixels within PSNR ≥ 48 dB of the reference (measured 57–59 dB) |
+
+The language model and the DSpark image head run CUDA graphs, fused kernels and Triton replicas of cuBLAS's decode GEMMs that reproduce the reference arithmetic bit for bit, so the image codes are unchanged. The refiner gets a single-sample DiT path, FlashInfer's sm90 attention, large-tile cuBLASLt GEMMs and fused norm kernels; only floating-point rounding changes there. One code path serves both models and is on by default, with automatic fallbacks and a `GSTAR_FAST=0` opt-out. Running `python -m gstar.infer` once for a single image, including model loading, is 2.50× / 2.12× / 1.36× faster with a warm compile cache.
+
+[Code ↗](https://github.com/DAGroup-PKU/G-STAR) · [Pull request ↗](https://github.com/DAGroup-PKU/G-STAR/pull/2)
 
 ## Faster-RAE
 
