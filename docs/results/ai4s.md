@@ -74,7 +74,6 @@ The measurements cover single-device, real ground-state training with the defaul
 
 [Code & project README ↗](https://github.com/sen-ye/faster-ferminet) · [Timing & validation evidence ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/validation/h20.json) · [Bitwise records ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/validation/bitwise_records.json) · [Frozen judge ↗](https://github.com/sen-ye/faster-ferminet/blob/master/task/formulation.json) · [Optimization history ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/history.md) · [Reproduction ↗](https://github.com/sen-ye/faster-ferminet/blob/master/docs/reproduction.md)
 
-
 ## Faster-State
 
 Contributed by [@YHDGD5](https://github.com/YHDGD5).
@@ -88,7 +87,7 @@ Contributed by [@YHDGD5](https://github.com/YHDGD5).
 | Measurement scope | One training step — batch 8 cell sentences × 512 cells = 4,096 cell rows over 47,942 genes — at 0.371 → 0.2215 s/iteration against a live reference in the same check. A 200-step end-to-end run from seed 42 on the same slice. |
 | Validation | Frozen judge, tier N1. Trajectory gate PASS: worst z 3.00, 0 of 30 steps outside a bound frozen from ten reference repeats per seed; threshold 6.11, calibrated so the reference passes 95 % of its own leave-one-out checks (at 3σ it passes 3 %). Batches from the candidate's own dataloader are bitwise identical to the reference's. End-to-end, `train_loss` is 1.9557 vs 1.9630 and `decoder_loss` 3.1258 vs 3.1211 over steps 150–199 (0.38 % and 0.15 %). |
 
-The step turned out to be bound by the host, not the GPU: a step with no model at all — just the batch and a trivial loss — took as long as the full model. `cell_load` built each cell's 47,942-gene row through a one-row `sparse_csr_tensor(...).to_dense()` at 2.81 ms per cell, and the collate ran two full-tensor scans whose result was discarded. Densifying the CSR row with a NumPy scatter and shipping the non-zeros to the device instead of the 97.6 % zeros took the step from 0.396 to 0.2215 s/iteration; the model-side work was marginal by comparison.
+The step turned out to be bound by the host, not the GPU: a step with no model at all — just the batch and a trivial loss — took as long as the full model. `cell_load` built each cell's 47,942-gene row through a one-row `sparse_csr_tensor(...).to_dense()` at 2.81 ms per cell, and the collate ran two full-tensor scans whose result was discarded. Densifying the CSR row with a NumPy scatter and shipping the non-zeros to the device instead of the 97.6 % zeros took the step to 0.2215 s/iteration, against 0.371 for the reference timed in the same check; the model-side work was marginal by comparison.
 
 The certified tree is round 1's tree with its two `torch.compile` calls disabled by hand after the run, one line each in `utils.py` and `state_transition.py`. The agent's own runs reached 1.885× (cold, round 1) and 2.02–2.08× (warm, round 2), and both trees kept compile; both fail the trajectory gate (worst z 16.05 and 16.35, 27 of 30 steps outside at 6.11). They stay in the repository as `round-1` and `round-2` so the call can be re-checked.
 
