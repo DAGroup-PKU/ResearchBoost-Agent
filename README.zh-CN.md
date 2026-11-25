@@ -30,6 +30,7 @@
 
 ## 动态
 
+- <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-25** · **[Faster-State](https://github.com/YHDGD5/Faster-State)**，来自 [@YHDGD5](https://github.com/YHDGD5)：单张 A800 上 State（Arc Institute）在 Tahoe-100M 上的训练加速 **1.68×**。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-25** · **[Faster-VGGT](https://github.com/SuperFCR/Faster-VGGT)**，来自 [@SuperFCR](https://github.com/SuperFCR)：单张 A100 上 VGGT-1B 微调加速 **2.19×**（N2，峰值显存 −31.7%）/ **1.86×**（纯无损 N1）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-25** · **[Faster-SuperMimic](https://github.com/hwbhwbhwb/Faster-SuperMimic)**，来自 [@hwbhwbhwb](https://github.com/hwbhwbhwb)：SuperMimic 世界模型 + BPTT 训练（40 段 LAFAN1）加速 **1.38×**，统计评测通过；2 万次迭代的完整训练与原版一致（基准回报 0.862，原版 0.860）。
 - <img src="https://img.shields.io/badge/社区-1BAF7A?style=flat-square" alt="社区" height="18"> **2026-11-25** · **[G-STAR](https://github.com/DAGroup-PKU/G-STAR)** 是一个自回归文生图模型，用分组的离散 token 表示图像，压缩率 32× / 64×。它已把 RBA 的推理加速合进上游（[G-STAR#2](https://github.com/DAGroup-PKU/G-STAR/pull/2)）：单张 H200 上每张图，G-STAR-Pro-8B 配一步 refiner 加速 **6.18×**，配 52 步 refiner 加速 **2.73×**，G-STAR-Flash-1.7B 加速 **2.72×**，图像 code 逐位一致。
