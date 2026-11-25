@@ -1,0 +1,1 @@
+/goal Raise `performance.speedup` to >= 2.5 from `python bench/bench.py check --tree state --config <switch file> --out <dir>`, keeping every one of the 794 recorded tensors bit-identical (tier N0); >= 2.0 with the remaining hotspots documented in WORK_LOG.md also counts. Start from the current `state` tree (branch `opt`), which already reached 1.885x.

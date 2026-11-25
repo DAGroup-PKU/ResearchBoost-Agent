@@ -1,0 +1,8 @@
+[
+ {
+  "name": "train2",
+  "seed": 42,
+  "steps": 2,
+  "phase": "train"
+ }
+]

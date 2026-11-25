@@ -1,0 +1,10 @@
+# The frozen benchmark slice: one directory of preprocessed Tahoe-100M h5ad files.
+[datasets]
+tahoe_slice = "${DATASET_DIR}/"
+
+[training]
+tahoe_slice = "train"
+
+[zeroshot]
+
+[fewshot]

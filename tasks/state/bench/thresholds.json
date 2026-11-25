@@ -1,0 +1,3987 @@
+{
+ "gates": {
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.basal_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.final_down_then_up.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.final_down_then_up.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.final_down_then_up.2.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.final_down_then_up.2.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.1.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.1.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.12.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.12.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.4.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.4.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.5.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.5.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.8.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.8.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.gene_decoder.decoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.pert_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.project_out.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.embed_tokens.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.0.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.1.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.2.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.layers.3.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|delta/adam#0/model.transformer_backbone.norm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.basal_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.final_down_then_up.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.final_down_then_up.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.final_down_then_up.2.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.final_down_then_up.2.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.1.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.1.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.12.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.12.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.4.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.4.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.5.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.5.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.8.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.8.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.gene_decoder.decoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.pert_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.project_out.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.0.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.1.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.2.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.layers.3.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|grad/adam#0/model.transformer_backbone.norm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|loss/train_loss": {
+   "env": 0.0,
+   "gate": 1e-06,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.basal_encoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.final_down_then_up.2.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.1.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.12.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.4.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.5.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.8.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.gene_decoder.decoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.pert_encoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.project_out.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.norm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.norm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s0|optim/adam/model.transformer_backbone.norm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.basal_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.final_down_then_up.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.final_down_then_up.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.final_down_then_up.2.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.final_down_then_up.2.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.1.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.1.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.12.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.12.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.4.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.4.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.5.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.5.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.8.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.8.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.gene_decoder.decoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.pert_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.project_out.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.embed_tokens.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.0.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.1.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.2.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.layers.3.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|delta/adam#1/model.transformer_backbone.norm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.basal_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.final_down_then_up.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.final_down_then_up.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.final_down_then_up.2.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.final_down_then_up.2.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.1.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.1.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.12.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.12.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.4.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.4.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.5.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.5.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.8.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.8.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.gene_decoder.decoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.pert_encoder.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.0.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.0.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.3.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.3.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.6.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.6.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.9.bias": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.project_out.9.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.0.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.1.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.2.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.input_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.mlp.down_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.mlp.gate_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.mlp.up_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.post_attention_layernorm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.self_attn.k_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.self_attn.o_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.self_attn.q_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.layers.3.self_attn.v_proj.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|grad/adam#1/model.transformer_backbone.norm.weight": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|loss/train_loss": {
+   "env": 0.0,
+   "gate": 1e-06,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.basal_encoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.final_down_then_up.2.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.1.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.12.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.4.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.5.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.8.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.gene_decoder.decoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.pert_encoder.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.0.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.3.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.6.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.bias/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.bias/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.bias/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.project_out.9.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.0.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.1.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.2.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.input_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.down_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.gate_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.mlp.up_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.post_attention_layernorm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.k_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.o_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.q_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.layers.3.self_attn.v_proj.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.norm.weight/exp_avg": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.norm.weight/exp_avg_sq": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  },
+  "train2|r0|s1|optim/adam/model.transformer_backbone.norm.weight/step": {
+   "env": 0.0,
+   "gate": 1e-05,
+   "pooled_env": 0.0
+  }
+ },
+ "meta": {
+  "floor_bwd": 1e-05,
+  "floor_fwd": 1e-06,
+  "golden": null,
+  "k_bwd": 3.0,
+  "k_fwd": 2.0,
+  "pooling": "tensor family (call indices dropped) x all cases and ranks x steps up to this one",
+  "reference": "bench/records/ref",
+  "variants": [
+   "bench/records/ref"
+  ]
+ },
+ "ref_to_fp64": {}
+}

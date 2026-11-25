@@ -1,0 +1,10 @@
+# Files the candidate may not touch: the launch path, the CLI layer and the frozen recipe configs.
+# Everything else in the tree (the model, the loss, the callbacks, the kernels) is the work surface.
+src/state/__main__.py
+src/state/_cli/__init__.py
+src/state/_cli/_tx/_train.py
+src/state/_cli/_tx/__init__.py
+src/state/configs/config.yaml
+src/state/configs/data/perturbation.yaml
+src/state/configs/model/tahoe_best.yaml
+src/state/configs/training/default.yaml

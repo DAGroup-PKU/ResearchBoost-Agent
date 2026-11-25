@@ -1,0 +1,16 @@
+{
+ "inputs": {
+  "$ASSETS/data/dataset/tahoe_slice.h5ad": {
+   "kind": "sha256",
+   "value": "c5fca56d0ec57d5c93f31db46586f3f6e39f70153b72b1bad7c7bbcbcccbeb7f"
+  },
+  "bench/fixture.pt": {
+   "kind": "sha256",
+   "value": "972bbc25a94a9ba281d79b20fd3246f2985044af3c8e8c512d48109a402dabb9"
+  },
+  "$ASSETS/data/gene_metadata.parquet": {
+   "kind": "sha256",
+   "value": "d6104d1ca570d94832be0d27ffe8b7e4e54cfd366c9080239219f9c406eb751c"
+  }
+ }
+}
