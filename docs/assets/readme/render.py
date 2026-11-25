@@ -58,7 +58,7 @@ T = {
                     ("bench-blog", "book", "Read the blog post", "light")],
         "cards": [
             ("results", "chart", "01 · RESULTS", "Up to 9.59× faster,<br>across seven domains",
-             "26 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
+             "27 projects, from LLM pretraining to 3D reconstruction, robot policies and protein design, each measured against its own baseline.",
              "See all results"),
             ("prompt", "terminal", "02 · ONE PROMPT", "Paste one prompt,<br>get a verified speedup",
              "Open Codex or Claude Code on a GPU host. The agent finds the code, asks only what is yours to decide, and does the rest.",
@@ -134,7 +134,7 @@ T = {
                     ("bench-blog", "book", "阅读博客", "light")],
         "cards": [
             ("results", "chart", "01 · 结果", "最高 9.59× 加速，<br>覆盖七个领域",
-             "26 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",
+             "27 个项目，覆盖大模型预训练、三维重建、机器人策略和蛋白质设计，每个都与自身的基线对比。",
              "查看全部结果"),
             ("prompt", "terminal", "02 · 一段提示词", "粘贴一段话，<br>拿到验证过的加速",
              "在 GPU 主机上打开 Codex 或 Claude Code。agent 自己找到代码，只问需要你决定的事，其余全部自己完成。",

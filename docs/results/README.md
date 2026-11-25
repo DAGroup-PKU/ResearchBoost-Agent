@@ -2,7 +2,7 @@
 
 [← ResearchBoost-Agent](../../README.md#results)
 
-**26 projects · 7 research domains**
+**27 projects · 7 research domains**
 
 Each report includes the workload, hardware, timing and validation results, with links to the project’s code and experiments.
 
@@ -13,7 +13,7 @@ Each report includes the workload, hardware, timing and validation results, with
 | Image Generation | [G-STAR](https://github.com/DAGroup-PKU/G-STAR), RAE, DMD2, JiT | [Open report](image-generation.md) |
 | Video Generation | [Wan2.2-VSA](https://github.com/JoeyXuquant11/Faster-Wan22-VSA-MUSA) by [@JoeyXuquant11](https://github.com/JoeyXuquant11), [SANA-WM](https://github.com/JoeyXuquant11/Faster-SANA-WM-MUSA) by [@JoeyXuquant11](https://github.com/JoeyXuquant11), Self-Forcing, [MiniMax-H3](https://github.com/2018cx/Faster-MiniMax-H3) by [@2018cx](https://github.com/2018cx) | [Open report](video-generation.md) |
 | Embodied AI | RoboTwin, Motus, FastWAM, [OpenWAM](https://github.com/OpenWAM-Official/OpenWAM) by [@GONGSHUKAI](https://github.com/GONGSHUKAI), [SuperMimic](https://github.com/hwbhwbhwb/Faster-SuperMimic) by [@hwbhwbhwb](https://github.com/hwbhwbhwb) | [Open report](embodied-ai.md) |
-| AI for Science | [ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN) by [@micky-li-hd](https://github.com/micky-li-hd), [Protenix](https://github.com/micky-li-hd/Faster-Protenix) by [@micky-li-hd](https://github.com/micky-li-hd), [FermiNet](https://github.com/sen-ye/faster-ferminet) by [@sen-ye](https://github.com/sen-ye) | [Open report](ai4s.md) |
+| AI for Science | [ProteinMPNN](https://github.com/micky-li-hd/Faster-ProteinMPNN) by [@micky-li-hd](https://github.com/micky-li-hd), [Protenix](https://github.com/micky-li-hd/Faster-Protenix) by [@micky-li-hd](https://github.com/micky-li-hd), [FermiNet](https://github.com/sen-ye/faster-ferminet) by [@sen-ye](https://github.com/sen-ye), [State](https://github.com/YHDGD5/Faster-State) by [@YHDGD5](https://github.com/YHDGD5) | [Open report](ai4s.md) |
 | 3D Reconstruction | [Original 3DGS](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost) by [@HaoqinHong](https://github.com/HaoqinHong), [PIDG](https://github.com/HaoqinHong/Physics-Informed-Deformable-Gaussian-Splatting-ResearchBoost) by [@HaoqinHong](https://github.com/HaoqinHong), [VGGT](https://github.com/SuperFCR/Faster-VGGT) by [@SuperFCR](https://github.com/SuperFCR) | [Open report](3d-reconstruction.md) |
 
 Speedups compare each workload with its own baseline. **est.** marks an extrapolated result.
