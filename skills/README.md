@@ -17,3 +17,13 @@ re-verify them on yours before treating them as facts. The verdict is always the
 | `sglang-diffusion-performance` | diffusion models: performance techniques (attention backends, compile, caching, parallelism) |
 
 The two `sglang-diffusion-*` cards are adapted from [SGLang](https://github.com/sgl-project/sglang/tree/main/python/sglang/multimodal_gen/.agents/skills) (Apache-2.0).
+
+## Ascend NPU backend
+
+The [Ascend optimization collection](ascend-opt/README.md) contains 13 skills for
+NPU environment and communication, performance best practices, profiling, and Ascend C
+operator development. Use the task's frozen measurement and numerical verdict.
+
+Pass `ascend-opt` to `goal/setup_home.sh <task>` to install the collection. To install
+specific cards, pass their names, such as `ascend-model-profiling`. Name any required
+general-purpose cards in the same command.
