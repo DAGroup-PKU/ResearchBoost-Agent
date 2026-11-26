@@ -1,5 +1,7 @@
 # rsi-bench-vetkit
 
+**简体中文** · [English](README.en.md)
+
 把一个训练仓库做成 [RSI-Infra Bench](https://github.com/DAGroup-PKU/ResearchBoost-Agent/tree/bench)（ResearchBoost-Agent 的 `bench` 分支）的一道题，并验它该不该进 bench：规程、一个 Claude Code skill，和在自己机器上就能跑的判卷侧工具。
 
 | 目录 | 是什么 |
