@@ -15,6 +15,7 @@ RUNUSER = "/usr/sbin/runuser"
 BENCH = WORKSPACE / "bench/bench.py"
 READY = WORKSPACE / "task/ready.json"
 LOGS = Path("/logs/verifier")
+FINAL_MARKER = Path("/run/researchboost/final-evaluation")
 
 
 def root_only(path):
@@ -91,7 +92,7 @@ def main():
     LOGS.mkdir(parents=True, exist_ok=True)
     if not root_only(LOGS):
         raise RuntimeError("Verifier log directory is not root-only")
-    for name in ("reward.json", "reward.txt", "harness.log"):
+    for name in ("reward.json", "reward.txt", "harness.log", "check.json"):
         (LOGS / name).unlink(missing_ok=True)
     (LOGS / "reward.json").write_text(json.dumps({"accepted": 0.0, "speedup": 0.0}) + "\n")
     if not all(root_only(path) for path in (PYTHON, RUNUSER, BENCH, READY)):
@@ -106,11 +107,25 @@ def main():
            "LOGNAME": agent.pw_name, "GIT_CONFIG_GLOBAL": os.devnull}
     command = [RUNUSER, "-u", agent.pw_name, "--", PYTHON, "-I", str(BENCH), "check",
                "--tree", "/submission/sgf_framewise", "--config", "/submission/switches.json", "--final"]
-    with (LOGS / "harness.log").open("w") as log:
-        completed = subprocess.run(command, cwd=WORKSPACE, env=env, stdout=log,
-                                   stderr=subprocess.STDOUT, timeout=30, check=False)
-    if completed.returncode != 2:
+    FINAL_MARKER.parent.mkdir(mode=0o755, exist_ok=True)
+    if not root_only(FINAL_MARKER.parent) or not FINAL_MARKER.parent.is_dir():
+        raise RuntimeError("Final marker directory is not root-only")
+    FINAL_MARKER.unlink(missing_ok=True)
+    FINAL_MARKER.touch(mode=0o644, exist_ok=False)
+    try:
+        with (LOGS / "harness.log").open("w") as log:
+            completed = subprocess.run(command, cwd=WORKSPACE, env=env, stdout=log,
+                                       stderr=subprocess.STDOUT, timeout=30, check=False)
+    finally:
+        FINAL_MARKER.unlink()
+    expected = {1: "INCORRECT", 2: "UNAVAILABLE"}.get(completed.returncode)
+    if expected is None:
         raise RuntimeError(f"Unexpected structural check exit code: {completed.returncode}")
+    payload = (LOGS / "harness.log").read_text()
+    result = json.loads(payload)
+    if result.get("status") != expected or result.get("command") != "check" or result.get("final") is not True:
+        raise RuntimeError("Unexpected structural check result")
+    (LOGS / "check.json").write_text(payload)
 
 
 if __name__ == "__main__":

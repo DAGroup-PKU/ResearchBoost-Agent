@@ -1,17 +1,16 @@
 # SGF framewise training — Harbor task skeleton
 
-Stage A (desk review and recipe definition) and the Stage B reference timing
-and A/A runs are complete on a single node with four H200 GPUs. Stage B is not
-fully qualified. Stage C (the real GPU judge and Harbor `nop`), Stage D (pilot),
-and Stage E (clean rejudging) are pending. This is an N1-only task, not a runnable
-benchmark judge yet.
+This N1-only draft freezes the four-H200 workload and judge contract. Earlier
+reference timing and A/A runs are not calibration for this contract. Stage B
+qualification and the GPU judge, Harbor `nop`, pilot, and clean rejudging are
+still pending. Do not score candidates or build a reference pack from this draft.
 
 ## Reproduce the upstream workload on four GPUs
 
 Use a disposable checkout of `zhuang2002/Self_Gradient_Forcing` at
 `79be9acbd874c9be050944a6b1de6693e988a171`. Provision a CUDA/PyTorch environment
-compatible with your H200 driver and build of FlashAttention; install the pinned
-checkout's requirements and FlashAttention as described upstream.
+compatible with your H200 driver; install the pinned checkout's requirements
+and the upstream FlashAttention package as described upstream.
 **`diffusers==0.31.0` is required** for `CausalWanModel` gradient checkpointing.
 The Harbor skeleton does not install this training environment.
 
@@ -66,8 +65,51 @@ CUDA_VISIBLE_DEVICES="${SGF_GPU_IDS:-0,1,2,3}" NUM_GPUS=4 NNODES=1 NODE_RANK=0 \
   `/opt/candidate-env`. The structural image does not download or load weights.
 - Compose expects `sgf_framewise` subdirectories under `RESEARCHBOOST_ASSETS_ROOT`
   (read-only) and `RESEARCHBOOST_SCRATCH_ROOT` (isolated per trial).
-- `bench.py` exposes `record`, `compare`, `time`, and `check`; the commands return
-  `UNAVAILABLE` (exit 2). `sgf_entry.py` prints a launch plan only. The shared
-  verifier fails closed; its zero reward is not evidence of a real `nop` run.
-- `timing.spread_band` stays `null` until Stage C repeats A/A through the actual
-  judge. Do not use this skeleton to score candidates or build a reference pack.
+- `bench.py` exposes `record`, `compare`, `time`, and `check`, including
+  verifier-only `check --final`. The stub returns `UNAVAILABLE` (exit 2) when
+  the manifest is valid and `INCORRECT` (exit 1) for an invalid manifest.
+  `sgf_entry.py` prints a launch plan only. The shared verifier writes `check.json`
+  and fails closed; its zero reward is not evidence of a real `nop` run.
+
+## Frozen judge contract
+
+The reference uses upstream mixed precision, gradient checkpointing, the trainer's
+TF32 settings, and FlashAttention-2 through the pinned upstream dispatch. Other
+upstream attention paths stay intact. The GPU judge must confirm the reference
+path actually executes; a fallback is not a substitute. Use the four-rank overrides
+and baseline in `environment/workspace/bench/bench.json` when building the GPU judge.
+
+- **Gate 0:** Rebuild the effective recipe independently of the candidate. Match
+  configuration and actual traces in `gate0.exact_items`, including all Pass 1
+  stages, per-rank sampling, dtype, and optimizer order. Count a completed
+  `Trainer.train` iteration at the `self.step` increment after the critic step.
+- **Gate 1:** In final, measure reference → candidate → reference on the same
+  held-out windows. The benefit threshold uses the larger of the configured
+  floor and one plus twice the live reference spread. `timing.spread_band` is a
+  provisional machine-consistency band, not the candidate's benefit threshold.
+  Repeat judge A/A before adopting the band. Reject incomplete or invalid runs;
+  use the declared log signatures even if a process reports success.
+- **Gate 3:** Same production configuration as timing. Compare seed-paired
+  endpoints at both critic-only and generator+critic updates. Bitwise matches
+  still need the statistical gate; there is no N0 scoring path.
+- **Switch manifest:** `{}` is valid. Only explicitly allowed, non-reference
+  environment settings may be recorded under `environment`. The current
+  allowlist is empty, and enabling reference defaults does not count toward
+  the switch ladder or qualify as an implementation change.
+
+## Maintainer Leak Audit
+
+Do not include the private deny file in the task or image. Run `leak_guard.py`
+with that file against the source and, when available, the built image. The
+following grep-style checks are a source backstop. Run from the task directory
+with `SGF_DENY_FILE` set to the absolute path; exit 1 from `rg` means no matches.
+Inspect each hit and read
+the instruction and copied sources for less literal hints. The pristine pinned
+upstream checkout is checked for revision and cleanliness separately.
+
+```bash
+: "${SGF_DENY_FILE:?set the path to the private task deny file}"
+paths=(instruction.md environment tests)
+rg -ni --pcre2 -f <(awk 'NF && $1 !~ /^#/' "$SGF_DENY_FILE") "${paths[@]}"
+rg -ni '[0-9]+([.][0-9]+)?[[:space:]]*[x×]([^[:alnum:]]|$)|[h]ot[- ]?spot|[b]ottleneck' "${paths[@]}"
+```
