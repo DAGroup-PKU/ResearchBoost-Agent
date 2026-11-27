@@ -1,0 +1,60 @@
+{
+  "task": "SGF framewise training",
+  "world_size": 4,
+  "python": "/usr/bin/python3",
+  "candidate_python": "/opt/candidate-env/bin/python",
+  "reference": "targets/reference",
+  "reference_commit": "79be9acbd874c9be050944a6b1de6693e988a171",
+  "gpu_lock": "/tmp/sgf_framewise_gpu.lock",
+  "record": {
+    "reference": "bench/records/ref.json"
+  },
+  "timing": {
+    "field": "s_per_update",
+    "spread_band": null
+  },
+  "reserved_env": [
+    "PATH",
+    "PYTHONPATH",
+    "PYTHONHOME",
+    "LD_PRELOAD",
+    "LD_LIBRARY_PATH",
+    "CUDA_VISIBLE_DEVICES",
+    "CUDA_DEVICE_ORDER",
+    "MASTER_ADDR",
+    "MASTER_PORT",
+    "RANK",
+    "LOCAL_RANK",
+    "WORLD_SIZE",
+    "LOCAL_WORLD_SIZE",
+    "NNODES",
+    "NODE_RANK",
+    "NUM_GPUS",
+    "TORCHRUN",
+    "PROJECT_ROOT",
+    "CONFIG",
+    "LOGDIR",
+    "ENABLE_WANDB",
+    "TMPDIR",
+    "HF_HOME",
+    "HF_HUB_OFFLINE",
+    "WANDB_MODE",
+    "CUBLAS_WORKSPACE_CONFIG",
+    "NVIDIA_TF32_OVERRIDE",
+    "PYTORCH_CUDA_ALLOC_CONF"
+  ],
+  "invalid_run_signatures": [
+    {
+      "regex": "CUDA out of memory|torch\\.OutOfMemoryError",
+      "reason": "incomplete GPU workload"
+    },
+    {
+      "regex": "NCCL watchdog|Watchdog caught collective operation timeout",
+      "reason": "incomplete collective"
+    },
+    {
+      "regex": "hit config\\.(recompile_limit|cache_size_limit)",
+      "reason": "requested compiled path fell back"
+    }
+  ]
+}
