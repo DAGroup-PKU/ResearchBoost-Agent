@@ -1,0 +1,6 @@
+services:
+  main:
+    shm_size: 64gb
+    volumes:
+      - ${RESEARCHBOOST_ASSETS_ROOT:?set RESEARCHBOOST_ASSETS_ROOT}/sgf_framewise:/opt/researchboost/assets:ro
+      - ${RESEARCHBOOST_SCRATCH_ROOT:?set RESEARCHBOOST_SCRATCH_ROOT}/sgf_framewise:/tmp

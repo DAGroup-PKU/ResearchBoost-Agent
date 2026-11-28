@@ -1,0 +1,2 @@
+# The controller uses the standard library. The trusted training wheels and
+# their hash-locked requirements are provisioned offline by bootstrap.py.

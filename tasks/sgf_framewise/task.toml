@@ -1,0 +1,33 @@
+schema_version = "1.3"
+artifacts = ["/submission/sgf_framewise", "/submission/switches.json", "/opt/candidate-env"]
+
+[task]
+name = "researchboost/sgf_framewise"
+description = "Accelerate frozen Self Gradient Forcing framewise training on 4 H200 GPUs, preserving N1 equivalence."
+
+[agent]
+user = "agent"
+network_mode = "public"
+timeout_sec = 36000
+
+[environment]
+workdir = "/submission/sgf_framewise"
+gpus = 4
+gpu_types = ["H200"]
+cpus = 96
+memory_mb = 262144
+storage_mb = 524288
+build_timeout_sec = 3600
+
+[environment.healthcheck]
+command = "test -f /run/researchboost-ready"
+interval_sec = 10
+timeout_sec = 60
+start_period_sec = 21600
+retries = 3
+
+[verifier]
+environment_mode = "shared"
+user = "root"
+network_mode = "no-network"
+timeout_sec = 10800
