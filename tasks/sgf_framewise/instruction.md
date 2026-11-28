@@ -28,10 +28,12 @@ context passed between blocks. The second pass uses the matching context and
 preserves the prescribed gradient flow. Preserve every first-pass block and
 its denoising work even when a sampled exit selects an earlier state. Keep
 the starting weights, per-rank sample order, noise, and sampling semantics.
+The generator has a rolling context of six latent frames including the
+current frame, with the first three latent frames retained when available.
 
 ## Judge
 
-The judge checks exact workload invariants, the judge's speedup threshold,
+The judge checks exact workload invariants, measured performance benefit,
 and statistical equivalence on training trajectories with both critic-only
 and generator+critic updates. Only N1 is accepted; bitwise agreement does
 not bypass the trajectory check. Final evaluation is offline.

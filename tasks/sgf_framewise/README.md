@@ -1,9 +1,8 @@
-# SGF framewise training — Harbor task skeleton
+# SGF framewise training — Harbor task
 
-This N1-only draft freezes the four-H200 workload and judge contract. Earlier
-reference timing and A/A runs are not calibration for this contract. Stage B
-qualification and the GPU judge, Harbor `nop`, pilot, and clean rejudging are
-still pending. Do not score candidates or build a reference pack from this draft.
+This N1-only task freezes the four-H200 workload and judge contract. The GPU
+judge is implemented; Harbor validation, reference repeatability, and pilot runs
+are still required before using it to score submissions.
 
 ## Reproduce the upstream workload on four GPUs
 
@@ -12,7 +11,7 @@ Use a disposable checkout of `zhuang2002/Self_Gradient_Forcing` at
 compatible with your H200 driver; install the pinned checkout's requirements
 and the upstream FlashAttention package as described upstream.
 **`diffusers==0.31.0` is required** for `CausalWanModel` gradient checkpointing.
-The Harbor skeleton does not install this training environment.
+The Harbor environment provisions its training dependencies offline.
 
 From the upstream checkout, with the Hugging Face `hf` CLI available:
 
@@ -40,9 +39,11 @@ These are spot checks against publisher hashes, not the production asset
 manifest. Before packaging, verify every file against its pinned source and
 freeze a complete `SHA256SUMS` manifest, including the teacher shards and tokenizer.
 
-Keep the upstream framewise YAML, changing only `total_batch_size` from 8 to 4
-for the four-rank workload. Keep `batch_size: 1`, no accumulation, and all
-generator/critic, denoising, cache and context-gradient settings unchanged.
+Use the upstream framewise YAML with global batch size four and the frozen
+generator context: six recent latent frames including the current frame,
+with the first three retained when available. Copy the exact config overrides
+from `gate0.exact_items.config` in `environment/workspace/bench/bench.json`.
+Keep batch one per rank, no accumulation, and the upstream dual-pass update.
 For a separate upstream smoke run (not the judge), set an explicit nonzero
 `seed` and a smoke-run `max_steps` of at least 6 to include a generator update.
 Save that copy as `configs/sgf_framewise_4gpu_smoke.yaml` and run:
@@ -58,18 +59,25 @@ CUDA_VISIBLE_DEVICES="${SGF_GPU_IDS:-0,1,2,3}" NUM_GPUS=4 NNODES=1 NODE_RANK=0 \
     configs/sgf_framewise_4gpu_smoke.yaml "$SGF_LOGDIR" --no_save --no_visualize
 ```
 
-## Harbor skeleton and judge status
+## Harbor and host use
 
 - Harbor builds the pinned reference under `/opt/researchboost/ws/targets/reference`,
   copies it to `/submission/sgf_framewise`, and creates an agent-writable
-  `/opt/candidate-env`. The structural image does not download or load weights.
+  `/opt/candidate-env`. The image does not download weights. Provision the
+  frozen assets and an Ubuntu 22.04 / Python 3.10 CUDA-compatible wheelhouse
+  with hash-locked `runtime/requirements.lock` on the asset mount before trials.
 - Compose expects `sgf_framewise` subdirectories under `RESEARCHBOOST_ASSETS_ROOT`
   (read-only) and `RESEARCHBOOST_SCRATCH_ROOT` (isolated per trial).
-- `bench.py` exposes `record`, `compare`, `time`, and `check`, including
-  verifier-only `check --final`. The stub returns `UNAVAILABLE` (exit 2) when
-  the manifest is valid and `INCORRECT` (exit 1) for an invalid manifest.
-  `sgf_entry.py` prints a launch plan only. The shared verifier writes `check.json`
-  and fails closed; its zero reward is not evidence of a real `nop` run.
+- `bench.py` exposes `record`, `compare`, `time`, and `check`; `check --final`
+  is reserved for the trusted verifier. `sgf_entry.py` wraps the pinned trainer
+  without requiring modifications to the upstream checkout. On a host, use
+  `bench.py <command> --help` to supply the paths to your checkout, frozen assets,
+  and training Python. Keep output outside the training checkout.
+- `check --n1` checks both held-out trajectories against independent reference
+  calibration without running the performance gate. It cannot award reward.
+- Missing prerequisites report `UNAVAILABLE` (exit 2), rejected submissions
+  report `INCORRECT` (exit 1), and invalid runs report `INVALID` (exit 3).
+  Only a complete final check can award nonzero reward.
 
 ## Frozen judge contract
 
@@ -77,7 +85,7 @@ The reference uses upstream mixed precision, gradient checkpointing, the trainer
 TF32 settings, and FlashAttention-2 through the pinned upstream dispatch. Other
 upstream attention paths stay intact. The GPU judge must confirm the reference
 path actually executes; a fallback is not a substitute. Use the four-rank overrides
-and baseline in `environment/workspace/bench/bench.json` when building the GPU judge.
+and baseline in `environment/workspace/bench/bench.json` to reproduce the judge.
 
 - **Gate 0:** Rebuild the effective recipe independently of the candidate. Match
   configuration and actual traces in `gate0.exact_items`, including all Pass 1

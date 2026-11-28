@@ -1,14 +1,16 @@
 FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    bash ca-certificates git python3 python3-venv util-linux \
+    bash ca-certificates git libgl1 libglib2.0-0 python3 python3-venv util-linux \
     && rm -rf /var/lib/apt/lists/* \
-    && useradd --create-home --shell /bin/bash agent
+    && useradd --create-home --shell /bin/bash agent \
+    && useradd --system --no-create-home --shell /usr/sbin/nologin judge-worker
 
 COPY requirements.txt bootstrap.py no_credentials.py entrypoint.sh /opt/researchboost/
 COPY workspace/ /opt/researchboost/ws/
 
-RUN python3 -m venv /opt/candidate-env \
+RUN python3 -m venv /opt/reference-env \
+    && python3 -m venv /opt/candidate-env \
     && /opt/candidate-env/bin/python -m pip install --no-cache-dir -r /opt/researchboost/requirements.txt \
     && mkdir -p /submission /opt/researchboost/ws/targets/reference \
     && cd /opt/researchboost/ws/targets/reference \

@@ -30,4 +30,4 @@ retries = 3
 environment_mode = "shared"
 user = "root"
 network_mode = "no-network"
-timeout_sec = 3600
+timeout_sec = 10800

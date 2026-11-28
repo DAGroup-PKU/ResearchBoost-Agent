@@ -3,6 +3,9 @@
   "world_size": 4,
   "python": "/usr/bin/python3",
   "candidate_python": "/opt/candidate-env/bin/python",
+  "reference_python": "/opt/reference-env/bin/python",
+  "assets": "/opt/researchboost/assets",
+  "run_timeout_sec": 1200,
   "reference": "targets/reference",
   "reference_commit": "79be9acbd874c9be050944a6b1de6693e988a171",
   "reference_baseline": {
@@ -31,8 +34,25 @@
         "total_batch_size": 4,
         "sharding_strategy": "hybrid_full",
         "num_frame_per_block": 1,
-        "image_or_video_shape": [1, 21, 16, 60, 104],
-        "denoising_step_list": [1000, 750, 500, 250],
+        "image_or_video_shape": [
+          1,
+          21,
+          16,
+          60,
+          104
+        ],
+        "denoising_step_list": [
+          1000,
+          750,
+          500,
+          250
+        ],
+        "model_kwargs": {
+          "model_name": "Wan2.1-T2V-1.3B",
+          "timestep_shift": 5.0,
+          "local_attn_size": 6,
+          "sink_size": 3
+        },
         "grad_mode": "self_gradient_forcing",
         "self_gradient_forcing_cache_mode": "exit",
         "per_rank_exit_step": true,
@@ -69,8 +89,13 @@
       "counter": "self.step",
       "event": "after critic_optimizer.step(), at self.step += 1",
       "schedule": {
-        "critic_only": ["critic"],
-        "generator_dmd_and_critic": ["generator", "critic"],
+        "critic_only": [
+          "critic"
+        ],
+        "generator_dmd_and_critic": [
+          "generator",
+          "critic"
+        ],
         "generator_starts_after_step_zero": true,
         "generator_step_modulo": 0,
         "generator_period_config_key": "dfake_gen_update_ratio"
@@ -93,10 +118,32 @@
     "reference": "bench/records/ref.json"
   },
   "timing": {
+    "windows": [
+      [
+        1,
+        6
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        11,
+        16
+      ]
+    ],
+    "heldout_window_offsets": [
+      1,
+      2
+    ],
     "field": "s_per_update",
     "spread_band": 0.05,
     "spread_band_status": "provisional_machine_check_band",
-    "final_order": ["reference_a", "candidate", "reference_b"],
+    "final_order": [
+      "reference_a",
+      "candidate",
+      "reference_b"
+    ],
     "speedup_statistic": "mean of per-window min(reference_a, reference_b) / candidate",
     "reference_spread_statistic": "max of per-window abs(reference_a - reference_b) / min(reference_a, reference_b)",
     "over_band_status": "INVALID",
@@ -110,18 +157,35 @@
     "below_threshold_status": "UNAVAILABLE"
   },
   "correctness": {
-    "accepted_tiers": ["N1"],
+    "accepted_tiers": [
+      "N1"
+    ],
     "bitwise_match_waives_trajectory": false,
-    "final_required_gates": [0, 1, 3],
+    "final_required_gates": [
+      0,
+      1,
+      3
+    ],
     "trajectory": {
       "production_config": true,
-      "reference_seed_count": 6,
+      "reference_seed_count": 3,
+      "reference_seeds": [
+        42,
+        117,
+        231
+      ],
+      "completed_steps": 6,
+      "heldout_seed_count": 1,
       "sigma_multiplier": 3,
       "pair_by_seed_and_completed_step": true,
       "use_heldout_seeds_in_final": true,
       "require_all_endpoint_groups": true,
       "endpoints_by_step_type": {
-        "critic_only": ["critic_loss", "critic_gradient_norm", "critic_parameter_delta"],
+        "critic_only": [
+          "critic_loss",
+          "critic_gradient_norm",
+          "critic_parameter_delta"
+        ],
         "generator_dmd_and_critic": [
           "generator_dmd_loss",
           "generator_gradient_norm",
